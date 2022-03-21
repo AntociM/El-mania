@@ -16,7 +16,80 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top"></header>
+    <header class="container-fluid fixed-top">
+        <div class="row">
+            <div class="col-sm-12 col-lg-8 offset-lg-2 d-flex justify-content-between align-items-center">
+
+                <div class="col-lg-2">
+                    <a href="{% url 'home' %}" class="nav-link">
+                        <h2>El-mania</h2>
+                    </a>
+                </div>
+
+                <div class="col-sm-12 col-lg-8  justify-content-center">
+                    <form method="GET" action="">
+                        <div class="input-group w-75">
+                            <input class="form-control border border-black rounded-0" type="text" name="q"
+                                placeholder="Search by name or category">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                    <span class="icon">
+                                        <img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA6dJREFUaEPt2GnIrVMUB/DfJb4QXwxJMk+lZChEZjKETCkuujdlSiKfkFmmEDKWoSQZyxSRISXjR8lUZB5SMmQe+muf2/F673Oevd9zct56n2+ns9ba67/X2mv911pknn+L5rn/FgD83xFciMB8j8AGOAT7YH2sjdXwJT7Fm3gEz+LnSYBtTaEdcRl2L07F0XfwGX7CWlgHkVsd3+M6XIXvxgmkFkCcuQ1H4gtcjYfxwXKcWgm7YSmOwjc4HfeOC0QNgE3wGDbCxbgWP1Y4sg2ux864Aufgzwr9WUX7AtgYrxQLh+PFxoMTkaTSybgdJzTaWabWB0Ae5cslr3fC+3M9FBfgfJxZItlssg+Ae0rO74sXmk/6t2LOvQ+HIZfyeqvdUQC2x2u4qNxa6zmz6a2Kd0v12qPV8CgAT2Nr5AGnFI77OxG3YH881WK8C8C6+LhUi9T8SXx51B+W1Dym5YAuAKfgRmxeQt1iv4/OraVHpPn92kdhWKYLQBrUVtis1mil/MGFbuyClyp1O+eBNwqfCdeZ5JcLCg05uqVDd0UgvOZRnDRJ75FqlAJxVqEmVcd1AfgWd5RmU2W0UnjFkvuhJ2lwVV8XgIQ1adRUHSq8CGtNtE/FTRV6/4h2AUjXDdnas9Zopfx25aKOwEOVup0AwhyXYM1JDSPF2TNwDdbDJ+MEsDeewQF4stZwhfzzZfjZokJnmWhXCqVLZmh5rpC5FvujdDbFW7i05QGPegP5/9xC5MIYXx3lTcP/9+NAZLb+ukF/5GJrFbxXRsbMv7+1HLIcnb1Kil6Os1vtjmKjsZsJ7IEyC4+rqW1YZoBsL7bFL5MEENsX4rwyC2eS+qv1QMT5J7AlQtcPaiFxg/P7RGDwVm5G+PuDpbz+0AAiPSWT2BpDulkUpAdUM9E+j3imj6eVmv1VedwZzH/vASRLgUsKbU7Vebuk5kA1nCurmmoQfSMw7GPGzCuRMTDbt9zg48WpwWIrG7pQhF1LimQ3FKDZSCQd42h41vFDhptAtAAYnLlfcSDjYBZegy/0Y4Wh35l7kzY3zCiVkbkTx80FxFwADM5dGTuU3WhuPWuY1PTPS+/4qCPFwkQTiWYQ4wDQ4wl0iiQSM9Mp1OXQPuV1GgAE3Wzp1AvEtAAIiNnSaSSIaQLQBGLaAAxA3IXFQy8nG5JQmv980whgACIl9lj8UTr/3fMJwHA6hS9lwTzrN60R6F2aFwD0vqoJCS5EYEIX29vsvI/A34DsqzEOpvKhAAAAAElFTkSuQmCC">
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-12 col-lg-2">
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAABDJJREFUaEPtmVmsnVMUx3/1QClKKR5EKEGbeiBN8IAnc0SLSISHakobVCuGxCzGGGNua3jAIzGlqFTS9kXMghBiHhJTDDHElCC/Zn21+13nnG/v75x7epO7kpN7v3P2Gv57r732f69vAmNcJozx+BkHUFvBLYE5wLHATGDn+P0L4C3gCeBx4Jd+rXy/VmATYCFwGbBjj+C+Aq4ElgN/twXSDwDO+kPA7MxgngZOAn7K1NtgeFsAmwLPAQclVj8B7gJWAh/H99OAI4AzgF2TsWuBQ4G/SkG0BbA0Ukf//wA3RBr92SGgzSJ9Lkh+F+xZwwCwH/AyYP4r5wE3NwzEsTfGWPeBtt5oqNu3FLKaWG2Ux4DjMgNoq7/OXWkKbQV8A0yM1JkOvJcJQJ23I4bfge2BXzNtFAM4CngqnL0KzMp1HONfA/aN/4+MjZ9lqnQFrPluYMV67nOJ3AOcFooLAJ+zpBTAhcC14ek64KIsr/8N1oa2FG1oK0tKAZweM68zZ83ZK5F7gfmhqE2fs6QUgPnqSaqMyT0gffg2qUIzgHezpg6sQu+Ezm/A1NGsQvq19lf8x5ouC82RJ4FjQuFR4Pgc5WpsaQqpb/l7JTmJzwduahiEVOL6GOtJrK03G+puMKwNAA3JYyRolUgPLgX+6BCMB99VQTuqIXcAZ5cEr05bALLRVcDBSQCfAnfHofRRfC8bdeMLdpdk7BrgsGGyUWOZBDxYwIVWACcP+z6Q7iXr+BXATj3S4UvgcuC+4FGl2bNOr20K1Z27GlYmWeo+tTuxm9Q7sZ9s0tYJZb8BtJrNEuVxACWz1k+dfqyANg6IcujfvYDtgK1rgdp9+C4uPi8AzwIvtt3IbQBsEVx+EbB74ax+ANweFUk+lC2lAOQttyZVJttxTeHzOI3lVFmSC0AqIH2YV/PyQ6TEM8DrwVS9M1edNzsXO8RH3uOpfDiwTc2O9wFXtBMVGQEuB4A5LYM8JLEipZbASR1y+51S8jOBc4NKV2ZXx1nSqGPXFIAz76ZLOY9gTgW+z1rzkYMnxx44ocaRXCW7FV2lKYD7a2lzcdxf7cb1Q4zDO/HViTHTSXrSGoAb9pHEip1lucwgRKp9SWLYS1LXjd1rBSyVNqyqPv/DwImDiDyxqY8qnT4D9gY6ltheABZHudS+ue7d9+sBA5DN2rGbEn6sSnd28tkNgL+9nxxSS4DbBhx8Zf4c4JZ4MIY9SwAcCDwfitJf0+jHUQKwLeBrKVNY2R946f98d1sBN6oXFOUBYO4oBV+58a3PKfHgPTutUOtD6QbAU9W3KkpR16wlYLt9y8KGTbSjc1fAC/luoeQLCCnCaIo+7fopHwJ75AL4GfC43xhEWuGJPUK6pZC1VwqxMYiUYvNcANdEA8rezzDFF4Y2zNITen08vQ6yYQbeyPc4gEbTNMBB/wKrD7cx2hrYGgAAAABJRU5ErkJggg==">
+                                    </div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="" class="dropdown-item">Admin</a>
+                                {% endif %}
+                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                                href="">
+                                <div class="text-center">
+                                    <div>
+                                        <img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAwJJREFUaEPt2F/o3XMcx/HHT4oLM0Myq13YuLALLihhK1kTanZHK4mURG6UULKLNeTSFHKjXExKCJtsRcaGsAv5k3/lgqyt+TdtKfSqz6lfxzk/3+/v9/2c8zs5n/r2Ped0Pp/3+/l+vz/v9/vzmTHhY2bC9TcFGLcHpx5YzB74u0+5fF+F78at9Gz5c4XQU7P+eCJuxf14ZFIA+vX8Asdx4aQCPI67xqT871gySHabLLQRL+NjvDlCkA1YWvbfv8S2AYgFDmM/1o0Q4AWswGUL9UDm78UlWIY/RgTxHg5iUxcAD2EL1mPPiAC+x07c3gVA3PgutuLBEQCcgGN4dJi8Nnsg+qYeHMKnuGIEAMvxA+5GsuCCNnFv8ku4tuyDo5UhLsaHuBHPdwVwJ7Yj6a12Or0eMdiVeKsrgPPxJR7GA5U90DPWGnzWFUDWSUP347Dc3CHUttJ/nVlqUCd7IIs8g5txOn7rUOH+pZ7FZpyEv7r0wA3YgWuwqyLAblyAc4bJaJtGe+ucUarjY7ivIsDnpQO+qGuArPcR/sSlFQF+xT5cXQMgB5t7EG9E0HxH+qpzBzzJPClkz+GmGgBXITF6HV7/D+3PwmqcV9753HtO65v7M77B1+V5A+/UADi5pLYncG+pzLMtGQtmA0bR9POzxxF8O+RJiu4/jw+1z3w3cRZM6KSxS6+ecUqflJ+KBb/qs2gsGyt3MuYDkINNOtE7itI5K7+PvHtuzzvHwOqjLUCuVdKbJ5ZfLG31J9W1nENAG4Cz8QFS1m8Z1h2OGqYNwGulA031TfZZFKMpQA4vSWU5GdWsvK2N0hTgSdyGhFFOZItmNAU4gJV4eoyaD/R8U4BfcOoYlY/ogbo2BcgCuSFYW6pk7ocG9ucdQTaW1RQgC75a+v/omIyUq8YaEK1kNQXIVeLbfdbNb0ObrAV4opWs/w1A3PpKaZ1j3IRTrjxqhVBjWU090NvEl5fQSBdaQ/le5MVgjWS1AVhAWNebOgWoZ9tmK0890MxO9f418R74B6a+kDFJKhXJAAAAAElFTkSuQmCC">
+                                    </div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        $0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
 
     {% if messages %}
     <div class="message-container"></div>
