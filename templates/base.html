@@ -15,10 +15,10 @@
     <title>El-mania {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
+<body style="background-color: antiquewhite;">
     <header class="container-fluid fixed-top">
         <div class="row">
-            <div class="col-sm-12 col-lg-8 offset-lg-2 d-flex justify-content-between align-items-center">
+            <div class="col-sm-12 col-lg-8 offset-lg-2 d-flex justify-content-between align-items-center bg-light" >
 
                 <div class="col-lg-2">
                     <a href="{% url 'home' %}" class="nav-link">
@@ -88,6 +88,16 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <!-- <div class="col-sm-12 col-lg-8 offset-lg-2 d-flex justify-content-between align-items-center"> -->
+            <nav class="navbar col-sm-12 col-lg-8 offset-lg-2 d-flex justify-content-between align-items-center navbar-expand-lg navbar-dark bg-secondary">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/main-nav.html' %}
+            </nav>
+            <!-- </div> -->
         </div>
     </header>
 
