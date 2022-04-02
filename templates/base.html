@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top">
+    <header class="container-fluid">
         <div class="row">
             <div class="col-sm-12 col-lg-6 offset-lg-3 d-flex align-items-center bg-light p-0">
 
@@ -99,13 +99,6 @@
 
 
     </header>
-
-    {% if messages %}
-    <div class="message-container"></div>
-    {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
 
     {% block content %}
     {% endblock %}
