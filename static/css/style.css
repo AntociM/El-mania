@@ -1,8 +1,11 @@
 body { 
     background-color: rgb(207, 202, 202);
 }
-
-img {
-    width: 32px;
+.nav-icon {
+    width: 35px;
     height: auto;
+}
+
+a {
+    text-decoration: none
 }
