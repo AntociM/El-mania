@@ -9,3 +9,12 @@ This app includes the products added by the customer to the shopping cart and th
 
 
 
+
+# Testing
+
+## Generating Fixtures
+
+https://www.geeksforgeeks.org/read-json-file-using-python/
+
+
+
