@@ -14,6 +14,10 @@ This app includes the products added by the customer to the shopping cart and th
 
 ## Generating Fixtures
 
+The products data in the database is created by uploading pre-written data from a file using fixtures in JSON format. To read and filter the dataset using Python, conversion of JSON into their respective Python objects was needed.
+
+https://github.com/algolia/datasets 
+
 https://www.geeksforgeeks.org/read-json-file-using-python/
 
 
