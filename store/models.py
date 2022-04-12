@@ -12,9 +12,7 @@ class Item(models.Model):
         return self.name
 
 
-
-
-
-                
-
+class ItemDiscount(models.Model):
+    item = models.ForeignKey('Item', null=True, blank=True, on_delete=models.SET_NULL)
+    discount_procent = models.DecimalField(max_digits=6, decimal_places=2)
 
