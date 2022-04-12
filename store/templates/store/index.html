@@ -58,49 +58,16 @@
 
 <div class="container h-100 col-sm-12 col-lg-6 offset-lg-3 mt-3">
     <div class="row gy-1">
+        {% for i in offers %}
         <div class="card col-lg-3">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img class="offers-img-cards card-img-top" src="{{ i.item.image }}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
+                <h5 class="card-title">{{i.item.name }}</h5>
+                <p class="card-text">{{ i.item.description }}</p>
                 <a href="#" class="btn btn-success">Add to your shopping cart</a>
-
             </div>
         </div>
-
-        <div class="card col-lg-3">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-success">Add to your shopping cart</a>
-
-            </div>
-        </div>
-
-        <div class="card col-lg-3">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-success">Add to your shopping cart</a>
-
-            </div>
-        </div>
-
-        <div class="card col-lg-3">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-success">Add to your shopping cart</a>
-
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 

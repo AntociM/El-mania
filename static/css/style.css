@@ -9,3 +9,8 @@ body {
 a {
     text-decoration: none
 }
+
+.offers-img-cards {
+    width: 60px;
+    height: auto;
+}
