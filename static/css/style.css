@@ -11,6 +11,29 @@ a {
 }
 
 .offers-img-cards {
-    width: 60px;
+    width: 150px;
     height: auto;
 }
+
+.h3 {
+    text-decoration: line-through;
+}
+
+.h2 {
+    color: rgb(192, 36, 36)  
+}
+
+.card {
+    position:relative;
+  }
+
+.price-badge {
+    position:absolute;
+    top:10px;
+    left:10px;
+    /* padding:5px; */
+    background:red;
+    font-size: 0.75em;
+    color:white;
+    transform:rotate(-25deg);
+  }

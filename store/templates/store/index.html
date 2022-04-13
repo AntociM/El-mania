@@ -59,13 +59,16 @@
 <div class="container h-100 col-sm-12 col-lg-6 offset-lg-3 mt-3">
     <div class="row gy-1">
         {% for i in offers %}
-        <div class="card col-lg-3">
-            <img class="offers-img-cards card-img-top" src="{{ i.item.image }}" alt="Card image cap">
+        <div class="card col-lg-3 align-items-stretch" style=" height: 25rem;">
+            <br>
+            <img class="offers-img-cards card-img-top align-items-center" src="{{ i.item.image }}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{i.item.name }}</h5>
-                <p class="card-text">{{ i.item.description }}</p>
+                <span class="h3">{{  i.item.price }}</span>
+                <span class="h2">{{ i.discount_procent }}</span>
                 <a href="#" class="btn btn-success">Add to your shopping cart</a>
             </div>
+            <div class="price-badge badge">{{ i.discount_procent }}</div>
         </div>
         {% endfor %}
     </div>
