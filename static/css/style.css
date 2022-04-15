@@ -34,7 +34,7 @@ a {
     top:10px;
     left:10px;
     /* padding:5px; */
-    background:red;
+    background:#ff5a5a;
     font-size: 0.75em;
     color:white;
     transform:rotate(-25deg);
