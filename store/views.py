@@ -1,4 +1,6 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render
+
 from .models import ItemDiscount, Item
 
 # Create your views here.
@@ -30,10 +32,14 @@ def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
     products = Item.objects.all()
+    paginator = Paginator(products, 25)
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
     context = {
-        'products': products[30:60],
+        'page_obj': page_obj,
     }
 
-    return render(request, 'store/products.html', context)
+    return render(request, 'store/products.html', context,)
 
