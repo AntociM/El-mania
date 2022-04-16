@@ -32,7 +32,7 @@ def all_products(request):
     products = Item.objects.all()
 
     context = {
-        'products': products,
+        'products': products[30:60],
     }
 
     return render(request, 'store/products.html', context)
