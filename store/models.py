@@ -16,4 +16,5 @@ class Item(models.Model):
 class ItemDiscount(models.Model):
     item = models.ForeignKey('Item', null=True, blank=True, on_delete=models.SET_NULL)
     discount_procent = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(100)])
+    new_price = models.DecimalField(max_digits=6, decimal_places=2,null=True)
 

@@ -14,7 +14,8 @@ def index(request):
              "name": offer.item.name,
              "price": offer.item.price,
              "discount": offer.discount_procent,
-             "new_price": round(offer.item.price - (offer.discount_procent * offer.item.price) / 100,2),
+            #  "new_price": round(offer.item.price - (offer.discount_procent * offer.item.price) / 100,2),
+             "new_price": offer.new_price,
         }
         discounted_items.append(offer_dict)
     
