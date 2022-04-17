@@ -35,7 +35,7 @@ def all_products(request):
 
     products = Item.objects.all()
     
-    ### Search functionality code from Boutique Ado project- Code institute
+    ### Search functionality code from Boutique Ado project - Code Institute
     query = None
 
     if request.GET:

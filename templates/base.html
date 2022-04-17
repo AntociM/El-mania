@@ -33,7 +33,7 @@
         </div>
 
         <div class="col-lg-7 d-none d-sm-block justify-content-center">
-          <form method="GET" action="">
+          <form method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
               <input class="form-control border border-black rounded-0" type="text" name="q"
                 placeholder="Search by name or category">
@@ -178,7 +178,7 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
       © 2022 Copyright:
-      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">El-mania</a>
+      <a class="text-reset fw-bold" href="{% url 'home' %}">El-mania</a>
     </div>
 
   </footer>
