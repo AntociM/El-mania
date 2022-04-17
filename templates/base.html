@@ -35,7 +35,8 @@
         <div class="col-lg-7 d-none d-sm-block justify-content-center">
           <form method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
-              <input class="form-control border border-black rounded-0" type="text" name="q"
+              <input class="form-control border border-black rounded-0" type="text" name="q" value="{% if request.GET.q %}{{ request.GET.q }}{% endif %}"
+
                 placeholder="Search by name or category">
               <div class="input-group-append">
                 <button class="form-control btn btn-black border border-black rounded-0" type="submit">
