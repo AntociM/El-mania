@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import ItemDiscount, Item
 
@@ -41,5 +41,20 @@ def all_products(request):
         'page_obj': page_obj,
     }
 
-    return render(request, 'store/products.html', context,)
+    return render(request, 'store/products.html', context)
+
+def product_detail(request, item_id):
+    """ A view to show individual product details """
+    print(item_id)
+
+    product = get_object_or_404(Item, pk=item_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'store/product_detail.html', context)
+
+
+
 
