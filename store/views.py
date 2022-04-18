@@ -37,6 +37,8 @@ def all_products(request):
     
     ### Search functionality code from Boutique Ado project - Code Institute
     query = None
+    sort  = 'none'
+    order = ''
 
     if request.GET:
         if 'q' in request.GET:
@@ -48,12 +50,19 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(category__icontains=query)
             products = products.filter(queries)
         
-        if 'npr' in request.GET:
-            pass
-        
-        if 'ord' in request.GET:
-            pass
-    
+        if 'sort' in request.GET:
+            sort = request.GET['sort']
+            sortkey = sort
+            # Check the order
+            if 'order' in request.GET:
+                order = request.GET['order']
+            
+            if order == 'desc':
+                sortkey = f'-{sort}'
+
+            if sort != 'none':
+                products = products.order_by(sortkey)
+
     paginator = Paginator(products, 25)
 
     page_number = request.GET.get('page')
@@ -62,6 +71,8 @@ def all_products(request):
     context = {
         'page_obj': page_obj,
         'serach_term': query,
+        'current_sorting': sort,
+        'current_ordering': order
     }
 
     return render(request, 'store/products.html', context)
