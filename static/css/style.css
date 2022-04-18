@@ -1,6 +1,12 @@
-body { 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins:wght@200&family=Roboto:wght@100;300&display=swap');
+
+/* General settings*/
+body {
     background-color: rgb(207, 202, 202);
 }
+
+
+/* Navigation */
 .nav-icon {
     width: 35px;
     height: auto;
@@ -10,11 +16,27 @@ a {
     text-decoration: none
 }
 
+/* Cards */
 .offers-img-cards {
-    
+
     width: 160px;
-    /* height: auto; */
     max-height: 150px;
+}
+
+
+.card {
+    position: relative;
+}
+
+.price-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    /* padding:5px; */
+    background: #ff5a5a;
+    font-size: 0.75em;
+    color: white;
+    transform: rotate(-25deg);
 }
 
 .h3 {
@@ -22,31 +44,15 @@ a {
 }
 
 .h2 {
-    color: #ff5a5a;  
+    color: #ff5a5a;
 }
 
-.card {
-    position:relative;
-  }
-
-.price-badge {
-    position:absolute;
-    top:10px;
-    left:10px;
-    /* padding:5px; */
-    background:#ff5a5a;
-    font-size: 0.75em;
-    color:white;
-    transform:rotate(-25deg);
-  }
-
-  .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
 }
-
