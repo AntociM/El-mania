@@ -1,53 +1,32 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_js %}
+<script src="{% static 'scripts/products.js' %}"></script>   
+{% endblock %}
+
 {% block content %}
 <!-- Page Header -->
 <!-- <div class="overlay"></div> -->
 
 <div class="container-fluid">
     <div class="row flex-sm-nowrap">
-
-
         <div class="col-sm-10 col-lg-7">
             <div class="container-fluid ">
-
                 <div class="container mt-2 mb-2">
-                    <form class="d-flex row p-2 bg-white border rounded" method="GET" action="{% url 'products' %}">
-                        {% csrf_token %}
-                        <div class="col-6">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="npr" id="name-checkbox" value="name"
-                                    checked>
-                                <label class="form-check-label" for="name-checkbox">Name</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="npr" id="price-checkbox"
-                                    value="price">
-                                <label class="form-check-label" for="price-checkbox">Price</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="npr" id="rating-checkbox"
-                                    value="rating">
-                                <label class="form-check-label" for="rating-checkbox">Rating</label>
-                            </div>
-                        </div>
-
-                        <div class="col-5 align-items-end justify-content-end">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="ord" id="asc-checkbox" value="asc"
-                                    checked>
-                                <label class="form-check-label" for="asc-checkbox">Ascending</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="ord" id="desc-checkbox" value="desc">
-                                <label class="form-check-label" for="desc-checkbox">Descending</label>
-                            </div>
-                        </div>
-                        <div class="col-1">
-                            <input class="btn btn-primary" type="submit" value="Sort">
-                        </div>
-                    </form>
+                    <div class="d-flex row p-2 bg-white border rounded" id="product-sorting">
+                        <select class="form-select form-select-sm mb-3" id="product-sorting-select">
+                            <option value="none"  {% if current_sorting == 'none' %}selected {% endif %} >None</option>
+                            <option value="name"  {% if current_sorting == 'name' %}selected{% endif %} >Name</option>
+                            <option value="price" {% if current_sorting == 'price' %}selected{% endif %} >Price</option>
+                            <option value="rating"{% if current_sorting == 'rating' %}selected{% endif %} >Rating</option>
+                        </select>
+                          
+                        <select class="form-select form-select-sm" id="product-order-select" {% if current_sorting == 'none' %} disabled {% endif %}>
+                            <option value="asc" {% if current_ordering == 'asc' %}selected {% endif %} >Ascending</option>
+                            <option value="desc" {% if current_ordering == 'desc' %}selected {% endif %}>Descending</option>
+                        </select>
+                    </div>
                 </div>
 
 
@@ -126,7 +105,5 @@
         </div>
     </div>
 </div>
-
-
 
 {% endblock %}
