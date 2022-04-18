@@ -7,17 +7,18 @@
 
 <div class="container-fluid">
     <div class="row flex-sm-nowrap">
-        
+
 
         <div class="col-sm-10 col-lg-7">
             <div class="container-fluid ">
 
                 <div class="container mt-2 mb-2">
-                    <div class="d-flex flex-nowrap row p-2 bg-white border rounded">
+                    <form class="d-flex row p-2 bg-white border rounded" method="GET" action="{% url 'products' %}">
+                        {% csrf_token %}
                         <div class="col-6">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="npr" id="name-checkbox"
-                                    value="name">
+                                <input class="form-check-input" type="radio" name="npr" id="name-checkbox" value="name"
+                                    checked>
                                 <label class="form-check-label" for="name-checkbox">Name</label>
                             </div>
                             <div class="form-check form-check-inline">
@@ -32,19 +33,21 @@
                             </div>
                         </div>
 
-                        <div class="col-6 align-items-end justify-content-end">
+                        <div class="col-5 align-items-end justify-content-end">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="ord" id="asc-checkbox"
-                                    value="asc">
+                                <input class="form-check-input" type="radio" name="ord" id="asc-checkbox" value="asc"
+                                    checked>
                                 <label class="form-check-label" for="asc-checkbox">Ascending</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="ord" id="desc-checkbox"
-                                    value="desc">
+                                <input class="form-check-input" type="radio" name="ord" id="desc-checkbox" value="desc">
                                 <label class="form-check-label" for="desc-checkbox">Descending</label>
                             </div>
                         </div>
-                    </div>
+                        <div class="col-1">
+                            <input class="btn btn-primary" type="submit" value="Sort">
+                        </div>
+                    </form>
                 </div>
 
 

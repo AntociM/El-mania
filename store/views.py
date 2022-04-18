@@ -47,6 +47,12 @@ def all_products(request):
             
             queries = Q(name__icontains=query) | Q(category__icontains=query)
             products = products.filter(queries)
+        
+        if 'npr' in request.GET:
+            pass
+        
+        if 'ord' in request.GET:
+            pass
     
     paginator = Paginator(products, 25)
 
