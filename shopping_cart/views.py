@@ -8,8 +8,12 @@ from datetime import datetime
 
 def shopping_cart_view(request):
     """ A view that renders the shopping cart contents page """
-    
-    return render(request, 'shopping_cart/shopping_cart.html')
+    cart_items = CartItem.objects.filter(user_id=request.user.pk)
+    context = {
+        'cart_items' : cart_items
+    }
+
+    return render(request, 'shopping_cart/shopping_cart.html', context)
 
 
 def add_to_cart(request, item_id):

@@ -5,6 +5,13 @@
 <div class="container">
     <div class="row">
         <h1>Shopping Cart</h1>
+        {% for cart_item in cart_items %}
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item"> {{ cart_item.item.name }} </li>
+            <li class="list-group-item"> {{ cart_item.quantity}} </li>
+            <li class="list-group-item"> {{ cart_item.created_at }} </li>
+          </ul>
+        {% endfor %}
     </div>
 </div>
 
