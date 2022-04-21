@@ -9,8 +9,16 @@ from datetime import datetime
 def shopping_cart_view(request):
     """ A view that renders the shopping cart contents page """
     cart_items = CartItem.objects.filter(user_id=request.user.pk)
+
+    # Calculate cart's subtotal
+    total = 0
+    for cart_item in cart_items:
+         total = (cart_item.item.price * cart_item.quantity) + total
+
+        
     context = {
-        'cart_items' : cart_items
+        'cart_items' : cart_items,
+        'subtotal': total,
     }
 
     return render(request, 'shopping_cart/shopping_cart.html', context)
