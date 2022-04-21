@@ -49,3 +49,17 @@ def add_to_cart(request, item_id):
         cart_item.save()
 
     return redirect(redirect_url)
+
+def adjust_quantity(request, cart_item_id):
+    #Adjust quantity for each product
+    cart_item = CartItem.objects.get(pk=cart_item_id)
+    redirect_url = request.POST.get('redirect_url')
+
+    quantity = request.POST.get(f'quantity_{cart_item_id}')
+    cart_item.quantity = quantity
+    cart_item.save()
+
+    return redirect(redirect_url)
+
+
+
