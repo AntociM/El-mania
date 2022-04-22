@@ -61,5 +61,17 @@ def adjust_quantity(request, cart_item_id):
 
     return redirect(redirect_url)
 
+def remove_from_cart(request, cart_item_id):
+    cart_item = get_object_or_404(CartItem, pk=cart_item_id)
+    redirect_url = request.POST.get('redirect_url')
+
+    if cart_item:
+        cart_item.delete()
+
+    return redirect(redirect_url)
+
+
+
+
 
 

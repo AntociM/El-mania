@@ -39,10 +39,14 @@
                         </button>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
-                    <button class="btn btn-outline-danger btn-sm  w-100 mb-2" type="button">
-                        Remove
-                        <i class="bi bi-trash3"></i>
-                    </button>
+                    <form action="{% url 'remove_from_cart' cart_item.pk %}" class="form" method="POST">
+                        {% csrf_token %}
+                        <button class="btn btn-outline-danger btn-sm  w-100 mb-2" type="submit">
+                            Remove
+                            <i class="bi bi-trash3"></i>
+                        </button>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </form>
                 </div>
             </div>
             {% endfor %}
