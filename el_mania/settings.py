@@ -178,3 +178,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+FREE_DELIVERY_THRESHOLD = 100
+DELIVERY_COST = 10
