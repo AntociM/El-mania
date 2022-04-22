@@ -87,13 +87,13 @@ body{margin-top:20px;}
     font-weight: normal;
 }
 
-.text-muted {
+/* .text-muted {
     color: #888 !important;
-}
+} */
 
-.bg-secondary {
+/* .bg-secondary {
     background-color: #f7f7f7 !important;
-}
+} */
 
 .accordion .accordion-heading {
     margin-bottom: 0;
