@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.exceptions import ObjectDoesNotExist
+from django.contrib import messages
 from store.models import Item
 from .models import CartItem
 from datetime import datetime
@@ -56,8 +57,12 @@ def adjust_quantity(request, cart_item_id):
     redirect_url = request.POST.get('redirect_url')
 
     quantity = request.POST.get(f'quantity_{cart_item_id}')
-    cart_item.quantity = quantity
-    cart_item.save()
+
+    if int(quantity) > 0 :
+        cart_item.quantity = quantity
+        cart_item.save()
+    else:
+        messages.error(request, 'Quantity could not be 0. To remove the product from cart press delete.')
 
     return redirect(redirect_url)
 
