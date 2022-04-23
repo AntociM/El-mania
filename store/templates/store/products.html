@@ -10,8 +10,81 @@
 <!-- <div class="overlay"></div> -->
 
 <div class="container-fluid">
+
+    <!-- Display Messages -->
+    {% if messages %}
+    {% for message in messages %}
+
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
     <div class="row flex-sm-nowrap">
-        <div class="col-sm-10 col-lg-7">
+        <div class="col-sm-2 col-lg-2 offset-lg-1">
+            <div class="btn-group w-100" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-primary" id="activate-product-filter">Show results</button>
+                <button type="button" class="btn btn-outline-primary" id="clear-product-filter">Clear filters</button>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelStayOpen-headingPrice">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelStayOpen-price" aria-expanded="true"
+                            aria-controls="panelStayOpen-price">
+                            Price
+                        </button>
+                    </h2>
+                    <div id="panelStayOpen-price" class="accordion-collapse collapse show"
+                        aria-labelledby="panelStayOpen-headingPrice">
+                        <div class="accordion-body">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Min</span>
+                                <input type="number" class="form-control" placeholder="Min" aria-label="Min"
+                                    {% if min_price != '' %} value="{{min_price}}" {% endif %} min="0" max="100000">
+                                <span class="input-group-text">Max</span>
+                                <input type="number" class="form-control" placeholder="Max" aria-label="Max"
+                                    {% if max_price != '' %} value="{{max_price}}" {% endif %} min="0" max="100000">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            Category
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            Brand
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-lg-6">
             <div class="container-fluid ">
                 <div class="container mt-2 mb-2">
                     <div class="d-flex row p-2 bg-white border rounded" id="product-sorting">

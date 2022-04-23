@@ -2,6 +2,7 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from decimal import Decimal
 
 from .models import ItemDiscount, Item
 
@@ -40,6 +41,8 @@ def all_products(request):
     query = None
     sort  = 'none'
     order = ''
+    min_price = ''
+    max_price = ''
 
     if request.GET:
         if 'q' in request.GET:
@@ -64,6 +67,20 @@ def all_products(request):
             if sort != 'none':
                 products = products.order_by(sortkey)
 
+        min_price = Decimal(request.GET.get('min_price', 0)) 
+        max_price = Decimal(request.GET.get('max_price', 100000)) 
+
+        # Validate the price filters
+        if min_price < 0:
+            messages.error(request, 'Min price cannot be negative value')
+        if max_price < 0:
+            messages.error(request, 'Max price cannot be negative value')
+        if max_price < min_price:
+            messages.warning(request, 'Max price is smaller than Min price. It may not find any products.')
+
+        if min_price >= 0 and max_price >= 0:
+            products = products.filter(price__range=(min_price, max_price))
+
     paginator = Paginator(products, 25)
 
     page_number = request.GET.get('page')
@@ -73,7 +90,9 @@ def all_products(request):
         'page_obj': page_obj,
         'serach_term': query,
         'current_sorting': sort,
-        'current_ordering': order
+        'current_ordering': order,
+        'min_price': min_price,
+        'max_price': max_price
     }
 
     return render(request, 'store/products.html', context)
