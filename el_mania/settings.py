@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'store',
-    'shopping_cart',
+    'cart',
     'checkout',
     'django_bootstrap5',
 ]

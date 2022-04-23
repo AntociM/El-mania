@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
-from shopping_cart.models import CartItem
+from cart.models import CartItem
 from .forms import OrderForm
 
 # Create your views here.

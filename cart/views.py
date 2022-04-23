@@ -7,7 +7,7 @@ from datetime import datetime
 
 # Create your views here.
 
-def shopping_cart_view(request):
+def cart_view(request):
     """ A view that renders the shopping cart contents page """
     cart_items = CartItem.objects.filter(user_id=request.user.pk)
 
@@ -22,7 +22,7 @@ def shopping_cart_view(request):
         'subtotal': total,
     }
 
-    return render(request, 'shopping_cart/shopping_cart.html', context)
+    return render(request, 'cart/cart.html', context)
 
 
 def add_to_cart(request, item_id):
