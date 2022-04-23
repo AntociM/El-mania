@@ -43,6 +43,7 @@ def all_products(request):
     order = ''
     min_price = ''
     max_price = ''
+    categ = None
 
     if request.GET:
         if 'q' in request.GET:
@@ -67,9 +68,9 @@ def all_products(request):
             if sort != 'none':
                 products = products.order_by(sortkey)
 
+        # Price filtering
         min_price = Decimal(request.GET.get('min_price', 0)) 
-        max_price = Decimal(request.GET.get('max_price', 100000)) 
-
+        max_price = Decimal(request.GET.get('max_price', 100000))
         # Validate the price filters
         if min_price < 0:
             messages.error(request, 'Min price cannot be negative value')
@@ -77,14 +78,24 @@ def all_products(request):
             messages.error(request, 'Max price cannot be negative value')
         if max_price < min_price:
             messages.warning(request, 'Max price is smaller than Min price. It may not find any products.')
-
         if min_price >= 0 and max_price >= 0:
             products = products.filter(price__range=(min_price, max_price))
+
+        # Category filtering
+        categ = request.GET.get('categ', '__ALL__').split('@')
+        if categ[0] != '__ALL__':
+            products = products.filter(category__in=categ)
+
 
     paginator = Paginator(products, 25)
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
+
+    # Categories
+    products_categ = products.order_by('category').values('category').distinct()
+    # for prod in products_categ:
+    #     prod['category'] = prod['category'].replace(" ", "_")
 
     context = {
         'page_obj': page_obj,
@@ -92,7 +103,9 @@ def all_products(request):
         'current_sorting': sort,
         'current_ordering': order,
         'min_price': min_price,
-        'max_price': max_price
+        'max_price': max_price,
+        'categories': products_categ,
+        'selected_categories':categ
     }
 
     return render(request, 'store/products.html', context)
