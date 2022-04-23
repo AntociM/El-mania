@@ -31,6 +31,8 @@ window.onload=()=>{
         var url = new URL(document.URL);
         var category = document.getElementById("panelsStayOpen-category").children[0].children;
         var category_array = []
+        var brand = document.getElementById("panelsStayOpen-brand").children[0].children;
+        var brand_array = []
 
         // Get price
         var price_accordion =  document.getElementById("panelStayOpen-price");
@@ -51,13 +53,12 @@ window.onload=()=>{
             url.searchParams.delete('max_price');
         }
         
-
+        // Category
         for (var i=0; i < category.length; i++) {
             if( category[i].children[0].checked) {
                 category_array.push(category[i].children[0].value)
             }
         }
-        
         if (category_array.length) {
             url.searchParams.set('categ', category_array.join("@"));
         } 
@@ -65,6 +66,18 @@ window.onload=()=>{
             url.searchParams.delete('categ');
         }
 
+        // Brand
+        for (var i=0; i < brand.length; i++) {
+            if( brand[i].children[0].checked) {
+                brand_array.push(brand[i].children[0].value)
+            }
+        }
+        if (brand_array.length) {
+            url.searchParams.set('brand', brand_array.join("@"));
+        } 
+        else {
+            url.searchParams.delete('brand');
+        }
 
         window.location.href = url;
 
@@ -80,6 +93,7 @@ window.onload=()=>{
         url.searchParams.delete('min_price');
         url.searchParams.delete('max_price');
         url.searchParams.delete('categ');
+        url.searchParams.delete('brand');
 
         window.location.href = url;
     }

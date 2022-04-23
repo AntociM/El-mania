@@ -44,6 +44,7 @@ def all_products(request):
     min_price = ''
     max_price = ''
     categ = None
+    brand = None
 
     if request.GET:
         if 'q' in request.GET:
@@ -86,6 +87,10 @@ def all_products(request):
         if categ[0] != '__ALL__':
             products = products.filter(category__in=categ)
 
+        # Brand filtering
+        brand = request.GET.get('brand', '__ALL__').split('@')
+        if brand[0] != '__ALL__':
+            products = products.filter(brand__in=brand)
 
     paginator = Paginator(products, 25)
 
@@ -94,8 +99,7 @@ def all_products(request):
 
     # Categories
     products_categ = products.order_by('category').values('category').distinct()
-    # for prod in products_categ:
-    #     prod['category'] = prod['category'].replace(" ", "_")
+    products_brands = products.order_by('brand').values('brand').distinct()
 
     context = {
         'page_obj': page_obj,
@@ -105,7 +109,9 @@ def all_products(request):
         'min_price': min_price,
         'max_price': max_price,
         'categories': products_categ,
-        'selected_categories':categ
+        'selected_categories': categ,
+        'product_brands': products_brands,
+        'selected_brands': brand,
     }
 
     return render(request, 'store/products.html', context)

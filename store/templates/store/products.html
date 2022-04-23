@@ -62,7 +62,7 @@
                     </h2>
                     <div id="panelsStayOpen-category" class="accordion-collapse collapse show"
                         aria-labelledby="panelsStayOpen-headingCategory">
-                        <div class="accordion-body">
+                        <div class="accordion-body vh-25" >
                             {% for category in categories %}
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="{{ category.category }}" id="category_{{ category.category }}" 
@@ -77,17 +77,25 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingBrand">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseThree">
+                            data-bs-target="#panelsStayOpen-brand" aria-expanded="false"
+                            aria-controls="panelsStayOpen-brand">
                             Brand
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingThree">
+                    <div id="panelsStayOpen-brand" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingBrand">
                         <div class="accordion-body">
-
+                            {% for product in product_brands %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="{{ product.brand }}" id="category_{{ product.brand }}" 
+                                {% if product.brand in selected_brands %} checked {% endif %}>
+                                <label class="form-check-label" for="category_{{ product.brand }}">
+                                    {{ product.brand }}
+                                </label>
+                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
