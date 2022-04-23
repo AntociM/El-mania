@@ -3,7 +3,7 @@ from django.dispatch import receiver
 
 from .models import OrderItem
 
-def @receiver(post_save, sender=OrderItem)
+@receiver(post_save, sender=OrderItem)
 def update_on_save(sender, instance, created, **kwargs):
 
     instance.order.update_total()
