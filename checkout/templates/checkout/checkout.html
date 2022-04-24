@@ -38,16 +38,16 @@
                 {% endfor %}
                 <li class="list-group-item d-flex justify-content-between">
                     <span>Order Total (USD)</span>
-                    <span>100</span>
+                    <span>{{ order_total }}</span>
                     
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
                     <span>Delivery fee</span>
-                    <span>10</span>
+                    <span>{{ delivery_cost }}</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
                   <span style="font-weight: bold">Total (USD)</span>
-                  <strong style="">2000</strong>
+                  <strong style="">{{ grand_total }}</strong>
                 </li>
                
               </ul>

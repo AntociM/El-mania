@@ -40,12 +40,12 @@
                     </div>
                 </div>
                 <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 10rem;">
-                    <form action="{% url 'adjust_quantity' cart_item.pk %}" class="form" method="POST">
+                    <form action="{% url 'adjust_quantity' cart_item.item.pk %}" class="form" method="POST">
                         {% csrf_token %}
                         <div class="form-group mb-2">
-                            <label for="quantity_{{ cart_item.pk }}">Quantity</label>
-                            <input class="form-control form-control-sm" type="number" name="quantity_{{ cart_item.pk }}"
-                                id="quantity_{{ cart_item.pk }}" value="{{ cart_item.quantity }}">
+                            <label for="quantity_{{ cart_item.item.pk }}">Quantity</label>
+                            <input class="form-control form-control-sm" type="number" name="quantity_{{ cart_item.item.pk }}"
+                                id="quantity_{{ cart_item.item.pk }}" value="{{ cart_item.quantity }}">
                         </div>
                         <button class="btn btn-outline-secondary btn-sm w-100 mb-2" type="submit">
                             Update cart
@@ -53,7 +53,7 @@
                         </button>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
-                    <form action="{% url 'remove_from_cart' cart_item.pk %}" class="form" method="POST">
+                    <form action="{% url 'remove_from_cart' cart_item.item.pk %}" class="form" method="POST">
                         {% csrf_token %}
                         <button class="btn btn-outline-danger btn-sm  w-100 mb-2" type="submit">
                             Remove
