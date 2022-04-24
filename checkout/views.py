@@ -18,16 +18,22 @@ def checkout(request):
 
     order_form = OrderForm()
 
+
     order_total = 0
     grand_total = 0
     delivery_cost = 0
+    line_item_total = 0
     cart_items = []
     for item in items:
+
+        # Calculate item's subtotal
+        line_item_total = item.price * Decimal(bag_items[f'{item.pk}'])
         # Calculate cart's subtotal
         order_total += item.price * Decimal(bag_items[f'{item.pk}'])
         cart_items.append({
             'item': item,
-            'quantity': bag_items[f'{item.pk}']
+            'quantity': bag_items[f'{item.pk}'],
+            'subtotal': line_item_total
         })
 
     if order_total < settings.FREE_DELIVERY_THRESHOLD:
