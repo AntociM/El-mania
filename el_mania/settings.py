@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'django_bootstrap5',
+    'customer',
 ]
 
 MIDDLEWARE = [
@@ -91,6 +92,8 @@ AUTHENTICATION_BACKENDS = [
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
+
+AUTH_USER_MODEL = 'customer.UserProfile'
 
 SITE_ID = 1
 
