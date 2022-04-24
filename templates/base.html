@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Buy electronics online at the best prices in Sweden. El-mania offers a huge range of electronic products such as TVs, laptops, cameras, video games, and much more.">
+  <meta name="description"
+    content="Buy electronics online at the best prices in Sweden. El-mania offers a huge range of electronic products such as TVs, laptops, cameras, video games, and much more.">
   <meta name="keywords" content="electronics, appliances, sweden, stockholm, homedelivery">
   <meta name="theme-color" content="">
 
@@ -16,7 +17,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../static/css/style.css">
-  
+
   {% block extra_js %}
   {% endblock %}
 
@@ -38,9 +39,8 @@
         <div class="col-lg-7 d-none d-sm-block justify-content-center">
           <form method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
-              <input class="form-control border border-black rounded-0" type="text" name="q" value="{% if request.GET.q %}{{ request.GET.q }}{% endif %}"
-
-                placeholder="Search by name or category">
+              <input class="form-control border border-black rounded-0" type="text" name="q"
+                value="{% if request.GET.q %}{{ request.GET.q }}{% endif %}" placeholder="Search by name or category">
               <div class="input-group-append">
                 <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                   <i class="bi bi-search"></i>
@@ -49,7 +49,8 @@
             </div>
           </form>
         </div>
-        <div class="col-lg-3 d-flex justify-content-end p-0">
+
+        <!-- <div class="col-lg-3 d-flex justify-content-end p-0">
           <ul class="list-group list-group-flush list-group-horizontal align-items-end text-center text-lg-right my-0">
             <li class="list-group-item d-none d-sm-block bg-transparent dropdown">
               <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
@@ -86,7 +87,37 @@
               </a>
             </li>
           </ul>
-        </div>
+        </div> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse col-lg-3 d-flex justify-content-end p-0" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link" href="">My Account</a>
+                </li>
+                {% if user.is_superuser %}
+                <li class="nav-item">
+                  <a class="nav-link" href="">Admin</a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'account_logout' %}">Sign out</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'account_login' %}">Sign in</a>
+                </li>
+                {% endif %}
+                <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+                  <a role="button" class="btn btn-primary position-relative" href="{% url 'cart_view' %}">
+                    <i class="bi bi-cart4 fs-4"></i>
+                  </a>
+              </ul>
+
+            </div>
+          </div>
+        </nav>
       </div>
     </div>
 
@@ -109,20 +140,29 @@
         <span>Get connected with us on social networks:</span>
       </div>
       <div>
-        <a href="https://www.facebook.com/" class="me-4 text-reset" >
-          <img class="media-icons" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAASNJREFUOE/Nkj9LxjAQxu9ShwoV/+CmH8FVB1c3l+JSuLgI7s6OfUFBBAc/QXFIU/IlOorvorgWJ5EOooKKk8lJwUqRpnQSbwu5++V5nguCp8qynKnreh8RtxFxhZlDAJhl5h0p5W07hj6A1vocAA5+3zPzppTychBgjAmste8A0Lza1isAWADYIqLrQUCWZQthGL50hi+IaK9Pba8FpdSiEOK5MzAhonQUoCiKQ+fcGiLu/shEvGHm6ff5iIjuvRaUUlMhxLov3CAIVpMkefACtNZXALDRB3DOfVRVNZemqRsMMc/zZUR8bJuY+YSZT6Mo+ozj+K0L7w3RGLNkrX3qNKZENBkVYtP0LwHj/4HHwt8D5q21dwAgGkXMfCylPOvbwhfxbZARswXDhQAAAABJRU5ErkJggg==" alt="">
+        <a href="https://www.facebook.com/" class="me-4 text-reset">
+          <img class="media-icons"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAASNJREFUOE/Nkj9LxjAQxu9ShwoV/+CmH8FVB1c3l+JSuLgI7s6OfUFBBAc/QXFIU/IlOorvorgWJ5EOooKKk8lJwUqRpnQSbwu5++V5nguCp8qynKnreh8RtxFxhZlDAJhl5h0p5W07hj6A1vocAA5+3zPzppTychBgjAmste8A0Lza1isAWADYIqLrQUCWZQthGL50hi+IaK9Pba8FpdSiEOK5MzAhonQUoCiKQ+fcGiLu/shEvGHm6ff5iIjuvRaUUlMhxLov3CAIVpMkefACtNZXALDRB3DOfVRVNZemqRsMMc/zZUR8bJuY+YSZT6Mo+ozj+K0L7w3RGLNkrX3qNKZENBkVYtP0LwHj/4HHwt8D5q21dwAgGkXMfCylPOvbwhfxbZARswXDhQAAAABJRU5ErkJggg=="
+            alt="">
         </a>
         <a href="https://www.twitter.com/" class="me-4 text-reset">
-          <img class="media-icons" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAb5JREFUOE+lkr+LE0Ecxd+buR9axICNWF4TCwUFBeE8sRGEaHHVspshi7Gw8Q/QzhTiFVYWV6QQFJLNsJVaRFDOYKUgiGgjFl55KWwSEE3YzFcm3B1RE27BKYYZvvM+35k3j/jPwTz6NE2Xsiw7q7U+RPJdEAQ/93TsdDrL/X7/ShRFz2fBrLWnRMTXVnbrOyJyT0QuaK03mCTJGsnXAG5GUfR4GiIitNZ+BnDyb7hz7qVSapPtdvscgPf+AMmnAG6HYfjV79M0PTEej7/Muplzbms0Gl1jt9td6PV6H6e6OBF5o5TaEpEhgAdzAFeNMR22Wq0zAO6QDEjmMtUDRWS1Uqm89R4cA7BN8nCeH9kVj7IsOxrH8Y9JR2tt7Jx7RHIhD8S/3xhzeeKbn/xXDgaDhyJyA8DiQRCS62EYPtsH+EWSJE9IxgeJnXMvjDHl/SDtLRqNxmKhULgF4DrJ03NA37IsW6tWqzv/AJrN5hGlVETyLoDjMwCftNbrQRBsT9d8kM4DuC8il0jqGcLvADaLxeJGuVz2ufhjTEys1+uqVCpdBLCqlPLdl0TEZ/7DcDh8VavVfs3zJndw5gF+AxSGr10iAjCnAAAAAElFTkSuQmCC">
+          <img class="media-icons"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAb5JREFUOE+lkr+LE0Ecxd+buR9axICNWF4TCwUFBeE8sRGEaHHVspshi7Gw8Q/QzhTiFVYWV6QQFJLNsJVaRFDOYKUgiGgjFl55KWwSEE3YzFcm3B1RE27BKYYZvvM+35k3j/jPwTz6NE2Xsiw7q7U+RPJdEAQ/93TsdDrL/X7/ShRFz2fBrLWnRMTXVnbrOyJyT0QuaK03mCTJGsnXAG5GUfR4GiIitNZ+BnDyb7hz7qVSapPtdvscgPf+AMmnAG6HYfjV79M0PTEej7/Muplzbms0Gl1jt9td6PV6H6e6OBF5o5TaEpEhgAdzAFeNMR22Wq0zAO6QDEjmMtUDRWS1Uqm89R4cA7BN8nCeH9kVj7IsOxrH8Y9JR2tt7Jx7RHIhD8S/3xhzeeKbn/xXDgaDhyJyA8DiQRCS62EYPtsH+EWSJE9IxgeJnXMvjDHl/SDtLRqNxmKhULgF4DrJ03NA37IsW6tWqzv/AJrN5hGlVETyLoDjMwCftNbrQRBsT9d8kM4DuC8il0jqGcLvADaLxeJGuVz2ufhjTEys1+uqVCpdBLCqlPLdl0TEZ/7DcDh8VavVfs3zJndw5gF+AxSGr10iAjCnAAAAAElFTkSuQmCC">
         </a>
         <a href="" class="me-4 text-reset">
-         <img  class="media-icons" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAf9JREFUOE+NkzFoFEEUhv83kxxy4jU2V0QCYogB7dPJpZKgGATX3Z1CC5uUFmIlHLEzFtp5Ngre7s5tCoMWIhKuj9iICHKg2OihQsAisdh9T+bYO/bkTp1u3vvfN2/eP0OYsDqdTkNEzgI4xcwVAF+IaJeZY2PMXrmEyps0TRfzPH8MYHkSmJn3tda3lVKbnuflTjMCuFOZeRtAbVLxMCYi30Vk2RjzcQSIomheKfUGwNFS8S6AlyJyICJLSqmLIrKvlFrxff/dUDfoII7jNhGZIshEdM33/UflTtrt9lylUjnsed6HsRm4hFLqExHNuISI3AzD8M7frjEGsNZeEpG0CP7UWtc9zzsYiqIoWtVaz00BvqUkSW4B2HACZn5hjFkti5Mk2QGwMgWQjgEAPAuC4ML/Aohom+I4vkJEznu3vmqtjw09doEkSa4DOFmy8QwRLQ4sJLpHhYXOU1WI1oMgeDCp5W63O9Pv998DWCgAwcBGa+1TEVkrXHADvByG4fMypNVqzdZqtfsA1ov4j2q1enwAcE84y7LXRHSkVPQKwA4R7eV5vqCUcgecKOVvBEFwd/SUrbXnRGQLwKF/vQFmftLr9a42m00e+0zWWveJHorI6SmQXwA26/X6RqPRyAZz+FOYpqnOsuw8ETk7l5h5Vin1zV2HmbeMMZ/LNb8BeHLPfaeFW2sAAAAASUVORK5CYII=" alt="">
+          <img class="media-icons"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAf9JREFUOE+NkzFoFEEUhv83kxxy4jU2V0QCYogB7dPJpZKgGATX3Z1CC5uUFmIlHLEzFtp5Ngre7s5tCoMWIhKuj9iICHKg2OihQsAisdh9T+bYO/bkTp1u3vvfN2/eP0OYsDqdTkNEzgI4xcwVAF+IaJeZY2PMXrmEyps0TRfzPH8MYHkSmJn3tda3lVKbnuflTjMCuFOZeRtAbVLxMCYi30Vk2RjzcQSIomheKfUGwNFS8S6AlyJyICJLSqmLIrKvlFrxff/dUDfoII7jNhGZIshEdM33/UflTtrt9lylUjnsed6HsRm4hFLqExHNuISI3AzD8M7frjEGsNZeEpG0CP7UWtc9zzsYiqIoWtVaz00BvqUkSW4B2HACZn5hjFkti5Mk2QGwMgWQjgEAPAuC4ML/Aohom+I4vkJEznu3vmqtjw09doEkSa4DOFmy8QwRLQ4sJLpHhYXOU1WI1oMgeDCp5W63O9Pv998DWCgAwcBGa+1TEVkrXHADvByG4fMypNVqzdZqtfsA1ov4j2q1enwAcE84y7LXRHSkVPQKwA4R7eV5vqCUcgecKOVvBEFwd/SUrbXnRGQLwKF/vQFmftLr9a42m00e+0zWWveJHorI6SmQXwA26/X6RqPRyAZz+FOYpqnOsuw8ETk7l5h5Vin1zV2HmbeMMZ/LNb8BeHLPfaeFW2sAAAAASUVORK5CYII="
+            alt="">
         </a>
         <a href="https://www.instagram.com/" class="me-4 text-reset">
-          <img class="media-icons" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAhRJREFUOE+Fkz1ok0EYx5//JRoVXETq5mD9GASRIiIFRRAEdVIwuXuvWEUkxaWuIu7qIIJ00FJKg++9x+kiQemgBBGcBD/q5qRLJrEkQpDk7pELqbzUmD7DHTwfP55P0EBqtdpYsVi8SkSHiGjnmj7/A2gT0ecQwqLW+lu0IT5pmp4FYIjokxDiNTP/HgZg5u3MfAzAJBFdTpLEwTm313v/kYhmlVILwwLX66y1F5m5xsxHYK29S0T7pZTnNwo2xtxg5gmt9SVjzBMAq8iy7DkRvVNKRVBfGo1GsdlszjLzGQCbYlmdTudeqVSaBDCulJo3xlQBTMEYs0xEy0mSPIjBzBx1LwDsAfAQQNd7XxVCdFut1vFqtdqNfsaYaQAz/wCyLIulzIUQDmqtf0Zn59zWXq/3QQhxX0r5eCQg9oSZx5RSV/I9ybLsDhHtWtOPyuA2EZ1USp3KA9I0TQF8T5Lk5sgMnHO7vfcrAG5VKpU5AGyMUUS0IIQ4KqX8MhIQjdba0yGEJQBFZu4R0WYhxIyU8ulaVn9LSNP0pRDiTX6M0aler29rt9sTEVIoFN6Xy+Vf63pyjZmn+ovEzPuUUhc2WqS83Vo7z3HmzrkDgxFN51McBRvczjMAJ/rHZIwpA1giolfM/FYIsfqfY9oSg5j5HIDrUsrFPmDQuPEQQlzPwwB2DAN4738UCoUV7/0jrfXX6PMHYngbUTbCp6gAAAAASUVORK5CYII=" alt="">
+          <img class="media-icons"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAhRJREFUOE+Fkz1ok0EYx5//JRoVXETq5mD9GASRIiIFRRAEdVIwuXuvWEUkxaWuIu7qIIJ00FJKg++9x+kiQemgBBGcBD/q5qRLJrEkQpDk7pELqbzUmD7DHTwfP55P0EBqtdpYsVi8SkSHiGjnmj7/A2gT0ecQwqLW+lu0IT5pmp4FYIjokxDiNTP/HgZg5u3MfAzAJBFdTpLEwTm313v/kYhmlVILwwLX66y1F5m5xsxHYK29S0T7pZTnNwo2xtxg5gmt9SVjzBMAq8iy7DkRvVNKRVBfGo1GsdlszjLzGQCbYlmdTudeqVSaBDCulJo3xlQBTMEYs0xEy0mSPIjBzBx1LwDsAfAQQNd7XxVCdFut1vFqtdqNfsaYaQAz/wCyLIulzIUQDmqtf0Zn59zWXq/3QQhxX0r5eCQg9oSZx5RSV/I9ybLsDhHtWtOPyuA2EZ1USp3KA9I0TQF8T5Lk5sgMnHO7vfcrAG5VKpU5AGyMUUS0IIQ4KqX8MhIQjdba0yGEJQBFZu4R0WYhxIyU8ulaVn9LSNP0pRDiTX6M0aler29rt9sTEVIoFN6Xy+Vf63pyjZmn+ovEzPuUUhc2WqS83Vo7z3HmzrkDgxFN51McBRvczjMAJ/rHZIwpA1giolfM/FYIsfqfY9oSg5j5HIDrUsrFPmDQuPEQQlzPwwB2DAN4738UCoUV7/0jrfXX6PMHYngbUTbCp6gAAAAASUVORK5CYII="
+            alt="">
         </a>
         <a href="https://www.linkedin.com/" class="me-4 text-reset">
-          <img class="media-icons" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAVVJREFUOE/dkT9LA0EQxd+wRRr/lBZWNpZKxMIPEAsRG4nH7kYstAsi6ewl2FtZ2Whye8RcLYqIoIWCsbBQQbAxjZ9AvMvtyIUNSECSa51uhnm/mXlDxphlIqoy84sQYsvzvC9kCDLGvAOYSjVE5EkpTzPokQIuACwCsMyc11o/ZQI0Go3xTqezQkSvSqmHLOLu1lkF/f0UhmEljuOJXC73nSTJWbFYvA+CYI2ZC6751lr7DGCfiOaJKAZwBWBXKfWRAh6jKMo7E8tSykNjzAGAHVdrWWuniWi0b3pbCDE7EOBEqcFvACaJaKQHYuY9ajabrTiO5/7agJkjIioopW5qtdqYEOIcwIKD3A0DuNRap2/uhjFmE8CRS9vDAOpa6/UeIAiCVWYOXf45EGCtPSmVShv/GRCG4XUURTPujRUp5bHv+1UiKru7faXU9i8Plpi53jPxBxZxDFSyRpH2AAAAAElFTkSuQmCC" alt="">
+          <img class="media-icons"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAVVJREFUOE/dkT9LA0EQxd+wRRr/lBZWNpZKxMIPEAsRG4nH7kYstAsi6ewl2FtZ2Whye8RcLYqIoIWCsbBQQbAxjZ9AvMvtyIUNSECSa51uhnm/mXlDxphlIqoy84sQYsvzvC9kCDLGvAOYSjVE5EkpTzPokQIuACwCsMyc11o/ZQI0Go3xTqezQkSvSqmHLOLu1lkF/f0UhmEljuOJXC73nSTJWbFYvA+CYI2ZC6751lr7DGCfiOaJKAZwBWBXKfWRAh6jKMo7E8tSykNjzAGAHVdrWWuniWi0b3pbCDE7EOBEqcFvACaJaKQHYuY9ajabrTiO5/7agJkjIioopW5qtdqYEOIcwIKD3A0DuNRap2/uhjFmE8CRS9vDAOpa6/UeIAiCVWYOXf45EGCtPSmVShv/GRCG4XUURTPujRUp5bHv+1UiKru7faXU9i8Plpi53jPxBxZxDFSyRpH2AAAAAElFTkSuQmCC"
+            alt="">
         </a>
       </div>
     </section>
