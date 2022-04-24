@@ -50,73 +50,44 @@
           </form>
         </div>
 
-        <!-- <div class="col-lg-3 d-flex justify-content-end p-0">
-          <ul class="list-group list-group-flush list-group-horizontal align-items-end text-center text-lg-right my-0">
-            <li class="list-group-item d-none d-sm-block bg-transparent dropdown">
-              <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                <div class="text-center">
-                  <i class="bi bi-person fs-4"></i>
-                  <p class="my-0">My Account</p>
-                </div>
-              </a>
-              <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
-                <a href="" class="dropdown-item">Admin</a>
-                {% endif %}
-                <a href="" class="dropdown-item">My Profile</a>
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                {% endif %}
-              </div>
-            </li>
-            <li class="list-group-item d-none d-sm-block bg-transparent border-0">
-              <a role="button" class="btn btn-primary position-relative" href="{% url 'cart_view' %}">
-                <i class="bi bi-cart4 fs-4"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  {% if request.session.bag.product_count %}
-                  {{ request.session.bag.product_count }}
-                  {% else %}
-                  0
-                  {% endif %}
-                  <span class="visually-hidden">unread messages</span>
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div> -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <div class="collapse navbar-collapse col-lg-3 d-flex justify-content-end p-0" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                  <a class="nav-link" href="">My Account</a>
-                </li>
-                {% if user.is_superuser %}
-                <li class="nav-item">
-                  <a class="nav-link" href="">Admin</a>
-                </li>
-                {% endif %}
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_logout' %}">Sign out</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_login' %}">Sign in</a>
-                </li>
-                {% endif %}
-                <li class="list-group-item d-none d-sm-block bg-transparent border-0">
-                  <a role="button" class="btn btn-primary position-relative" href="{% url 'cart_view' %}">
-                    <i class="bi bi-cart4 fs-4"></i>
-                  </a>
-              </ul>
+        <nav class=" col-lg-3  justify-content-lg-between navbar navbar-expand-lg navbar-light bg-light">
+          <!-- <div class=" col-lg-3"> -->
+          <div class="collapse navbar-collapse  p-0" id="navbarSupportedContent">
+            <ul class="navbar-nav d-flex me-auto mb-2 mb-lg-0">
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href=""><i class="bi bi-person"></i></a>
+              </li>
+              {% if user.is_superuser %}
+              <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+                <a class="nav-link" href="">Admin</a>
+              </li>
+              {% endif %}
+              <li class="nav-item">
+                <a role="button" class="nav-link btn btn-primary position-relative" href="{% url 'account_logout' %}"><i
+                    class="bi bi-box-arrow-right"></i></a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}"><i class="bi bi-box-arrow-left"></i></a>
+              </li>
+              {% endif %}
+              <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+                <a role="button" class="btn btn-primary position-relative" href="{% url 'cart_view' %}">
+                  <i class="bi bi-cart4 fs-4"></i>
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {% if request.session.bag.product_count %}
+                    {{ request.session.bag.product_count }}
+                    {% else %}
+                    0
+                    {% endif %}
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </a>
+            </ul>
 
-            </div>
           </div>
+          <!-- </div> -->
         </nav>
       </div>
     </div>
