@@ -73,17 +73,16 @@
               </div>
             </li>
             <li class="list-group-item d-none d-sm-block bg-transparent border-0">
-              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'cart_view' %}">
-                <div class="text-center">
-                  <i class="bi bi-cart4 fs-4"></i>
-                  <p class="my-0">
-                    {% if grand_total %}
-                    ${{ grand_total|floatformat:2 }}
-                    {% else %}
-                    $0.00
-                    {% endif %}
-                  </p>
-                </div>
+              <a role="button" class="btn btn-primary position-relative" href="{% url 'cart_view' %}">
+                <i class="bi bi-cart4 fs-4"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {% if request.session.bag.product_count %}
+                  {{ request.session.bag.product_count }}
+                  {% else %}
+                  0
+                  {% endif %}
+                  <span class="visually-hidden">unread messages</span>
+                </span>
               </a>
             </li>
           </ul>

@@ -4,11 +4,16 @@ from django.contrib import messages
 from store.models import Item
 from datetime import datetime
 from decimal import Decimal
+from django.conf import settings
+
 
 # Create your views here.
 
 def cart_view(request):
     """ A view that renders the shopping cart contents page """
+    if not request.session.session_key:
+        request.session.create()
+    
     bag = request.session.get('bag', {})
     bag_items = bag.get('items', {})
     items = Item.objects.filter(pk__in=bag_items.keys())
@@ -34,6 +39,9 @@ def cart_view(request):
 
 
 def add_to_cart(request, item_id):
+    if not request.session.session_key:
+        request.session.create()
+
     # Retrive product
     product = get_object_or_404(Item, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
@@ -50,11 +58,15 @@ def add_to_cart(request, item_id):
         bag_items[item_id] = 1
         messages.success(request, f'Added "{product.name}" to your bag')
         
+  
     bag['items'] = bag_items
-    request.session['bag'] = bag
+    request.session['bag'] = update_bag(bag)
     return redirect(redirect_url)
 
 def adjust_quantity(request, item_id):
+    if not request.session.session_key:
+        request.session.create()
+
     bag = request.session.get('bag', {})
     bag_items = bag.get('items', {})
     product = get_object_or_404(Item, pk=item_id)
@@ -71,7 +83,7 @@ def adjust_quantity(request, item_id):
         messages.error(request, f'Quantity for product "{product.name}" could not be updated and it cannot be found in the shopping bag.')
 
     bag['items'] = bag_items
-    request.session['bag'] = bag
+    request.session['bag'] = update_bag(bag)
     return redirect(redirect_url)
 
 def remove_from_cart(request, item_id):
@@ -85,6 +97,37 @@ def remove_from_cart(request, item_id):
         pass
     
     bag['items'] = bag_items
-    request.session['bag'] = bag
+    request.session['bag'] = update_bag(bag)
     return redirect(redirect_url)
+
+
+# Returns an updated bag
+def update_bag(current_bag):
+    # if not request.session.session_key:
+    #     request.session.create()
+
+    bag_items = current_bag.get('items', {})
+    items = Item.objects.filter(pk__in=bag_items.keys())
+
+    # order_total = 0
+    # grand_total = 0
+    # delivery_cost = 0
+    product_count = 0
+
+    for item in items:
+        # order_total += item.price * Decimal(bag_items[f'{item.pk}'])
+        product_count += int(bag_items[f'{item.pk}'])
+
+    # if order_total < settings.FREE_DELIVERY_THRESHOLD:
+    #     delivery_cost = settings.DELIVERY_COST
+    # grand_total = order_total + delivery_cost
+    
+    # current_bag['order_total'] = order_total
+    # current_bag['grand_total'] = grand_total
+    # current_bag['delivery_cost'] = delivery_cost
+    current_bag['product_count'] = product_count
+
+    return current_bag
+
+
 
