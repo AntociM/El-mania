@@ -5,7 +5,7 @@ data = json.load(f)
 data_filtered = []
 
 
-for product in data:
+for product in data[0:4000]:
     # Create product dict
     product_dict = {}
     fields = {}
@@ -24,7 +24,7 @@ for product in data:
 
     data_filtered.append(product_dict)
 
-with open('products.json', 'w') as outfile:
+with open('products_4000.json', 'w') as outfile:
     json.dump(data_filtered, outfile)
 
 
