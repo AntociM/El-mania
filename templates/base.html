@@ -50,44 +50,46 @@
           </form>
         </div>
 
-        <nav class=" col-lg-3  justify-content-lg-between navbar navbar-expand-lg navbar-light bg-light">
-          <!-- <div class=" col-lg-3"> -->
-          <div class="collapse navbar-collapse  p-0" id="navbarSupportedContent">
-            <ul class="navbar-nav d-flex me-auto mb-2 mb-lg-0">
-              {% if user.is_authenticated %}
-              <li class="nav-item">
-                <a class="nav-link" href=""><i class="bi bi-person"></i></a>
-              </li>
-              {% if user.is_superuser %}
-              <li class="list-group-item d-none d-sm-block bg-transparent border-0">
-                <a class="nav-link" href="">Admin</a>
-              </li>
-              {% endif %}
-              <li class="nav-item">
-                <a role="button" class="nav-link btn btn-primary position-relative" href="{% url 'account_logout' %}"><i
-                    class="bi bi-box-arrow-right"></i></a>
-              </li>
-              {% else %}
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_login' %}"><i class="bi bi-box-arrow-left"></i></a>
-              </li>
-              {% endif %}
-              <li class="list-group-item d-none d-sm-block bg-transparent border-0">
-                <a role="button" class="btn btn-primary position-relative" href="{% url 'cart_view' %}">
-                  <i class="bi bi-cart4 fs-4"></i>
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    {% if request.session.bag.product_count %}
-                    {{ request.session.bag.product_count }}
-                    {% else %}
-                    0
-                    {% endif %}
-                    <span class="visually-hidden">unread messages</span>
-                  </span>
-                </a>
-            </ul>
-
-          </div>
-          <!-- </div> -->
+        <nav class=" col-lg-3 justify-content-lg-between bg-light">
+          <ul class="list-group justify-content-lg-end d-flex flex-row me-auto">
+            {% if user.is_authenticated %}
+            <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+              <a class="btn btn-primary position-relative" href="">
+                <i class="bi bi-person fs-6"> | Profile</i>
+              </a>
+            </li>
+            {% if user.is_superuser %}
+            <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+              <a class="btn btn-primary position-relative" href="">
+                <i class="bi bi-person fs-6"> | Admin</i>
+              </a>
+            </li>
+            {% endif %}
+            <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+              <a role="button" class="btn btn-primary position-relative" href="{% url 'account_logout' %}">
+                <i class="bi bi-box-arrow-left fs-6"> | Logout</i>
+              </a>
+            </li>
+            {% else %}
+            <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+              <a role="button" class="btn btn-primary position-relative" href="{% url 'account_login' %}">
+              <i class="bi bi-box-arrow-right fs-6">| Login</i>
+            </a>
+            </li>
+            {% endif %}
+            <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+              <a role="button" class="btn btn-primary position-relative" href="{% url 'cart_view' %}">
+                <i class="bi bi-cart4 fs-6"> | Cart</i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {% if request.session.bag.product_count %}
+                  {{ request.session.bag.product_count }}
+                  {% else %}
+                  0
+                  {% endif %}
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </a>
+          </ul>
         </nav>
       </div>
     </div>
