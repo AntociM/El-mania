@@ -15,15 +15,19 @@
     </div>
   </div>
 
+  <!--Order Form-->
   <div class="row">
-    <form action="/url/to/submit/" method="post" class="form">
-      {% csrf_token %}
-      {% bootstrap_form order_form layout='floating'%}
-    </form>
+    <div class="col col-lg-8">
+      <form action="/url/to/submit/" method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form order_form layout='floating'%}
+      </form>
+    </div>
+
 
     <!--Order Summary-->
-    <div class="row">
-      <div class="col-md-4 order-md-2 mb-4">
+    <div class="col col-lg-4">
+      <div class="">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-muted">Your cart</span>
           <span class="badge badge-secondary badge-pill">{{request.session.bag.product_count}}</span>
@@ -55,12 +59,17 @@
         </ul>
       </div>
 
-      <!--Payment-->
-
+    </div>
+    
+    <!--Payment-->
+    <div class="d-grid gap-2 col-6 d-md-block mx-auto">
       <form action="{% url 'create-checkout-session' %}" method="GET">
-        <button id="submitBtn" type="submit">Checkout</button>
+        <button class="btn btn-primary btn-lg" id="submitBtn" type="submit"><i class="bi bi-credit-card-2-back"></i>
+          Payment</button>
       </form>
     </div>
+
   </div>
 </div>
+
 {% endblock %}
