@@ -8,6 +8,8 @@ from django.http.response import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import stripe
 
+import base64
+
 
 # Create your views here.
 
@@ -66,35 +68,30 @@ def stripe_config(request):
 def create_checkout_session(request):
     if request.method == 'GET':
         stripe.api_key = settings.STRIPE_SECRET_KEY
+
+        bag = request.session.get('bag', {})
+        bag_items = bag.get('items', {})
+        items = Item.objects.filter(pk__in=bag_items.keys())
+        cart_items = []
+        
+        for item in items:
+            cart_items.append({
+                'name': f'{item.name}',
+                'quantity': int(bag_items[f'{item.pk}']),
+                'currency': 'usd',
+                'amount': f'{int(item.price * 100)}',
+                'images': [f'{item.image}']
+            })
+
+        print(cart_items)
+
         try:
             checkout_session = stripe.checkout.Session.create(
                 success_url=settings.BASE_URL + 'checkout/success?session_id={CHECKOUT_SESSION_ID}',
                 cancel_url=settings.BASE_URL + 'checkout/cancelled/',
                 payment_method_types=['card'],
                 mode='payment',
-                line_items=[
-                    {
-                        'name': 'T-shirt',
-                        'quantity': 1,
-                        'currency': 'usd',
-                        'amount': '2000',
-                        'images': ['https://cdn-demo.algolia.com/bestbuy/9131042_rb.jpg']
-                    },
-                    {
-                        'name': 'T-shirt2',
-                        'quantity': 1,
-                        'currency': 'usd',
-                        'amount': '2000',
-                        'images': ['https://cdn-demo.algolia.com/bestbuy/9131042_rb.jpg']
-                    },
-                    {
-                        'name': 'T-shirt3',
-                        'quantity': 1,
-                        'currency': 'usd',
-                        'amount': '2000',
-                        'images': ['https://cdn-demo.algolia.com/bestbuy/9131042_rb.jpg']
-                    }
-                ]
+                line_items=cart_items
             )
             return redirect(checkout_session.url)
         except Exception as e:
