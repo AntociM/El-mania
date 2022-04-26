@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col">
       <hr>
-      <h2 class="logo-font mb-4">Checkout</h2>
+      <h2 class="logo-font mb-4">Shipping Address</h2>
       <hr>
     </div>
   </div>
@@ -18,9 +18,13 @@
   <!--Order Form-->
   <div class="row">
     <div class="col col-lg-8">
-      <form action="/url/to/submit/" method="post" class="form">
+      <form action="{% url 'create-checkout-session' %}" method="GET" class="form">
         {% csrf_token %}
         {% bootstrap_form order_form layout='floating'%}
+        <button class="btn btn-primary btn-lg" id="submitBtn" type="submit">
+          <i class="bi bi-credit-card-2-back"> Payment</i>
+        </button>
+        <input type="hidden" name="redirect_url" value="{{ request.path }}">
       </form>
     </div>
 
@@ -42,16 +46,16 @@
             <span class="text-muted">{{ cart_item.subtotal }} </span>
           </li>
           {% endfor %}
-          <li class="list-group-item d-flex justify-content-between">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
             <span>Order Total (USD)</span>
             <span>{{ order_total }}</span>
 
           </li>
-          <li class="list-group-item d-flex justify-content-between">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
             <span>Delivery fee</span>
             <span>{{ delivery_cost }}</span>
           </li>
-          <li class="list-group-item d-flex justify-content-between">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
             <span style="font-weight: bold">Total (USD)</span>
             <strong style="">{{ grand_total }}</strong>
           </li>
@@ -62,12 +66,12 @@
     </div>
     
     <!--Payment-->
-    <div class="d-grid gap-2 col-6 d-md-block mx-auto">
+    <!-- <div class="d-grid gap-2 col-6 d-md-block mx-auto">
       <form action="{% url 'create-checkout-session' %}" method="GET">
         <button class="btn btn-primary btn-lg" id="submitBtn" type="submit"><i class="bi bi-credit-card-2-back"></i>
           Payment</button>
       </form>
-    </div>
+    </div> -->
 
   </div>
 </div>

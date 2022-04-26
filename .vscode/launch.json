@@ -9,7 +9,7 @@
     "program": "${workspaceFolder}/manage.py",
     "args": [
       "runserver",
-      "8081"
+      "8000"
     ],
     "django": true
   }, ]

@@ -10,9 +10,9 @@ from store.models import Item
 # Create your models here.
 
 class Order(models.Model):
-    order_number = models.CharField(max_length=30, null=False, editable=False)
-    user_id = models.IntegerField()
-    payment_id = models.IntegerField()
+    order_number = models.CharField(max_length=40, null=False, editable=False, primary_key = True)
+    user_id = models.IntegerField(null=True)
+    payment_id = models.IntegerField(null=True)
     full_name = models.CharField(max_length=254, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=12, null=False, blank=False)
@@ -22,7 +22,7 @@ class Order(models.Model):
     address = models.CharField(max_length=100, null=False, blank=False)
     county = models.CharField(max_length=80, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    modified_at = models.DateTimeField()
+    modified_at = models.DateTimeField(auto_now_add=True)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     delivery_cost = models.DecimalField(max_digits=4, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
@@ -38,13 +38,14 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        self.order_total = self.orderitems.aggregate(Sum('orderitem_total'))['orderitem_total__sum']
-        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = settings.DELIVERY_COST
-        else:
-            self.delivery_cost = 0
-        self.grand_total = self.order_total + self.delivery_cost
-        self.save()
+        # self.order_total = self.orderitems.aggregate(Sum('orderitem_total'))['orderitem_total__sum']
+        # if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
+        #     self.delivery_cost = settings.DELIVERY_COST
+        # else:
+        #     self.delivery_cost = 0
+        # self.grand_total = self.order_total + self.delivery_cost
+        # self.save()
+        pass
 
     def save(self, *args, **kwargs):
         """
@@ -52,7 +53,7 @@ class Order(models.Model):
         if it hasn't been set already.
         """
         if not self.order_number:
-            self.order_number = self._generate_order_number()
+            self.order_number = self.generate_order_number()
         super().save(*args, **kwargs)
 
     def __str__(self):
