@@ -4,6 +4,8 @@ from django.utils import timezone
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.models import BaseUserManager, PermissionsMixin
 
+from django_countries.fields import CountryField
+
 # Create your models here.
 
 class UserManager(BaseUserManager):
@@ -38,9 +40,6 @@ class UserManager(BaseUserManager):
 
 class UserProfile(AbstractUser):
     email = models.EmailField(max_length=254, unique=True)
-    telephone = models.CharField(max_length=12, null=True)
-    address = models.CharField(max_length=100, null=True)
-
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
@@ -49,3 +48,18 @@ class UserProfile(AbstractUser):
 
     def get_absolute_url(self):
         return "/users/%i/" % (self.pk)
+
+
+class UserContact(models.Model):
+    """
+    A user profile model for maintaining default
+    delivery information and order history
+    """
+    user = models.OneToOneField(UserProfile(), on_delete=models.CASCADE)
+    phone_number = models.CharField(max_length=20, null=True, blank=True)
+    address = models.CharField(max_length=80, null=True, blank=True)
+    city = models.CharField(max_length=40, null=True, blank=True)
+    county = models.CharField(max_length=80, null=True, blank=True)
+    postcode = models.CharField(max_length=20, null=True, blank=True)
+    country = CountryField(null=True, blank=True)
+

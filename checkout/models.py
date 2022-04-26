@@ -7,6 +7,9 @@ from django.conf import settings
 from django_countries.fields import CountryField
 from store.models import Item
 
+from model_utils.fields import StatusField
+from model_utils import Choices
+
 
 # Create your models here.
 
@@ -28,6 +31,10 @@ class Order(models.Model):
     delivery_cost = models.DecimalField(max_digits=4, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     notes = models.TextField(null=True, blank=True)
+
+    STATUS = Choices('processing', 'delivered')
+
+    status = StatusField(null=False)
 
     def generate_order_number(self):
         """
