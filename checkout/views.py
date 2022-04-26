@@ -109,6 +109,7 @@ def create_checkout_session(request):
             order.address = form.cleaned_data['address']
             order.county = form.cleaned_data['county']
             order.address = form.cleaned_data['address']
+            order.notes = form.cleaned_data['notes']
             order.order_total=order_total
             order.delivery_cost=delivery_cost
             order.grand_total=grand_total

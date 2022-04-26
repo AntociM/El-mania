@@ -6,7 +6,7 @@ class OrderForm(forms.ModelForm):
         model = Order
         fields = (('full_name', 'email', 'phone_number',
                   'address', 'city', 'postcode',
-                  'county', 'country', ))
+                  'county', 'country', 'notes' ))
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -19,6 +19,7 @@ class OrderForm(forms.ModelForm):
             'city': 'Town or City',
             'address': 'Street address',
             'county': 'County',
+            'notes': 'Notes'
         }
 
         labels = {
@@ -30,14 +31,15 @@ class OrderForm(forms.ModelForm):
             'city': 'Town or City',
             'address': 'Street address',
             'county': 'County',
+            'notes': 'Notes'
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
+        self.fields['notes'].widget.attrs['hight'] = 150
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
             else:
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            # self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = labels[field]
