@@ -54,7 +54,7 @@
           <ul class="list-group justify-content-lg-end d-flex flex-row me-auto">
             {% if user.is_authenticated %}
             <li class="list-group-item d-none d-sm-block bg-transparent border-0">
-              <a class="btn btn-primary position-relative" href="">
+              <a class="btn btn-primary position-relative" href="{% url 'profile' %}">
                 <i class="bi bi-person fs-6"> | Profile</i>
               </a>
             </li>
