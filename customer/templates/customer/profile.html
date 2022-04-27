@@ -98,6 +98,37 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="accordion" id="accordionOrders">
+      {% for order in orders %}
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading{{order.order_number}}">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{order.order_number}}" aria-expanded="true" aria-controls="collapse{{order.order_number}}">
+            <div class="col-4">
+              #{{order.order_number}}
+            </div>
+            <div class="col-4">
+              {{order.status}}
+            </div>
+
+            <div class="col-4">
+              {{order.created_at}}
+            </div>
+          </button>
+        </h2>
+        <div id="collapse{{order.order_number}}" class="accordion-collapse collapse show" aria-labelledby="heading{{order.order_number}}" data-bs-parent="#accordionOrders">
+          <div class="accordion-body">
+            Delivery address: bla bla
+            <hr>
+            Notes: {{order.notes}}
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 {% endblock %}

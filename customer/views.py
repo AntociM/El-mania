@@ -3,15 +3,17 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserContactForm
 from .models import UserContact
+from checkout.models import Order
 
 
 # Create your views here.
 
 @login_required
 def profile(request):
-
     new_user_contact_form = UserContactForm()
+    orders = Order.objects.filter(user_id=request.user.pk)
     registered_contact_forms = []
+
     try:
         user_contact_items = UserContact.objects.filter(user=request.user)
     except UserContact.DoesNotExist:
@@ -38,7 +40,8 @@ def profile(request):
 
     context = {
         'register_contact_form' : new_user_contact_form,
-        'registered_contacts': registered_contact_forms
+        'registered_contacts'   : registered_contact_forms,
+        'orders' : orders
     }
 
     return render(request, "customer/profile.html", context)
