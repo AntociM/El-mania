@@ -55,7 +55,8 @@ class UserContact(models.Model):
     A user profile model for maintaining default
     delivery information and order history
     """
-    user = models.OneToOneField(UserProfile(), on_delete=models.CASCADE)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    name = models.CharField(max_length=80, null=True, blank=True)
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     address = models.CharField(max_length=80, null=True, blank=True)
     city = models.CharField(max_length=40, null=True, blank=True)
