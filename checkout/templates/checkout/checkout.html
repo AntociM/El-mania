@@ -20,7 +20,7 @@
     <div class="col col-lg-8">
       <form action="{% url 'create-checkout-session' %}" method="GET" class="form">
         {% csrf_token %}
-        {% bootstrap_form order_form layout='floating'%}
+        {% bootstrap_form register_contact_form layout='floating'%}
         <button class="btn btn-primary btn-lg w-100 mb-5 mt-3" id="submitBtn" type="submit">
           <i class="bi bi-credit-card-2-back"> Payment</i>
         </button>

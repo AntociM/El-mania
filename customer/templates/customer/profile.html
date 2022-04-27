@@ -15,6 +15,49 @@
     </div>
   </div>
 
+  <div class="row">
+
+    <p>
+      <button class="btn btn-light w-100 shadow " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Register shipping information
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body shadow">
+        <form action="{% url 'register_address' %}" method="POST" class="form">
+          {% csrf_token %}
+          {% bootstrap_form register_contact_form layout='floating'%}
+          <button class="btn btn-primary btn-sm w-100 mb-5 mt-3" type="submit">
+            <i class="bi bi-plus-lg fs-5"></i>
+          </button>
+          <input type="hidden" name="redirect_url" value="{{ request.path }}">
+        </form>
+      </div>
+    </div>
+
+    {% if user_contact_items %}
+      {% for contact_item in user_contact_items %}
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{ contact_item.name }}</h5>
+          <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+          <p class="card-text">{{ contact_item.address }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    {% endif %}
+    <!-- <div class="card shadow-lg p-3 mb-5 bg-white rounded-3" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div> -->
+    
+  </div>
+
 </div>
 
 {% endblock %}
