@@ -186,9 +186,10 @@ DELIVERY_COST = 10
 STRIPE_PUBLISHABLE_KEY = env('STRIPE_PUBLISHABLE_KEY')
 STRIPE_SECRET_KEY = env('STRIPE_SECRET_KEY')
 BASE_URL = env('BASE_URL')
+DEVELOPMENT = env('DEVELOPMENT')
 
 # Django mail
-if 'DEVELOPMENT' in os.environ:
+if DEVELOPMENT == 'True':
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'info@elmania.com'
 else:
@@ -196,7 +197,7 @@ else:
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
     EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
-    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = env('EMAIL_HOST_USER')
 
