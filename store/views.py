@@ -129,5 +129,13 @@ def product_detail(request, item_id):
     return render(request, 'store/product_detail.html', context)
 
 
+def privacy_policy(request):
+    """ A view to return privacy policy page """
+
+    return render(request, 'store/privacy_policy.html')
+
+
+
+
 
 
