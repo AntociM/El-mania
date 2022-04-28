@@ -156,7 +156,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = ''
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
@@ -166,7 +166,7 @@ CLOUDINARY_STORAGE = {
     'CLOUD_NAME': env('CLOUD_NAME'),
     'API_KEY': env('API_KEY'),
     'API_SECRET': env('API_SECRET'),
-    'MEDIA_TAG': 'el-mania',
+    'STATIC_TAG': 'el-mania',
     'SECURE': True
 }
 

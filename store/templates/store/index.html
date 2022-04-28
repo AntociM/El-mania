@@ -2,7 +2,11 @@
 {% load static %}
 
 {% block content %}
-
+<div class="row text-center">
+    <div class="col col-sm-12 col-lg-6 offset-lg-3 p-0 bg-light ">
+        <h4 class="logo-font my-1">Free delivery on orders over $100!</h4>
+    </div>
+</div>
 
 <div class="row col-sm-12 col-lg-6 offset-lg-3 p-0">
     <div id="newsCarousel" class="carousel slide p-0" data-bs-ride="carousel">
@@ -59,28 +63,29 @@
 
 <div class="container h-100 col-sm-12 col-lg-6 offset-lg-3 mt-3">
     <div class="row gy-1">
-            {% for i in discounted_items %}
-            <div class="card text-center col-lg-3">
-                <img src="{{ i.image }}" class=" offers-img-cards card-img-top" alt=""/>
-                <br>
-                <div class="card-body">
-                    <div class="text-center">
-                        <h5 class="card-title">{{i.name }}</h5>
-                    </div>
-                    <div class="d-flex">
-                        <span class="h3">{{  i.price }}</span>
-                        <span class="h2">{{ i.new_price }}</span>
-                    </div>
-                    <div class="d-flex ">
-                        <a class="btn btn-primary btn-sm mt-2" href="{% url 'cart_view' %}" role="button">Add to cart</a>
-                        <a class="btn btn-outline-primary btn-sm mt-2" href="{% url 'product_detail' i.item_id %}" role="button">Details</a>
-                    </div>
-                    <div>
-                        <h3> <span class="badge price-badge">-{{ i.discount }}%</span> </h3>
-                    </div>
+        {% for i in discounted_items %}
+        <div class="card text-center col-lg-3">
+            <img src="{{ i.image }}" class=" offers-img-cards card-img-top" alt="" />
+            <br>
+            <div class="card-body">
+                <div class="text-center">
+                    <h5 class="card-title">{{i.name }}</h5>
+                </div>
+                <div class="d-flex">
+                    <span class="h3">{{  i.price }}</span>
+                    <span class="h2">{{ i.new_price }}</span>
+                </div>
+                <div class="d-flex ">
+                    <a class="btn btn-primary btn-sm mt-2" href="{% url 'cart_view' %}" role="button">Add to cart</a>
+                    <a class="btn btn-outline-primary btn-sm mt-2" href="{% url 'product_detail' i.item_id %}"
+                        role="button">Details</a>
+                </div>
+                <div>
+                    <h3> <span class="badge price-badge">-{{ i.discount }}%</span> </h3>
                 </div>
             </div>
-            {% endfor %}
+        </div>
+        {% endfor %}
     </div>
 </div>
 
