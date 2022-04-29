@@ -78,7 +78,7 @@
       <!--Delete Shipping Info-->
       <form action="{% url 'delete_contact'  registered_contact.item.pk %}" method="POST" class="form">
         {% csrf_token %}
-        <button class="btn btn-danger btn-sm w-100" type="submit">
+        <button class="btn btn-danger btn-sm w-100" onclick="return confirm('Are you sure you want to delete this item?');" type="submit"> 
           Delete
         </button>
         <input type="hidden" name="redirect_url" value="{{ request.path }}">

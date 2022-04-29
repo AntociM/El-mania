@@ -35,6 +35,7 @@ class OrderForm(forms.ModelForm):
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
+        # self.fields['full_name'].widget.attrs['pattern'] = [A-Za-z ]+
         self.fields['notes'].widget.attrs['hight'] = 150
         for field in self.fields:
             if self.fields[field].required:
@@ -43,3 +44,14 @@ class OrderForm(forms.ModelForm):
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].label = labels[field]
+    
+    # def clean_full_name(self):
+    #     # Nume si prenume
+    #     full_name = self.cleaned_data['full_name']
+
+    #     if not all(x.isalpha() or x.isspace() for x in full_name):
+    #         raise forms.ValidationError("Full name must contain more than 6 alphabetical characters.")
+    #     return full_name
+
+    # def clean_email(self):
+    #     return self.cleaned_data['email']
