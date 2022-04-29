@@ -23,6 +23,7 @@ def profile(request):
         registered_form = UserContactForm()
         registered_form.initial = {
             'name' : user_contact_item.name,
+            'email' : user_contact_item.email,
             'phone_number' : user_contact_item.phone_number,
             'address' : user_contact_item.address,
             'city' : user_contact_item.city,
@@ -58,6 +59,7 @@ def register_address(request):
             user_contact = UserContact()
             user_contact.user = request.user
             user_contact.name = form.cleaned_data['name']
+            user_contact.email = form.cleaned_data['email']
             user_contact.phone_number = form.cleaned_data['phone_number']
             user_contact.address = form.cleaned_data['address']
             user_contact.city = form.cleaned_data['city']
@@ -81,6 +83,7 @@ def update_contact(request, contact_id):
         if form.is_valid():
             contact = get_object_or_404(UserContact, pk=contact_id)
 
+            contact.email = form.cleaned_data['email']
             contact.phone_number = form.cleaned_data['phone_number']
             contact.address = form.cleaned_data['address']
             contact.city = form.cleaned_data['city']

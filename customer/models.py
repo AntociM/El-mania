@@ -57,6 +57,7 @@ class UserContact(models.Model):
     """
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     name = models.CharField(max_length=80, null=True, blank=True)
+    email = models.EmailField(max_length=50, blank=False)
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     address = models.CharField(max_length=80, null=True, blank=True)
     city = models.CharField(max_length=40, null=True, blank=True)
