@@ -3,6 +3,7 @@ from django.contrib import messages
 from store.models import Item
 from .forms import OrderForm
 from .models import Order, OrderItem
+from customer.models import UserContact
 from django.conf import settings
 from decimal import Decimal
 from django.http.response import JsonResponse
@@ -18,12 +19,20 @@ def checkout(request):
     bag = request.session.get('bag', {})
     bag_items = bag.get('items', {})
     items = Item.objects.filter(pk__in=bag_items.keys())
+    contact_items=[]
+
+     
     if not items:
         messages.error(request, "There's nothing in your cart")
         return redirect(reverse('products'))
 
     order_form = OrderForm()
 
+    if request.user.is_authenticated:
+        try:
+            contact_items = UserContact.objects.filter(user=request.user)
+        except UserContact.DoesNotExist:
+            contact_items=[]
 
     order_total = 0
     grand_total = 0
@@ -48,7 +57,8 @@ def checkout(request):
     grand_total = order_total + delivery_cost
 
 
-    context = { 
+    context = {
+        'contact_items' : contact_items,
         'order_form': order_form,
         'cart_items': cart_items,
         'order_total': order_total,
@@ -71,36 +81,38 @@ def create_checkout_session(request):
         redirect_url = request.GET.get('redirect_url')
         # Validate checkout forms
         form = OrderForm(request.GET)
+        address_identifier = request.GET.get('address_select')
+
+        bag = request.session.get('bag', {})
+        bag_items = bag.get('items', {})
+        items = Item.objects.filter(pk__in=bag_items.keys())
+        cart_items = []
+        order_total = 0
+        grand_total = 0
+        delivery_cost = 0
+
+        for item in items:
+            cart_items.append({
+                'name': f'{item.name}',
+                'quantity': int(bag_items[f'{item.pk}']),
+                'currency': 'usd',
+                'amount': f'{int(item.price * 100)}',
+                'images': [f'{item.image}']
+            })
+            order_total += item.price * Decimal(bag_items[f'{item.pk}'])
+        if order_total < settings.FREE_DELIVERY_THRESHOLD:
+            delivery_cost = settings.DELIVERY_COST
+    
+        grand_total = order_total + delivery_cost
+
+        order = Order()
+        if request.user.is_authenticated:
+            order.user_id = request.user.pk
+        order.order_total=order_total
+        order.delivery_cost=delivery_cost
+        order.grand_total=grand_total
 
         if form.is_valid():
-            bag = request.session.get('bag', {})
-            bag_items = bag.get('items', {})
-            items = Item.objects.filter(pk__in=bag_items.keys())
-            cart_items = []
-            order_total = 0
-            grand_total = 0
-            delivery_cost = 0
-
-            for item in items:
-                cart_items.append({
-                    'name': f'{item.name}',
-                    'quantity': int(bag_items[f'{item.pk}']),
-                    'currency': 'usd',
-                    'amount': f'{int(item.price * 100)}',
-                    'images': [f'{item.image}']
-                })
-                order_total += item.price * Decimal(bag_items[f'{item.pk}'])
-            if order_total < settings.FREE_DELIVERY_THRESHOLD:
-                delivery_cost = settings.DELIVERY_COST
-    
-            grand_total = order_total + delivery_cost
-
-
-            order = Order()
-            # Get a unique ID
-            # order.order_number = order.generate_order_number()
-            if request.user.is_authenticated:
-                order.user_id = request.user.pk
             order.full_name = form.cleaned_data['full_name']
             order.email = form.cleaned_data['email']
             order.phone_number = form.cleaned_data['phone_number']
@@ -108,35 +120,43 @@ def create_checkout_session(request):
             order.city = form.cleaned_data['city']
             order.address = form.cleaned_data['address']
             order.county = form.cleaned_data['county']
-            order.address = form.cleaned_data['address']
             order.notes = form.cleaned_data['notes']
-            order.order_total=order_total
-            order.delivery_cost=delivery_cost
-            order.grand_total=grand_total
             order.save()
 
-            # Save the order ID to bag
-            bag['order_id'] = order.order_number
-            request.session['bag'] = bag
-
-            # Process Stripe payment
-            stripe.api_key = settings.STRIPE_SECRET_KEY
-           
-            print(cart_items)
-
-            try:
-                checkout_session = stripe.checkout.Session.create(
-                    success_url=settings.BASE_URL + 'checkout/success?session_id={CHECKOUT_SESSION_ID}',
-                    cancel_url=settings.BASE_URL + 'checkout/cancelled/',
-                    payment_method_types=['card'],
-                    mode='payment',
-                    line_items=cart_items
-                )
-                return redirect(checkout_session.url)
-            except Exception as e:
-                return str(e)
+        elif address_identifier != 'create':
+            contact_item = get_object_or_404(UserContact, pk=address_identifier)
+            order.full_name = contact_item.name
+            order.email = contact_item.email
+            order.phone_number = contact_item.phone_number
+            order.postcode = contact_item.postcode
+            order.city = contact_item.city
+            order.address = contact_item.address
+            order.county = contact_item.county
+            order.address = contact_item.address
+            order.save()
         else:
             return redirect(redirect_url)
+
+        # Save the order ID to bag
+        bag['order_id'] = order.order_number
+        request.session['bag'] = bag
+
+        # Process Stripe payment
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+
+        try:
+            checkout_session = stripe.checkout.Session.create(
+                success_url=settings.BASE_URL + 'checkout/success?session_id={CHECKOUT_SESSION_ID}',
+                cancel_url=settings.BASE_URL + 'checkout/cancelled/',
+                payment_method_types=['card'],
+                mode='payment',
+                line_items=cart_items
+            )
+            return redirect(checkout_session.url)
+        except Exception as e:
+            return str(e)
+        
+        return redirect(redirect_url)
 
 
 def success(request):
