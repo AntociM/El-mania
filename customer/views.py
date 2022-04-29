@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import UserContactForm
+from .forms import UserContactForm, ContactForm
 from .models import UserContact
 from checkout.models import Order
 
@@ -103,6 +103,15 @@ def delete_contact(request, contact_id):
 
     # messages.success(request, f'Saved address "{contact.name}" has been succesfully removed.')
     return render(request, "customer/profile.html")
-
+    
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form = ContactForm()
+    else:
+        form = ContactForm()
+    return render(request, 'customer/contact.html', {'form': form})
 
         

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Contact us" %}{% endblock %}
+
+{% block content %}
+
+<!--Contact header and intro-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-2 mb-2 d-flex justify-content-center">
+            <h1>{% trans "Contact" %}</h1>
+        </div>
+        <div class="row text-center justify-content-center" >
+            <div class="col-12 mt-2 mb-5 d-flex gx-10 justify-content-center">
+                <p>{% blocktrans %} Contact us directly if you have any questions. One of our staff members will be
+                    happy to contact you and answer your questions as soon as
+                    possible.{% endblocktrans %}</p>
+            </div>
+
+            <!--Boostrap contact form-->
+            <div class="row d-flex ">
+                <div class="col-sm-6">
+                    <form action="./contact" method="POST" class="form">
+                        {% csrf_token %}
+
+                        {% bootstrap_form form layout='horizontal' %}
+                        
+                        {% bootstrap_button button_type="submit" id="contact-button" content="Send" %}
+                    </form>
+                </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

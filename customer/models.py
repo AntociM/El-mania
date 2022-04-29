@@ -64,3 +64,21 @@ class UserContact(models.Model):
     postcode = models.CharField(max_length=20, null=True, blank=True)
     country = CountryField(null=True, blank=True)
 
+class Contact(models.Model):
+    REPLIED = ((0, 'No'), (1, 'Yes'))
+    name = models.CharField(max_length=100, null=False, blank=False)
+    telephone = models.CharField(max_length=20, null=True, blank=True)
+    email = models.EmailField(
+        max_length=50, blank=False)
+    title = models.CharField(max_length=100, null=False, blank=False, default=None)
+    message = models.TextField(blank=False, null=False)
+    replied = models.IntegerField(choices=REPLIED, default=False)
+    created = models.DateTimeField(auto_now=True)
+
+    objects = models.Manager()
+
+    class Meta:
+        ordering = ['name']
+
+    def __str__(self):
+        return str(self.name)

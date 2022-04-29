@@ -1,5 +1,6 @@
 from django import forms
 from .models import UserContact
+from .models import Contact
 
 class UserContactForm(forms.ModelForm):
     class Meta:
@@ -37,3 +38,9 @@ class UserContactForm(forms.ModelForm):
             #     placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholders[field]
             self.fields[field].label = labels[field]
+
+class ContactForm(forms.ModelForm):
+
+    class Meta:
+        model = Contact
+        fields = ['name', 'email', 'telephone', 'title', 'message']
