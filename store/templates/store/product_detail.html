@@ -24,17 +24,14 @@
                         <i class="bi bi-star-fill text-success"> </i>{{ product.rating }}/6
                     </span>
                 </p>
-                <div>
-                    <a href="{% url 'products'%}">
-                        <button type="button" class="btn btn-dark mt-3"> <i class="bi bi-caret-left"></i>Keep
-                            shopping</i></button>
-                    </a>
-                    <a href="{% url 'cart_view' %}">
-                        <button type="button" class="btn btn-dark mt-3">Add to cart <i
-                                class="bi bi-cart-plus"></i></button>
-                    </a>
-                </div>
-
+            
+                <form action="{% url 'add_to_cart' product.pk %}" method="POST">
+                    {% csrf_token %}
+                    <button type="button" class="btn btn-dark mt-3"> <i class="bi bi-caret-left"></i>Keep
+                        shopping</i></button>
+                    <input class="btn btn-dark mt-3" type="submit" value="Add to cart">
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </form>
             </div>
         </div>
     </div>
