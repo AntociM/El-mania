@@ -8,6 +8,7 @@
 {% block content %}
 <!-- Page Header -->
 <!-- <div class="overlay"></div> -->
+{% if page_obj.object_list|length > 0%}
 
 <div class="container-fluid">
     <div class="row flex-sm-nowrap">
@@ -190,5 +191,9 @@
         </div>
     </div>
 </div>
+{% else %}
+<h3 class="text-center mt-5">No search reasults matching your criteria.</h3>
+<p class="text-center">Please check your spelling or try a different word.</p>
+{% endif%}
 
 {% endblock %}
