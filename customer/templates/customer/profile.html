@@ -60,6 +60,7 @@
           
         </div>
         <div class="card-body">
+          {% bootstrap_field registered_contact.form.user_full_name  layout='floating' %}
           {% bootstrap_field registered_contact.form.phone_number  layout='floating' %}
           {% bootstrap_field registered_contact.form.email  layout='floating' %}
           {% bootstrap_field registered_contact.form.address  layout='floating'%}
@@ -120,7 +121,7 @@
         </h2>
         <div id="collapse{{order.order_number}}" class="accordion-collapse collapse show" aria-labelledby="heading{{order.order_number}}" data-bs-parent="#accordionOrders">
           <div class="accordion-body">
-            Delivery address: bla bla
+            Delivery address: {{order.full_name}}
             <hr>
             Notes: {{order.notes}}
           </div>

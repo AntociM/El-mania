@@ -5,7 +5,7 @@ from .models import Contact
 class UserContactForm(forms.ModelForm):
     class Meta:
         model = UserContact
-        fields = (('name', 'email', 'phone_number', 'address',
+        fields = (('name', 'email', 'user_full_name', 'phone_number', 'address',
                   'city', 'county', 'postcode',
                   'country'))
     
@@ -13,6 +13,7 @@ class UserContactForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         placeholders = {
             'name': 'Add a name you will rememeber',
+            'user_full_name': 'Contact person',
             'email': 'Email',
             'phone_number': 'Phone number',
             'address': 'Address',
@@ -24,6 +25,7 @@ class UserContactForm(forms.ModelForm):
 
         labels = {
             'name': 'Add a name you will rememeber',
+            'user_full_name': 'Contact person',
             'email': 'Email',
             'phone_number': 'Phone number',
             'address': 'Address',
