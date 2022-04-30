@@ -71,8 +71,6 @@ i {
     background-color: #FE6D73;
 }
 
-
-
 .color-accent {
     color:#FE6D73;
 }
@@ -146,3 +144,12 @@ body{margin-top:20px;}
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
   }
+
+/* Pagination */
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #2f9dc5;
+    /* border-color: rgb(25, 38, 25); */
+}

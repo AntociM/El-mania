@@ -92,7 +92,7 @@
         </div>
         <div class="col-sm-10 col-lg-6">
             <div class="container-fluid ">
-                <div class="container mt-2 mb-2">
+                <div class="container mb-2">
                     <div class="d-flex row p-2 bg-white border rounded" id="product-sorting">
                         <select class="form-select form-select-sm mb-3" id="product-sorting-select">
                             <option value="none" {% if current_sorting == 'none' %}selected {% endif %}>None</option>
@@ -129,10 +129,6 @@
                                     <span class="mt-5">Rating: </span>
                                     <div class="mr-2 mt-5">
                                         <i class="bi bi-star-fill text-success"> </i> {{ i.rating }} / 6
-                                        <!-- <i class="bi bi-star-fill text-success"> </i>
-                                            <i class="bi bi-star-half text-success"> </i>
-                                            <i class="bi bi-star text-success"> </i>
-                                            <i class="bi bi-star text-success"> </i> -->
                                     </div>
                                 </div>
                             </div>
@@ -143,8 +139,8 @@
                                 <form class="form" action="{% url 'add_to_cart' i.pk %}" method="POST">
                                     {% csrf_token %}
                                     <div class="d-flex flex-column mt-4">
-                                        <input class="btn btn-primary btn-sm" type="submit" value="Add to cart">
-                                        <a class="btn btn-outline-primary btn-sm mt-2"
+                                        <input class="btn shadow bg-dark-2 text-dark btn-sm" type="submit" value="Add to cart">
+                                        <a class="btn btn-outline-warning shadow text-dark btn-sm mt-2"
                                             href="{% url 'product_detail' i.pk %}" role="button">Details</a>
                                     </div>
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -156,30 +152,30 @@
                 {% endfor %}
 
                 <!-- Pagination -->
-                <div class=" col-sm-12 pagination justify-content-center mt-3">
+                <div class="col-sm-12 pagination justify-content-center mt-3">
                     <nav aria-label="page-number">
                         <ul class="pagination">
                             {% if page_obj.has_previous %}
-                            <li class="page-item">
-                                <a class="page-link"
+                            <li class="page-item ">
+                                <a class="page-link text-dark"
                                     href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"
                                     tabindex="-1">Previous</a>
                             </li>
-                            <li class="page-item"><a class="page-link"
+                            <li class="page-item"><a class="page-link text-dark"
                                     href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ page_obj.previous_page_number }}</a>
                             </li>
                             {% endif %}
 
-                            <li class="page-item active">
+                            <li class="page-item bg-dark active">
                                 <a class="page-link"
                                     href="?page={{ page_obj.number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ page_obj.number }}</a>
                             </li>
                             {% if page_obj.has_next %}
-                            <li class="page-item"><a class="page-link"
+                            <li class="page-item"><a class="page-link  text-dark"
                                     href="?page={{ page_obj.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ page_obj.next_page_number }}</a>
                             </li>
-                            <li class="page-item">
-                                <a class="page-link"
+                            <li class="page-itemn">
+                                <a class="page-link text-dark"
                                     href="?page={{ page_obj.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">Next</a>
                             </li>
                             {% endif %}
