@@ -75,7 +75,11 @@
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
-              <h6 class="my-0">{{ cart_item.quantity }} x {{ cart_item.item.name }}</h6>
+              <h6 class="my-0">
+                <a href="{% url 'product_detail'  cart_item.item.pk %}" class="text-decoration-none text-dark">
+                  {{ cart_item.quantity }} x {{ cart_item.item.name }}
+                </a>
+              </h6>
 
             </div>
             <span class="text-muted">{{ cart_item.subtotal }} </span>
