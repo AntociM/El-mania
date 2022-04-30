@@ -23,7 +23,11 @@
       {% endif %}
       <button class="btn bg-dark-2 w-100 btn-lg" value="Submit" type="submit">{% trans "Sign In" %}</button>
     </form>
+
+    <p class="mb-3 mt-2 text-center">
+      <a href="{% url 'account_reset_password' %}" role="button" class="btn btn-secondary btn-lg w-100"> Forgot your password?</a></p>
   </div>
+
 </div>
 
 {% endblock %}
