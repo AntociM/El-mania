@@ -40,7 +40,7 @@
 
         <div class="col-lg-2 justify-content-sm-center text-dark">
           <a href="{% url 'home' %}" class="nav-link">
-            <h2 class="text-dark">El-mania</h2>
+            <h2 class="text-light">El-mania</h2>
           </a>
         </div>
 
@@ -126,7 +126,7 @@
   {% endblock %}
 
   <!-- Footer -->
-  <footer class="mt-auto text-center text-dark col-sm-12 p-0 mt-3 text-lg-start">
+  <footer class="mt-auto text-center text-dark col-sm-12 p-0 text-lg-start">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between bg-medium p-4 border-bottom">
       <div class="me-5 d-none d-lg-block">
@@ -151,7 +151,7 @@
       </div>
     </section>
 
-    <section class="bg-dark-1">
+    <section class="bg-dark-1 text-light">
       <div class="container text-center text-md-start pt-5">
         <div class="row mt-3">
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
@@ -167,7 +167,7 @@
                 method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
                 target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
-                  <h5>Subscribe</h5>
+                  <h6>Subscribe to our newsletter</h6>
                   <div class="mc-field-group">
                     <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
                     </label>
@@ -182,7 +182,7 @@
                       name="b_8f89bfcfc4fb461a3c8360609_9e54c1306f" tabindex="-1" value=""></div>
                   <div class="optionalParent">
                     <div class="clear foot">
-                      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button bg-medium">
+                      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn bg-light-1 m-0">
                      
                     </div>
                   </div>
@@ -226,7 +226,8 @@
             <p><i class="bi bi-telephone-fill"></i> + 07 33 32 85 60</p>
             <p><i class="bi bi-printer-fill"></i> + 07 33 32 85 61</p>
             <p>
-              <a href="{% url 'contact' %}" class="text-reset">Drop us a message</a>
+              <a  href="{% url 'contact' %}" class="btn btn-light bg-light-1 text-dark" role="button">Drop us a message</a>
+    
             </p>
           </div>
         </div>
