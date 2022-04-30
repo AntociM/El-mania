@@ -28,59 +28,65 @@
 
 <body class="d-flex flex-column min-vh-100">
   <!--Header-->
+  <div class="row bg-dark text-center p-0 m-0">
+    <div class="col col-sm-12 col-lg-6 text-light offset-lg-3 p-0 ">
+        <h5 class="my-1">Free delivery on orders over $100!</h5>
+    </div>
+</div>
+
   <header class="container-fluid">
     <div class="row">
-      <div class="col-sm-12 d-flex align-items-center bg-light p-0">
+      <div class="col-sm-12 d-flex align-items-center bg-dark-1 p-0">
 
-        <div class="col-lg-2 justify-content-sm-center">
+        <div class="col-lg-2 justify-content-sm-center text-dark">
           <a href="{% url 'home' %}" class="nav-link">
-            <h2>El-mania</h2>
+            <h2 class="text-dark">El-mania</h2>
           </a>
         </div>
 
         <div class="col-lg-7 d-none d-sm-block justify-content-center">
           <form method="GET" action="{% url 'products' %}">
-            <div class="input-group w-100">
-              <input class="form-control border border-black rounded-0" type="text" name="q"
+            <div class="input-group w-100 rounded">
+              <input class="form-control rounded-start" type="text" name="q"
                 value="{% if request.GET.q %}{{ request.GET.q }}{% endif %}" placeholder="Search by name or category">
-              <div class="input-group-append">
-                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+              <!-- <div class="input-group-append"> -->
+                <button class="btn bg-light-1 rounded-end" type="submit">
                   <i class="bi bi-search"></i>
                 </button>
-              </div>
+              <!-- </div> -->
             </div>
           </form>
         </div>
 
-        <nav class=" col-lg-3 justify-content-lg-between bg-light">
+        <nav class=" col-lg-3 justify-content-lg-between bg-dark-1">
           <ul class="list-group justify-content-lg-end d-flex flex-row me-auto">
             {% if user.is_authenticated %}
             <li class="list-group-item d-none d-sm-block bg-transparent border-0">
-              <a class="btn btn-primary position-relative" href="{% url 'profile' %}">
+              <a class="btn bg-light-1 position-relative" href="{% url 'profile' %}">
                 <i class="bi bi-person fs-6"> | Profile</i>
               </a>
             </li>
             {% if user.is_superuser %}
             <li class="list-group-item d-none d-sm-block bg-transparent border-0">
-              <a class="btn btn-primary position-relative" href="">
+              <a class="btn bg-light-1 position-relative" href="">
                 <i class="bi bi-person fs-6"> | Admin</i>
               </a>
             </li>
             {% endif %}
             <li class="list-group-item d-none d-sm-block bg-transparent border-0">
-              <a role="button" class="btn btn-primary position-relative" href="{% url 'account_logout' %}">
+              <a role="button" class="btn bg-light-1 position-relative" href="{% url 'account_logout' %}">
                 <i class="bi bi-box-arrow-left fs-6"> | Logout</i>
               </a>
             </li>
             {% else %}
             <li class="list-group-item d-none d-sm-block bg-transparent border-0">
-              <a role="button" class="btn btn-primary position-relative" href="{% url 'account_login' %}">
+              <a role="button" class="btn bg-light-1 position-relative" href="{% url 'account_login' %}">
                 <i class="bi bi-box-arrow-right fs-6">| Login</i>
               </a>
             </li>
             {% endif %}
             <li class="list-group-item d-none d-sm-block bg-transparent border-0">
-              <a role="button" class="btn btn-primary position-relative" href="{% url 'cart_view' %}">
+              <a role="button" class="btn bg-light-1 position-relative" href="{% url 'cart_view' %}">
                 <i class="bi bi-cart4 fs-6"> | Cart</i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                   {% if request.session.bag.product_count %}
@@ -120,42 +126,33 @@
   {% endblock %}
 
   <!-- Footer -->
-  <footer class="mt-auto text-center col-sm-12 p-0 mt-3 text-lg-start bg-light text-muted">
+  <footer class="mt-auto text-center text-dark col-sm-12 p-0 mt-3 text-lg-start">
     <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <section class="d-flex justify-content-center justify-content-lg-between bg-medium p-4 border-bottom">
       <div class="me-5 d-none d-lg-block">
         <span>Get connected with us on social networks:</span>
       </div>
       <div>
         <a href="https://www.facebook.com/" class="me-4 text-reset">
-          <img class="media-icons"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAASNJREFUOE/Nkj9LxjAQxu9ShwoV/+CmH8FVB1c3l+JSuLgI7s6OfUFBBAc/QXFIU/IlOorvorgWJ5EOooKKk8lJwUqRpnQSbwu5++V5nguCp8qynKnreh8RtxFxhZlDAJhl5h0p5W07hj6A1vocAA5+3zPzppTychBgjAmste8A0Lza1isAWADYIqLrQUCWZQthGL50hi+IaK9Pba8FpdSiEOK5MzAhonQUoCiKQ+fcGiLu/shEvGHm6ff5iIjuvRaUUlMhxLov3CAIVpMkefACtNZXALDRB3DOfVRVNZemqRsMMc/zZUR8bJuY+YSZT6Mo+ozj+K0L7w3RGLNkrX3qNKZENBkVYtP0LwHj/4HHwt8D5q21dwAgGkXMfCylPOvbwhfxbZARswXDhQAAAABJRU5ErkJggg=="
-            alt="">
+          <i class="bi bi-facebook"></i>
         </a>
         <a href="https://www.twitter.com/" class="me-4 text-reset">
-          <img class="media-icons"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAb5JREFUOE+lkr+LE0Ecxd+buR9axICNWF4TCwUFBeE8sRGEaHHVspshi7Gw8Q/QzhTiFVYWV6QQFJLNsJVaRFDOYKUgiGgjFl55KWwSEE3YzFcm3B1RE27BKYYZvvM+35k3j/jPwTz6NE2Xsiw7q7U+RPJdEAQ/93TsdDrL/X7/ShRFz2fBrLWnRMTXVnbrOyJyT0QuaK03mCTJGsnXAG5GUfR4GiIitNZ+BnDyb7hz7qVSapPtdvscgPf+AMmnAG6HYfjV79M0PTEej7/Muplzbms0Gl1jt9td6PV6H6e6OBF5o5TaEpEhgAdzAFeNMR22Wq0zAO6QDEjmMtUDRWS1Uqm89R4cA7BN8nCeH9kVj7IsOxrH8Y9JR2tt7Jx7RHIhD8S/3xhzeeKbn/xXDgaDhyJyA8DiQRCS62EYPtsH+EWSJE9IxgeJnXMvjDHl/SDtLRqNxmKhULgF4DrJ03NA37IsW6tWqzv/AJrN5hGlVETyLoDjMwCftNbrQRBsT9d8kM4DuC8il0jqGcLvADaLxeJGuVz2ufhjTEys1+uqVCpdBLCqlPLdl0TEZ/7DcDh8VavVfs3zJndw5gF+AxSGr10iAjCnAAAAAElFTkSuQmCC">
+          <i class="bi bi-twitter"></i>
         </a>
         <a href="" class="me-4 text-reset">
-          <img class="media-icons"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAf9JREFUOE+NkzFoFEEUhv83kxxy4jU2V0QCYogB7dPJpZKgGATX3Z1CC5uUFmIlHLEzFtp5Ngre7s5tCoMWIhKuj9iICHKg2OihQsAisdh9T+bYO/bkTp1u3vvfN2/eP0OYsDqdTkNEzgI4xcwVAF+IaJeZY2PMXrmEyps0TRfzPH8MYHkSmJn3tda3lVKbnuflTjMCuFOZeRtAbVLxMCYi30Vk2RjzcQSIomheKfUGwNFS8S6AlyJyICJLSqmLIrKvlFrxff/dUDfoII7jNhGZIshEdM33/UflTtrt9lylUjnsed6HsRm4hFLqExHNuISI3AzD8M7frjEGsNZeEpG0CP7UWtc9zzsYiqIoWtVaz00BvqUkSW4B2HACZn5hjFkti5Mk2QGwMgWQjgEAPAuC4ML/Aohom+I4vkJEznu3vmqtjw09doEkSa4DOFmy8QwRLQ4sJLpHhYXOU1WI1oMgeDCp5W63O9Pv998DWCgAwcBGa+1TEVkrXHADvByG4fMypNVqzdZqtfsA1ov4j2q1enwAcE84y7LXRHSkVPQKwA4R7eV5vqCUcgecKOVvBEFwd/SUrbXnRGQLwKF/vQFmftLr9a42m00e+0zWWveJHorI6SmQXwA26/X6RqPRyAZz+FOYpqnOsuw8ETk7l5h5Vin1zV2HmbeMMZ/LNb8BeHLPfaeFW2sAAAAASUVORK5CYII="
-            alt="">
+          <i class="bi bi-google"></i>
         </a>
-        <a href="https://www.instagram.com/" class="me-4 text-reset">
-          <img class="media-icons"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAhRJREFUOE+Fkz1ok0EYx5//JRoVXETq5mD9GASRIiIFRRAEdVIwuXuvWEUkxaWuIu7qIIJ00FJKg++9x+kiQemgBBGcBD/q5qRLJrEkQpDk7pELqbzUmD7DHTwfP55P0EBqtdpYsVi8SkSHiGjnmj7/A2gT0ecQwqLW+lu0IT5pmp4FYIjokxDiNTP/HgZg5u3MfAzAJBFdTpLEwTm313v/kYhmlVILwwLX66y1F5m5xsxHYK29S0T7pZTnNwo2xtxg5gmt9SVjzBMAq8iy7DkRvVNKRVBfGo1GsdlszjLzGQCbYlmdTudeqVSaBDCulJo3xlQBTMEYs0xEy0mSPIjBzBx1LwDsAfAQQNd7XxVCdFut1vFqtdqNfsaYaQAz/wCyLIulzIUQDmqtf0Zn59zWXq/3QQhxX0r5eCQg9oSZx5RSV/I9ybLsDhHtWtOPyuA2EZ1USp3KA9I0TQF8T5Lk5sgMnHO7vfcrAG5VKpU5AGyMUUS0IIQ4KqX8MhIQjdba0yGEJQBFZu4R0WYhxIyU8ulaVn9LSNP0pRDiTX6M0aler29rt9sTEVIoFN6Xy+Vf63pyjZmn+ovEzPuUUhc2WqS83Vo7z3HmzrkDgxFN51McBRvczjMAJ/rHZIwpA1giolfM/FYIsfqfY9oSg5j5HIDrUsrFPmDQuPEQQlzPwwB2DAN4738UCoUV7/0jrfXX6PMHYngbUTbCp6gAAAAASUVORK5CYII="
-            alt="">
+        <a href="https://www.youtube.com/" class="me-4 text-reset">
+          <i class="bi bi-youtube"></i>
         </a>
         <a href="https://www.linkedin.com/" class="me-4 text-reset">
-          <img class="media-icons"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAVVJREFUOE/dkT9LA0EQxd+wRRr/lBZWNpZKxMIPEAsRG4nH7kYstAsi6ewl2FtZ2Whye8RcLYqIoIWCsbBQQbAxjZ9AvMvtyIUNSECSa51uhnm/mXlDxphlIqoy84sQYsvzvC9kCDLGvAOYSjVE5EkpTzPokQIuACwCsMyc11o/ZQI0Go3xTqezQkSvSqmHLOLu1lkF/f0UhmEljuOJXC73nSTJWbFYvA+CYI2ZC6751lr7DGCfiOaJKAZwBWBXKfWRAh6jKMo7E8tSykNjzAGAHVdrWWuniWi0b3pbCDE7EOBEqcFvACaJaKQHYuY9ajabrTiO5/7agJkjIioopW5qtdqYEOIcwIKD3A0DuNRap2/uhjFmE8CRS9vDAOpa6/UeIAiCVWYOXf45EGCtPSmVShv/GRCG4XUURTPujRUp5bHv+1UiKru7faXU9i8Plpi53jPxBxZxDFSyRpH2AAAAAElFTkSuQmCC"
-            alt="">
+          <i class="bi bi-linkedin"></i>
         </a>
       </div>
     </section>
 
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
+    <section class="bg-dark-1">
+      <div class="container text-center text-md-start pt-5">
         <div class="row mt-3">
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
@@ -164,8 +161,6 @@
             </h6>
 
             <!-- Begin Mailchimp Signup Form -->
-
-            </style>
             <div id="mc_embed_signup">
               <form
                 action="https://herokuapp.us10.list-manage.com/subscribe/post?u=8f89bfcfc4fb461a3c8360609&amp;id=9e54c1306f"
@@ -173,7 +168,6 @@
                 target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
                   <h5>Subscribe</h5>
-                  <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
                   <div class="mc-field-group">
                     <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
                     </label>
@@ -188,10 +182,8 @@
                       name="b_8f89bfcfc4fb461a3c8360609_9e54c1306f" tabindex="-1" value=""></div>
                   <div class="optionalParent">
                     <div class="clear foot">
-                      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                      <!-- <p class="brandingLogo"><a href="http://eepurl.com/h0L0bz"
-                          title="Mailchimp - email marketing made easy and fun"><img
-                            src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p> -->
+                      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button bg-medium">
+                     
                     </div>
                   </div>
                 </div>
@@ -232,7 +224,7 @@
               info@elmania.com
             </p>
             <p><i class="bi bi-telephone-fill"></i> + 07 33 32 85 60</p>
-            <p><i class="fas fa-print me-3"></i> + 07 33 32 85 61</p>
+            <p><i class="bi bi-printer-fill"></i> + 07 33 32 85 61</p>
             <p>
               <a href="{% url 'contact' %}" class="text-reset">Drop us a message</a>
             </p>
@@ -243,7 +235,7 @@
 
 
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center text-light bg-dark-3 p-4 ">
       © 2022 Copyright:
       <a class="text-reset fw-bold" href="{% url 'home' %}">El-mania</a>
     </div>

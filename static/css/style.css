@@ -2,7 +2,7 @@
 
 /* General settings*/
 body {
-    background-color: rgb(207, 202, 202);
+    background-color: rgb(242, 242, 242);
 }
 
 
@@ -52,6 +52,44 @@ i {
     color: #ff5a5a;
 }
 
+.bg-dark-1{
+    background-color: #227C9D;
+}
+
+.bg-dark-2{
+    background-color: #17C3B2;
+}
+
+.bg-dark-3 {
+    background-color: #5e638b;
+}
+
+.bg-medium {
+    background-color: #FFCB77;
+}
+
+.bg-accent {
+    background-color: #FE6D73;
+}
+
+
+
+.color-accent {
+    color:#FE6D73;
+}
+
+.bg-light-1 {
+    background-color:#FEF9EF;
+}
+
+nav .navbar-nav li a{
+    color: black !important;
+    }
+
+nav .nav-link li a{
+    color: black !important;
+    }
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -92,13 +130,6 @@ body{margin-top:20px;}
     font-weight: normal;
 }
 
-/* .text-muted {
-    color: #888 !important;
-} */
-
-/* .bg-secondary {
-    background-color: #f7f7f7 !important;
-} */
 
 .accordion .accordion-heading {
     margin-bottom: 0;
@@ -112,7 +143,7 @@ body{margin-top:20px;}
 /* Mailchimp */
 
 #mc_embed_signup {
-    background: #fff;
+    /* background: #fff; */
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
   }

@@ -2,13 +2,8 @@
 {% load static %}
 
 {% block content %}
-<div class="row text-center gx-0">
-    <div class="col col-sm-12 col-lg-6 offset-lg-3 p-0 bg-light ">
-        <h4 class="logo-font my-1">Free delivery on orders over $100!</h4>
-    </div>
-</div>
 
-<div class="row col-sm-12 col-lg-6 offset-lg-3 p-0">
+<div class="row shadow col-sm-12 col-lg-6 offset-lg-3 p-0 mt-5">
     <div id="newsCarousel" class="carousel slide p-0" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -64,7 +59,7 @@
 <div class="container h-100 col-sm-12 col-lg-6 offset-lg-3 mt-3">
     <div class="row gy-1">
         {% for i in discounted_items %}
-        <div class="card text-center col-lg-3">
+        <div class="card shadow text-center col-lg-3">
             <img src="{{ i.image }}" class=" offers-img-cards card-img-top" alt="" />
             <br>
             <div class="card-body">
@@ -78,11 +73,11 @@
                 <div class="d-flex ">
                     <form class="form" action="{% url 'add_to_cart' i.item_id %}" method="POST">
                         {% csrf_token %}
-                        <input class="btn btn-primary btn-sm mt-2" type="submit" value="Add to cart">
+                        <input class="btn  bg-dark-2 btn-sm mt-2" type="submit" value="Add to cart">
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
 
-                    <a class="btn btn-outline-primary btn-sm mt-2" href="{% url 'product_detail' i.item_id %}"
+                    <a class="btn bg-medium btn-sm mt-2" href="{% url 'product_detail' i.item_id %}"
                         role="button">Details</a>
                 </div>
                 <div>
