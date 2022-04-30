@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% load django_bootstrap5 %}
 
 {% load i18n %}
 
@@ -8,25 +9,20 @@
 {% block content %}
 
 <div class="container">
-  <div class="row">
-    <div class="col-md8 mt3 offset-md-2">
-      <h1>{% trans "Sign In" %}</h1>
+  <div class="row col-sm-12 col-lg-6 offset-lg-3 mt-5">
+    <h1>{% trans "Sign In" %}</h1>
 
-      <p>{% blocktrans %}Welcome back to El-mania. Please log in. If you do not have an account, please
-        <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <form class="login" method="POST" action="{% url 'account_login' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button  class="btn-signup btn " type="submit">{% trans "Sign In" %}</button>
-      </form>
-    </div>
+    <p class="mb-3">{% blocktrans %}Welcome back to El-mania. Please log in. If you do not have an account, please
+      <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+
+    <form class="login" method="POST" action="{% url 'account_login' %}">
+      {% csrf_token %}
+      {% bootstrap_form form layout='floating' %}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <button class="btn bg-dark-2 w-100 btn-lg" value="Submit" type="submit">{% trans "Sign In" %}</button>
+    </form>
   </div>
 </div>
 
