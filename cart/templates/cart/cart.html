@@ -24,7 +24,14 @@
                     <div class="media-body pt-3">
                         <h3 class="product-card-title text-center font-weight-semibold border-0 pb-0"><a href="#">
                                 {{ cart_item.item.name }}</a></h3>
+
+                        {% if cart_item.discount %}
+                        <span class="h3">${{  cart_item.item.price }}</span>
+                        <span class="h2">${{ cart_item.discount.new_price}}</span>
+                        {% else %}
                         <div class="font-size-lg text-primary pt-2">${{ cart_item.item.price }}</div>
+                        {% endif %}
+
                     </div>
                 </div>
                 <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 10rem;">
@@ -53,21 +60,22 @@
                 </div>
             </div>
             {% endfor %}
-    </div>
-    <!-- Sidebar-->
-    <div class="col-xl-3 col-md-4 pt-3 pt-md-0">
-        <h2 class="h6 px-4 py-3 bg-light text-center">Subtotal</h2>
-        <div class="h4 font-weight-semibold text-center py-3">{{ subtotal }}</div>
-        <hr>
-        <a class="btn btn-primary btn-block w-100" href="{% url 'checkout'%}">
-            Proceed to Checkout
-            <i class="bi bi-credit-card-2-back"></i>
-        </a>
+        </div>
+        <!-- Sidebar-->
+        <div class="col-xl-3 col-md-4 pt-3 pt-md-0">
+            <h2 class="h6 px-4 py-3 bg-light text-center">Subtotal</h2>
+            <div class="h4 font-weight-semibold text-center py-3">{{ subtotal }}</div>
+            <hr>
+            <a class="btn btn-primary btn-block w-100" href="{% url 'checkout'%}">
+                Proceed to Checkout
+                <i class="bi bi-credit-card-2-back"></i>
+            </a>
+        </div>
     </div>
     {% else %}
     <h4>Your cart is empty. </h4>
     <p>Please use the search bar or menu to find what you are looking for.</p>
-</div>
+    <!-- </div> -->
     {% endif %}
 </div>
 

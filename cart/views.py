@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib import messages
-from store.models import Item
+from store.models import Item, ItemDiscount
 from datetime import datetime
 from decimal import Decimal
 from django.conf import settings
@@ -22,10 +22,16 @@ def cart_view(request):
     # Parse items
     total = 0
     for item in items:
+        try:
+            discount = ItemDiscount.objects.get(item=item)
+        except:
+            discount = None
+
         # Calculate cart's subtotal
-        total += item.price * Decimal(bag_items[f'{item.pk}'])
+        total += item.price if discount is None else discount.new_price
         cart_items.append({
             'item': item,
+            'discount': discount,
             'quantity': bag_items[f'{item.pk}']
         })
         
@@ -103,28 +109,14 @@ def remove_from_cart(request, item_id):
 
 # Returns an updated bag
 def update_bag(current_bag):
-    # if not request.session.session_key:
-    #     request.session.create()
 
     bag_items = current_bag.get('items', {})
     items = Item.objects.filter(pk__in=bag_items.keys())
 
-    # order_total = 0
-    # grand_total = 0
-    # delivery_cost = 0
     product_count = 0
 
     for item in items:
-        # order_total += item.price * Decimal(bag_items[f'{item.pk}'])
         product_count += int(bag_items[f'{item.pk}'])
-
-    # if order_total < settings.FREE_DELIVERY_THRESHOLD:
-    #     delivery_cost = settings.DELIVERY_COST
-    # grand_total = order_total + delivery_cost
-    
-    # current_bag['order_total'] = order_total
-    # current_bag['grand_total'] = grand_total
-    # current_bag['delivery_cost'] = delivery_cost
     current_bag['product_count'] = product_count
 
     return current_bag
