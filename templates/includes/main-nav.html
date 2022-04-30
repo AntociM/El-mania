@@ -1,6 +1,6 @@
 <div class="row">
   <nav
-    class="navbar col-sm-12 d-flex justify-content-between align-items-center navbar-expand-lg navbar-dark bg-secondary">
+    class="navbar col-sm-12 d-flex justify-content-between align-items-center navbar-expand-lg bg-medium">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -13,19 +13,19 @@
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link" href="#"> Cell Phones <span class="sr-only"></span></a>
+          <a class="nav-link" href="{% url 'products'%}?categ=Cell+Phones"> Cell Phones <span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Tv & Home Theater</a>
+          <a class="nav-link" href="{% url 'products'%}?categ=TV+%26+Home+Theater">Tv & Home Theater</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Computer & Tablets</a>
+          <a class="nav-link" href="{% url 'products'%}?categ=Computers+%26+Tablets">Computer & Tablets</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Video Games</a>
+          <a class="nav-link" href="{% url 'products'%}?categ=Video+Games">Video Games</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Household</a>
+          <a class="nav-link" href="{% url 'products'%}?categ=Household+Essentials">Household</a>
         </li>
       </ul>
     </div>
