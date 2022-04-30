@@ -86,18 +86,24 @@ def create_checkout_session(request):
         bag = request.session.get('bag', {})
         bag_items = bag.get('items', {})
         items = Item.objects.filter(pk__in=bag_items.keys())
+        stripe_cart_items = []
         cart_items = []
         order_total = 0
         grand_total = 0
         delivery_cost = 0
 
         for item in items:
-            cart_items.append({
+            stripe_cart_items.append({
                 'name': f'{item.name}',
                 'quantity': int(bag_items[f'{item.pk}']),
                 'currency': 'usd',
                 'amount': f'{int(item.price * 100)}',
                 'images': [f'{item.image}']
+            })
+            cart_items.append({
+                'item': item,
+                'quantity': bag_items[f'{item.pk}'],
+                'subtotal': item.price * Decimal(bag_items[f'{item.pk}'])
             })
             order_total += item.price * Decimal(bag_items[f'{item.pk}'])
         if order_total < settings.FREE_DELIVERY_THRESHOLD:
@@ -122,7 +128,6 @@ def create_checkout_session(request):
             order.county = form.cleaned_data['county']
             order.notes = form.cleaned_data['notes']
             order.save()
-
         elif address_identifier != 'create':
             contact_item = get_object_or_404(UserContact, pk=address_identifier)
             order.full_name = contact_item.name
@@ -135,7 +140,21 @@ def create_checkout_session(request):
             order.address = contact_item.address
             order.save()
         else:
-            return redirect(redirect_url)
+            contact_items=[]
+            if request.user.is_authenticated:
+                try:
+                    contact_items = UserContact.objects.filter(user=request.user)
+                except UserContact.DoesNotExist:
+                    contact_items=[]
+            context = {
+                'contact_items' : contact_items,
+                'order_form': form, # Done
+                'cart_items': cart_items,
+                'order_total': order_total,
+                'grand_total': grand_total,
+                'delivery_cost': delivery_cost
+            }
+            return render(request, 'checkout/checkout.html', context)
 
         # Save the order ID to bag
         bag['order_id'] = order.order_number
@@ -150,7 +169,7 @@ def create_checkout_session(request):
                 cancel_url=settings.BASE_URL + 'checkout/cancelled/',
                 payment_method_types=['card'],
                 mode='payment',
-                line_items=cart_items
+                line_items=stripe_cart_items
             )
             return redirect(checkout_session.url)
         except Exception as e:
