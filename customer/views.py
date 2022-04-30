@@ -52,6 +52,8 @@ def profile(request):
 @login_required
 def register_address(request):
     if request.method == 'POST':
+        registered_contact_forms = []
+        orders = Order.objects.filter(user_id=request.user.pk)
         redirect_url = request.POST.get('redirect_url')
 
         form = UserContactForm(request.POST)
@@ -70,9 +72,43 @@ def register_address(request):
             user_contact.country = form.cleaned_data['country']
 
             user_contact.save()
+            return redirect(redirect_url)
 
+        else:
+            user_contacts=[]
+            if request.user.is_authenticated:
+                try:
+                    user_contacts = UserContact.objects.filter(user=request.user)
+                except UserContact.DoesNotExist:
+                    user_contacts=[]
 
-        return redirect(redirect_url)
+            for user_contact_item in user_contacts:
+                registered_form = UserContactForm()
+                registered_form.initial = {
+                    'name' : user_contact_item.name,
+                    'user_full_name' : user_contact_item.user_full_name,
+                    'email' : user_contact_item.email,
+                    'phone_number' : user_contact_item.phone_number,
+                    'address' : user_contact_item.address,
+                    'city' : user_contact_item.city,
+                    'county' : user_contact_item.county,
+                    'postcode' : user_contact_item.postcode,
+                    'country' : user_contact_item.country,
+                }
+
+                registered_contact_forms.append(
+                    {
+                        'item': user_contact_item,
+                        'form' : registered_form
+                    }
+                )
+
+            context = {
+            'register_contact_form' : form,
+            'registered_contacts'   : registered_contact_forms,
+            'orders' : orders
+            }
+            return render(request, "customer/profile.html", context)
     
     return render(request, "customer/profile.html")
 
