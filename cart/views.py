@@ -28,7 +28,7 @@ def cart_view(request):
             discount = None
 
         # Calculate cart's subtotal
-        total += item.price if discount is None else discount.new_price
+        total += item.price * Decimal(bag_items[f'{item.pk}']) if discount is None else discount.new_price * Decimal(bag_items[f'{item.pk}'])
         cart_items.append({
             'item': item,
             'discount': discount,

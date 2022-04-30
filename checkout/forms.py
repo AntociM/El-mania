@@ -63,7 +63,7 @@ class OrderForm(forms.ModelForm):
     def clean_county(self):
         county = self.cleaned_data['county']
 
-        if not all(x.isalpha() or x.isspace() for x in county):
+        if county != None and not all(x.isalpha() or x.isspace() for x in county):
             raise forms.ValidationError("County should contain only alphabetical characters. E.g. 'Stockholm Lan' ")
         return county
 
