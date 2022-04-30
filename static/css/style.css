@@ -23,9 +23,8 @@ i {
 
 /* Cards */
 .offers-img-cards {
-
-    width: 160px;
-    height: 150px;
+    width: auto;
+    max-height: 160px;
 }
 
 
@@ -152,4 +151,10 @@ body{margin-top:20px;}
     color: #fff;
     background-color: #2f9dc5;
     /* border-color: rgb(25, 38, 25); */
+}
+
+
+.accordion-button:not(.collapsed){
+    color: black;
+    background-color: #FFCB77;
 }

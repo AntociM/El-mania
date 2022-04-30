@@ -3,17 +3,17 @@
 
 {% block content %}
 
-<div class="container-fluid">
+<div class="container-fluid mt-md-3">
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-3" style="background-color:white">
-            <div class="col-md-3 mt-5 align-content-center">
+        <div class=" d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-3 offset-lg-3" style="background-color:white">
+            <!-- <div class="col-md-3 mt-5 align-content-center"> -->
                 <a href="{{ product.image }}" target="_blank">
-                    <img class="img-fluid rounded product-image" src="{{product.image}}">
+                    <img class="img-fluid rounded product-image" src="{{product.image}}" style="width:160px; height: auto;">
                 </a>
-            </div>
+            <!-- </div> -->
         </div>
 
-        <div class="col-12 col-md-6 col-lg-4" style="background-color:white">
+        <div class="col-12 col-md-6 col-lg-3" style="background-color:white">
             <div class="mb-5 mt-md-5">
                 <p class="mb-0">{{ product.name }}</p>
                 <p class="mb-0"><i class="bi bi-tag"></i> {{ product.category }}</p>
@@ -27,8 +27,8 @@
             
                 <form action="{% url 'add_to_cart' product.pk %}" method="POST">
                     {% csrf_token %}
-                    <button type="button" class="btn btn-dark mt-3"> <i class="bi bi-caret-left"></i>Keep
-                        shopping</i></button>
+                    <a type="button" class="btn btn-dark mt-3" href="{% url 'products' %}"> <i class="bi bi-caret-left"></i>Keep
+                        shopping</i></a>
                     <input class="btn btn-dark mt-3" type="submit" value="Add to cart">
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
