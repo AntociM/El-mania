@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Checkout canceled</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <section>
-    <p>Forgot to add something to your cart? Shop around then come back to pay!</p>
-  </section>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row col-sm-12 col-lg-6 offset-lg-3 mt-5">
+    <h3>Forgot to add something to your cart?
+    </h3>
+    <p class="mt-3">
+      Continue shopping and come back for payment.
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+
