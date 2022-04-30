@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from store.models import Item
+from store.models import Item, ItemDiscount
 from .forms import OrderForm
 from .models import Order, OrderItem
 from customer.models import UserContact
@@ -40,11 +40,15 @@ def checkout(request):
     line_item_total = 0
     cart_items = []
     for item in items:
+        try:
+            discount = ItemDiscount.objects.get(item=item)
+        except:
+            discount = None
 
         # Calculate item's subtotal
-        line_item_total = item.price * Decimal(bag_items[f'{item.pk}'])
+        line_item_total = (item.price if discount is None else discount.new_price ) * Decimal(bag_items[f'{item.pk}'])
         # Calculate cart's subtotal
-        order_total += item.price * Decimal(bag_items[f'{item.pk}'])
+        order_total += item.price * Decimal(bag_items[f'{item.pk}']) if discount is None else discount.new_price * Decimal(bag_items[f'{item.pk}'])
         cart_items.append({
             'item': item,
             'quantity': bag_items[f'{item.pk}'],
@@ -93,19 +97,24 @@ def create_checkout_session(request):
         delivery_cost = 0
 
         for item in items:
+            try:
+                discount = ItemDiscount.objects.get(item=item)
+            except:
+                discount = None
+
             stripe_cart_items.append({
                 'name': f'{item.name}',
                 'quantity': int(bag_items[f'{item.pk}']),
                 'currency': 'usd',
-                'amount': f'{int(item.price * 100)}',
+                'amount': f'{int(item.price * 100)}' if discount is None else f'{int(discount.new_price * 100)}' ,
                 'images': [f'{item.image}']
             })
             cart_items.append({
                 'item': item,
                 'quantity': bag_items[f'{item.pk}'],
-                'subtotal': item.price * Decimal(bag_items[f'{item.pk}'])
+                'subtotal': (item.price if discount is None else discount.new_price ) * Decimal(bag_items[f'{item.pk}'])
             })
-            order_total += item.price * Decimal(bag_items[f'{item.pk}'])
+            order_total += (item.price if discount is None else discount.new_price ) * Decimal(bag_items[f'{item.pk}'])
         if order_total < settings.FREE_DELIVERY_THRESHOLD:
             delivery_cost = settings.DELIVERY_COST
     
