@@ -206,14 +206,13 @@ def success(request):
         # Clear the bag
         bag = {}
         request.session['bag'] = bag
-        messages.error(request, f'Order {order_id} be submitted.')
 
     else:
         messages.error(request, f'Order could not be submitted. If you made the payment, please contact us.')
 
     # If the order succeded, take the items from the request.session bag
     # and add them into the OrderItem table
-    return render(request, 'checkout/success.html', {})
+    return render(request, 'checkout/success.html', {'order_id' : order_id})
 
 def cancelled(request):
     # If the request failed, remove the order from data base, but items in the
