@@ -134,7 +134,10 @@ def privacy_policy(request):
 
     return render(request, 'store/privacy_policy.html')
 
+def terms_of_sale(request):
+    """ A view to return terms of sale page """
 
+    return render(request, 'store/terms_of_sale.html')
 
 
 
