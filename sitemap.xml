@@ -1,0 +1,2512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://el-mania.herokuapp.com/</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/admin/login/?next=/admin/</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/cart/</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?categ=Cell+Phones</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?categ=TV+%26+Home+Theater</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?categ=Computers+%26+Tablets</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?categ=Video+Games</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?categ=Household+Essentials</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3651107</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3093014</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8963091</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4469101</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4260700</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8486002</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3317003</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4875333</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/terms_of_sale</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/open_purchase</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/privacy_policy</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/contact/</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1696302</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9131042</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5353024</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5357011</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5352061</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5354101</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9274741</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8508064</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9940451</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8507948</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8507939</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8507644</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9905762</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8507993</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5425773</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9274732</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2206525</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8610161</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4020462</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4591017</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4262900</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9275148</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8723085</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2792013</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4753004</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=1</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=2</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4712037</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8452148</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4424104</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4424101</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8452157</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4424106</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4424100</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4424105</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6703161</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6703198</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8451871</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8451899</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8452184</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8452166</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8452102</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8452139</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8452111</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6703125</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4207126</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4207116</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8618058</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1042034</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7200132</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7200169</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7200196</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5637023</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2345164</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9846217</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4370400</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4387400</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9999119</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4370311</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5782232</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6847298</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6761173</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4268900</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9747077</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2630891</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4875742</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4948308</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7511001</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4905036</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4907025</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9446799</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9446833</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9446744</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2445024</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9735222</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9735301</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2904108</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5009268</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4423600</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5009222</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5009277</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2520045</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4928044</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4503300</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4503200</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2372026</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4751006</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4079087</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4379502</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3261023</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4379401</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4281801</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6987389</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6575821</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7906033</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9503119</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8353179</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8229117</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8227338</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7369106</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7374023</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9376155</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6987006</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6995008</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6992001</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6991002</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6993028</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8186041</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8871234</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9501102</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8871173</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9009109</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9432042</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4209700</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4220900</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2442045</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8678062</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8120059</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2797746</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9238008</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3167299</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2034162</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3622799</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4910915</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4765048</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8524004</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1896262</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5215483</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6350009</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8614169</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=3</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8847604</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9984203</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8283007</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8286004</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8285023</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=4</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9926273</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9925964</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9926401</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9926396</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3788003</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3789002</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2266129</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2886946</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4550902</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9561097</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4769785</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1807145</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7551285</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1807206</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1807279</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1416147</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1807251</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9254006</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9597106</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8815536</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3992007</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3657041</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7551081</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7576083</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4769803</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=5</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2305807</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7551355</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6935031</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6935119</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4425700</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6935086</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6935013</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6935059</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6935077</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6935095</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6935128</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6935022</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6935068</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4425801</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3511436</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6925348</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9096103</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1954441</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4236915</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6581843</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8830217</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=6</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7077005</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7077014</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1614013</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1609858</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4612038</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6917001</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6917038</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6916295</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6916066</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6916231</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3073087</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3073156</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4494401</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4494503</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4494104</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4494000</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4390200</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9290115</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9292131</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8932007</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8932052</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4389700</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4390000</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4389400</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4389000</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=7</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9293103</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9298153</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9306108</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4390317</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4390601</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9359692</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9301103</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9439005</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9440019</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9301112</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9302088</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6599071</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6599099</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9359601</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9359665</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9359701</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2314056</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9359756</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9359683</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9359647</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=8</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2592015</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6643032</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1855155</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4087711</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8127023</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1836054</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4279308</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6699098</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9327076</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1835046</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5471152</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1714548</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3377912</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1714639</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3833639</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5911209</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7202007</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7188003</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7224236</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=9</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7200105</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7202043</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7201113</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7201026</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7200018</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7189002</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7201131</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6704373</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1259507</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3742027</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4213417</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7441404</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4274900</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8716142</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3698548</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7292062</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8163044</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=10</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8123117</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8176078</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2590062</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6293177</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4725415</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8074044</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5374005</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7271045</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8057123</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8062046</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9307797</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9307831</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4550200</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3695194</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3695121</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3695167</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3695176</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3695227</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8605046</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7944078</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7006915</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3094013</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7810143</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6293016</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=11</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.09</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5852008</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7815096</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7815078</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3095328</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9034004</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6600069</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6652043</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5856526</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2253772</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3453029</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/5852654</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4468901</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4469000</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4469200</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4469201</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4468900</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4468801</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4468800</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4468700</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4469202</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4469100</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=12</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.07</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4469002</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4275000</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4274901</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4275200</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4275003</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4276800</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4276705</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4274402</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4273801</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4274600</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4274701</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4274700</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4274800</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4274601</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4274802</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1209916</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4858651</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9889724</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6848136</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6975104</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6989013</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8847072</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8848772</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6963037</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6998014</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=13</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.05</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/6944029</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3786087</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3785015</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3786069</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3782027</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3781019</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3782009</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3784025</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3782054</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3784007</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3743019</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3316013</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2881031</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3312008</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3315023</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3313016</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3313043</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2881022</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3810023</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3806003</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3810014</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3811004</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3811013</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3753008</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=14</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3326028</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3326037</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3325038</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3322004</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3325001</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3325511</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3325056</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/3325294</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4264100</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4264000</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4263800</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4263702</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4263700</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4263500</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4263301</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4263200</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4265802</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4265800</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4265700</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4266103</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4266101</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4266302</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4266301</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4266204</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1780275</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=15</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.04</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7574067</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8884107</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1780352</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8884222</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8884125</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2579045</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1780284</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2579054</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1780325</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7576047</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8883083</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8879111</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2557966</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8879139</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1775147</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/1780211</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/8881067</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2557948</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4266007</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7638173</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2927053</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2927219</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/2927228</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7638004</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7639085</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=16</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.03</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7624003</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7639076</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7623383</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7641052</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7618012</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7618003</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/9635218</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7619002</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7640053</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7638068</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7638059</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7640035</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7638031</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7642015</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7640099</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7638095</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7640071</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7638086</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7642079</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7640062</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7638077</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7642051</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7640168</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7643014</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7640131</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=17</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7638146</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/7642139</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4443000</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4448213</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4448104</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4443100</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4448301</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4448202</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4442515</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4448208</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4448001</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4442510</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4448201</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4448000</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4442000</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4447600</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4447700</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4442200</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4447602</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4447701</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4441800</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4447500</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4447601</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4430501</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4430800</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products?page=18</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4447501</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4442401</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4448102</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+<url>
+  <loc>https://el-mania.herokuapp.com/products/4447901</loc>
+  <lastmod>2022-05-01T12:47:35+00:00</lastmod>
+  <priority>0.01</priority>
+</url>
+
+
+</urlset>

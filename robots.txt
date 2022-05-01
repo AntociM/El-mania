@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Disallow: /checkout/
+Sitemap: https://el-mania.herokuapp.com/sitemap.xml
