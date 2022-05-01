@@ -42,6 +42,67 @@ These user stories are part of the agile tools used for this project. In order t
 
 ![](static/media/readme-images/wireframes-shopping-bag.jpg)
 
+Some design changes come up during the development process. 
+## Site Structure
+
+The application has some main pages: Home, Products, Product-detail page, Terms of sale, Open purchase, Privacy Policy, Shopping Cart, Checkout. It also has several additional pages related to Admin and accounts.
+
+## Design Choices
+
+The design is modern and straightforward, with a sharp edge. The main goal is to maintain client focus on shopping and be as intuitive as possible, making users' interaction with the website fast and simple. 
+### Color Scheme
+
+The color pallet has contrasting and vibrant colors. The red and green accents are used as intuitive visual hints for `delete` and `add to cart` buttons, as well as to display discounted prices and badges. 
+
+![](static/media/readme-images/pallets.jpg)
+
+## Data Model
+
+El-mania's website is based on the MVC model (Model. View and Controller). It consists of a database with relationships between models (represented by tables in the above image). The models are User, Item, ItemDiscount, CartItem, Order, OrderItems, and Contact. The views then render the models in a way dictated by the URLs.
+
+Some fields have been altered during the development process, and new models have been created: UserProfile and UserContact.
+
+![](static/media/readme-images/MVC-table.jpg)
+
+## Features
+### Existing features
+#### Home Page
+##### Navigation 
+
+El-mania's navigation is located at the top of every page, under a banner with shipping cost info. 
+
+The top header has:
+
+- company's logo on the left-hand side;
+- search bar located in the middle where users can search after wished product by name or category;
+- icons for Login, Login Admin, and Cart in the right corner, displayed inline. When a user is authenticated, a My Profile and a Logout icon show up to make user interaction explicit. The Cart icon has a product-counter badge. 
+
+Main navigation consists of links for the entire list of products, Cell Phones, Tv and Home Theater, Computer $ Tablets, Video Games, Hausehold.
+
+![](static/media/readme-images/navigation.jpg)
+
+The main navigation elemets swifts to a dropdown list for smaller screens, represented by three lines in the top left corner.
+
+![](static/media/readme-images/mobile-version.jpg)
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
