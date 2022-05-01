@@ -5,6 +5,7 @@ from .forms import OrderForm
 from .models import Order, OrderItem
 from customer.models import UserContact
 from django.conf import settings
+from django.core.mail import send_mail
 from decimal import Decimal
 from django.http.response import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -206,6 +207,21 @@ def success(request):
         # Clear the bag
         bag = {}
         request.session['bag'] = bag
+
+        send_mail(
+            f'Order #{order_id} confirmation',
+            f'''Dear {order.full_name},
+
+Thank you for your order! We hope that you enjoyed shopping with us. Your order is being processed and we will keep you updated. 
+For additional information, contact us at orders@elmania.com.
+
+Best regards,
+El-mania team          
+''',
+            'orders@elmania.com',
+            [order.email],
+            fail_silently=False,
+        )
 
     else:
         messages.error(request, f'Order could not be submitted. If you made the payment, please contact us.')
