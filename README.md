@@ -85,6 +85,57 @@ The main navigation elemets swifts to a dropdown list for smaller screens, repre
 
 ![](static/media/readme-images/mobile-version.jpg)
 
+##### Carousel Images
+
+ A slideshow for cycling through a series of 3 images is a point of interest, with some sales or campaigns taking place.
+
+![](static/media/readme-images/carousel.jpg)
+
+##### Offers Cards
+
+Bootstrap card presenting discounted products. Each card has information for one product. Image, name, price, discounted price, discounted percent on the left corner. At the bottom are two buttons, `add to cart` and `details`. 
+
+`Add to cart` will add that product to the shopping cart, while `Details` will open a product-detail page with more information on that product. 
+
+![](static/media/readme-images/cards.jpg)
+
+##### Footer
+
+Located at the page bottom. It has three sections:
+
+1. social media section is redirecting the user to El-mania's Facebook page and other social media pages (El-mania does not have business pages on this website).
+2. in the second section:
+- is embedded in a signup form to the company's newsletter. 
+A list of Useful Links redirects the user to Terms to sale, Open purchase, and Privacy policy pages to increase the client's reliability. 
+- company's contact details, followed by a button to the client form. 
+3. Copywrite information 
+
+![](static/media/readme-images/footer.jpg)
+
+#### Products
+
+The Products page displays all the products that are registered in the database. On each page are displayed 25 products. Navigation between those pages is made using the pagination from the bottom of the page. 
+
+Each product is presented on a card with an image on the left side, name, and rating in the middle, and on the right-side unit price and two options: `Add to cart` and `Details`. 
+
+![](static/media/readme-images/products-page.jpg)
+
+On this page, the user can sort the products based on **name, rating, and price**, **ascending or descending**. 
+
+The left sidebar is dedicated to filtering: 
+- by price: the user can set a minimum and maximum value. 
+- by category: the user can check one or multiple categories from a dropdown list.
+- by brand: the user can select one or multiple manufacturers.
+
+To complete these actions, the user must click on `Show results`. The matching results are displayed. `Clear filters` will remove the selected filters. 
+
+When no result is found, an info message will be displayed.
+
+![](static/media/readme-images/no-result-msg.jpg)
+
+
+
+
 
 
 
@@ -95,39 +146,6 @@ The main navigation elemets swifts to a dropdown list for smaller screens, repre
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-The El-mania project has two apps: store and cart.
-## Store app
-
-This app contains the products list, item model, and product_page.html. The sorting and filtering of the products.
-
-## cart
-
-This app includes the products added by the customer to the shopping cart and the placement of order. The OrderItem and Order models. cart_page and checkout_page are located in the cart's templates.
-
-
-
-
-# Testing
 
 ## Generating Fixtures
 
