@@ -133,6 +133,57 @@ When no result is found, an info message will be displayed.
 
 ![](static/media/readme-images/no-result-msg.jpg)
 
+### Product Detail
+
+On click `Details` button from each presentation card will redirect the user to a product-detail page, where the user can read a short description of the project, see name, price, category, rating. The user can choose the next action, `Keep shopping` - redirect to previous page or `Add to cart` - add this product to the cart. 
+
+![](static/media/readme-images/products-detail.jpg)
+
+### Shopping Cart
+
+The shopping cart page is accessed from the right-based cart icon. Here the client can:
+
+- see all items added to the cart.
+- adjust the quantity by direct input in the field or by pressing the increase or decrease arrows. `Update cart` button will recalculate the subtotal displayed.
+- delete a product by pressing `Remove` button
+- see the product's total price. Each item is added to this amount. 
+- continue to the next step in the shopping process by clicking on `Proceed to Checkout`.
+
+![](static/media/readme-images/shopping-cart-page.jpg)
+
+### Checkout 
+
+- **Shipping Address** is an order form that the user must fill out to proceed to payment. Here a website's guest can fill up the name, email, telephone, address, city, postal code, county, country, and notes (comments regarding delivery, e.g.).
+
+   An authenticated user has the possibility to select from his registered shipping address.
+
+![](static/media/readme-images/checkout-2.jpg)
+
+
+- **Your cart** is a summary of the order. Quantity, product name, and amount for that product are displayed inline. *Order Total* is the products' total. *Delivery fee* is 0 for orders over 100$. If an order is under this amount, a delivery fee of 10$ will be applied. *Total* is the sum of the order total and delivery fee. 
+
+- `Payment` button will redirect the user to the payment form.
+
+![](static/media/readme-images/order-form-full.jpg)
+
+
+### Payment
+
+The secure payment formalities are implemented with Stripes. The standard Stripes page is divided into 2 columns. On the left side is a summary of the order, and on the right side is a payment form.
+
+The user can choose the type of card in the form, write the card's number, date, three digits security code, card's holder name, and country.
+
+After clicking on `Pay`, if the transaction is successful, the user will receive a message, followed by a confirmation email. An error message will appear for an unsuccessful payment.
+
+![](static/media/readme-images/payment.jpg)
+
+![](static/media/readme-images/order-confirmation.jpg)
+
+
+
+
+
+
 
 
 
