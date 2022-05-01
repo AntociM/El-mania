@@ -81,7 +81,7 @@ def register_address(request):
             user_contact.county = form.cleaned_data['county']
             user_contact.postcode = form.cleaned_data['postcode']
             user_contact.country = form.cleaned_data['country']
-
+            messages.success(request, "Address reigstered successfully.")
             user_contact.save()
             return redirect(redirect_url)
 
@@ -137,6 +137,7 @@ def update_contact(request, contact_id):
     if request.method == 'POST':
         redirect_url = request.POST.get('redirect_url')
         form = UserContactForm(request.POST)
+        form.fields['name'].required = False
 
         if form.is_valid():
             contact = get_object_or_404(UserContact, pk=contact_id)
@@ -148,9 +149,11 @@ def update_contact(request, contact_id):
             contact.county = form.cleaned_data['county']
             contact.postcode = form.cleaned_data['postcode']
             contact.country = form.cleaned_data['country']
+            messages.success(request, "Address updated successfully.")
             contact.save()
+        else:
+            messages.error(request, "Could not update the address.")
         return redirect(redirect_url)
-        
 
     return render(request, "customer/profile.html")
 
@@ -170,6 +173,7 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, f'Message submitted.')
             form = ContactForm()
     else:
         form = ContactForm()
