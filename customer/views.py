@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserContactForm, ContactForm
 from .models import UserContact
-from checkout.models import Order
+from checkout.models import Order, OrderItem
 
 
 # Create your views here.
@@ -13,6 +13,15 @@ def profile(request):
     new_user_contact_form = UserContactForm()
     orders = Order.objects.filter(user_id=request.user.pk)
     registered_contact_forms = []
+    user_orders = []
+
+    orders = Order.objects.filter(user_id=request.user.pk)
+    for order in orders:
+        order_items = OrderItem.objects.filter(order=order)
+        user_orders.append({
+            'order':order,
+            'order_items' : order_items
+        })
 
     try:
         user_contact_items = UserContact.objects.filter(user=request.user)
@@ -43,7 +52,7 @@ def profile(request):
     context = {
         'register_contact_form' : new_user_contact_form,
         'registered_contacts'   : registered_contact_forms,
-        'orders' : orders
+        'user_orders' : user_orders
     }
 
     return render(request, "customer/profile.html", context)
@@ -53,7 +62,9 @@ def profile(request):
 def register_address(request):
     if request.method == 'POST':
         registered_contact_forms = []
-        orders = Order.objects.filter(user_id=request.user.pk)
+        user_orders = []
+
+
         redirect_url = request.POST.get('redirect_url')
 
         form = UserContactForm(request.POST)
@@ -75,6 +86,15 @@ def register_address(request):
             return redirect(redirect_url)
 
         else:
+            orders = Order.objects.filter(user_id=request.user.pk)
+            for order in orders:
+                order_items = Order.objects.filter(order_number=order.pk)
+                user_orders.append({
+                    'order':order,
+                    'order_items' : order_items
+                })
+
+
             user_contacts=[]
             if request.user.is_authenticated:
                 try:
@@ -106,7 +126,7 @@ def register_address(request):
             context = {
             'register_contact_form' : form,
             'registered_contacts'   : registered_contact_forms,
-            'orders' : orders
+            'user_orders' : user_orders
             }
             return render(request, "customer/profile.html", context)
     

@@ -139,7 +139,7 @@ def create_checkout_session(request):
             order.save()
         elif address_identifier != 'create':
             contact_item = get_object_or_404(UserContact, pk=address_identifier)
-            order.full_name = contact_item.name
+            order.full_name = contact_item.user_full_name
             order.email = contact_item.email
             order.phone_number = contact_item.phone_number
             order.postcode = contact_item.postcode
