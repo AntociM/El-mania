@@ -8,6 +8,7 @@ from django_countries.fields import CountryField
 
 # Create your models here.
 
+
 class UserManager(BaseUserManager):
 
     def _create_user(self, username, email, password, is_staff, is_superuser, **extra_fields):
@@ -65,6 +66,7 @@ class UserContact(models.Model):
     county = models.CharField(max_length=80, null=True, blank=True)
     postcode = models.CharField(max_length=20, null=True, blank=True)
     country = CountryField(null=True, blank=True)
+
 
 class Contact(models.Model):
     REPLIED = ((0, 'No'), (1, 'Yes'))

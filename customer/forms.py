@@ -3,13 +3,14 @@ from django import forms
 from .models import UserContact
 from .models import Contact
 
+
 class UserContactForm(forms.ModelForm):
     class Meta:
         model = UserContact
         fields = (('name', 'email', 'user_full_name', 'phone_number', 'address',
-                  'city', 'county', 'postcode',
-                  'country'))
-    
+                   'city', 'county', 'postcode',
+                   'country'))
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         placeholders = {
@@ -47,14 +48,13 @@ class UserContactForm(forms.ModelForm):
         for field in self.fields:
             self.fields[field].widget.attrs['placeholder'] = placeholders[field]
             self.fields[field].label = labels[field]
-            
 
     def clean_user_full_name(self):
-        user_full_name = self.cleaned_data['user_full_name']   
+        user_full_name = self.cleaned_data['user_full_name']
 
         if not all(x.isalpha() or x.isspace() for x in user_full_name):
             raise forms.ValidationError("Full name should contain only alphabetical characters. E.g. 'John Doe' ")
-        return user_full_name    
+        return user_full_name
 
     def clean_city(self):
         city = self.cleaned_data['city']
@@ -66,7 +66,7 @@ class UserContactForm(forms.ModelForm):
     def clean_county(self):
         county = self.cleaned_data['county']
 
-        if county != None and not all(x.isalpha() or x.isspace() for x in county):
+        if county is not None and not all(x.isalpha() or x.isspace() for x in county):
             raise forms.ValidationError("County should contain only alphabetical characters. E.g. 'Stockholm Lan' ")
         return county
 
@@ -75,12 +75,12 @@ class UserContactForm(forms.ModelForm):
 
         flag_l = False
         flag_n = False
-        
+
         for i in address:
-        
+
             if i.isalpha():
                 flag_l = True
-    
+
             if i.isdigit():
                 flag_n = True
 
@@ -100,7 +100,6 @@ class UserContactForm(forms.ModelForm):
         except phonenumbers.NumberParseException:
             raise forms.ValidationError("Phone number is not in a valid format. E.g. +46712345678 ")
         return string_phone_number
-
 
 
 class ContactForm(forms.ModelForm):

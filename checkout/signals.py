@@ -10,5 +10,5 @@ def update_on_save(sender, instance, created, **kwargs):
 
 @receiver(post_delete, sender=OrderItem)
 def update_on_delete(sender, instance, **kwargs):
-    
+
     instance.order.update_total()

@@ -14,7 +14,7 @@ from model_utils import Choices
 # Create your models here.
 
 class Order(models.Model):
-    order_number = models.CharField(max_length=40, null=False, editable=False, primary_key = True)
+    order_number = models.CharField(max_length=40, null=False, editable=False, primary_key=True)
     user_id = models.IntegerField(null=True)
     payment_id = models.IntegerField(null=True)
     full_name = models.CharField(max_length=254, null=False, blank=False)
@@ -47,6 +47,7 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
+        # self.save()
         pass
 
     def save(self, *args, **kwargs):
