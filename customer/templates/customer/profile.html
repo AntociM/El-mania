@@ -115,8 +115,8 @@
       <div class="accordion-item">
         <!-- <h2 class="accordion-header" id="heading{{order.order_number}}"> -->
         <button class="accordion-button d-flex" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapse{{order.order_number}}" aria-expanded="true"
-          aria-controls="collapse{{order.order_number}}">
+          data-bs-target="#collapse{{user_order.order.order_number}}" aria-expanded="true"
+          aria-controls="collapse{{user_order.order.order_number}}">
           <div class="d-flex flex-column justify-content-between w-100 me-lg-5">
             <div class="fw-bold">
               #{{user_order.order.order_number}}
@@ -131,8 +131,8 @@
           </div>
         </button>
 
-        <div id="collapse{{order.order_number}}" class="accordion-collapse collapse show"
-          aria-labelledby="heading{{order.order_number}}" data-bs-parent="#accordionOrders">
+        <div id="collapse{{user_order.order.order_number}}" class="accordion-collapse collapse show"
+          aria-labelledby="heading{{user_order.order.order_number}}" data-bs-parent="#accordionOrders">
           <div class="accordion-body">
             <div class="row d-flex">
               <div class="col-lg-4  p-3">
@@ -159,7 +159,7 @@
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
                     <h6 class="my-0">
-                      <a href="{% url 'product_detail'  order_item.item.pk %}" class="text-decoration-none text-dark">
+                      <a href="" class="text-decoration-none text-dark">
                         {{ order_item.quantity }} x {{ order_item.item.name }}
                       </a>
                     </h6>

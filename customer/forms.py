@@ -45,10 +45,6 @@ class UserContactForm(forms.ModelForm):
         self.fields['country'].required = True
 
         for field in self.fields:
-            # if self.fields[field].required:
-            #     placeholder = f'{placeholders[field]} *'
-            # else:
-            #     placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholders[field]
             self.fields[field].label = labels[field]
             
@@ -77,17 +73,14 @@ class UserContactForm(forms.ModelForm):
     def clean_address(self):
         address = self.cleaned_data['address']
 
-        # initializing flag variable
         flag_l = False
         flag_n = False
         
         for i in address:
         
-            # if string has letter
             if i.isalpha():
                 flag_l = True
     
-            # if string has number
             if i.isdigit():
                 flag_n = True
 

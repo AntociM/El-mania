@@ -28,7 +28,7 @@
         {% if contact_items %}
         {% for contact_item in contact_items %}
   
-        <div class="card border-dark border-2 p-0 m-2" style="max-width: 18rem;" id="address-cards-{{contact_item.pk}}">
+        <div class="card shadow border-dark border-2 p-0 m-2" style="max-width: 18rem;" id="address-cards-{{contact_item.pk}}">
           <div class="card-header d-flex justify-content-between text-center text-justify">
             <h5> {{ contact_item.name}} </h5>
           </div>
@@ -42,6 +42,11 @@
           </div>
         </div>
         {% endfor %}
+
+        {% else %}
+        {% if user.is_authenticated %}
+          <p class="m-3"> You can add predefined shipping addresses in your profile page.</p>
+        {% endif %}
         {% endif %}
       </div>
 

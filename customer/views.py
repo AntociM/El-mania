@@ -86,6 +86,7 @@ def register_address(request):
             return redirect(redirect_url)
 
         else:
+            messages.error(request, "Address could not be registered. Please check the form")
             orders = Order.objects.filter(user_id=request.user.pk)
             for order in orders:
                 order_items = Order.objects.filter(order_number=order.pk)
