@@ -45,7 +45,7 @@ These user stories are part of the agile tools used for this project. In order t
 Some design changes come up during the development process. 
 ## Site Structure
 
-The application has some main pages: Home, Products, Product-detail page, Terms of sale, Open purchase, Privacy Policy, Shopping Cart, Checkout. It also has several additional pages related to Admin and accounts.
+The application has some main pages: Home, Products, Product-detail page, Profile, Shopping Cart, Checkout, Terms of sale, Open purchase, Privacy Policy,. It also has several additional pages related to Admin and accounts.
 
 ## Design Choices
 
@@ -133,13 +133,13 @@ When no result is found, an info message will be displayed.
 
 ![](static/media/readme-images/no-result-msg.jpg)
 
-### Product Detail
+#### Product Detail
 
 On click `Details` button from each presentation card will redirect the user to a product-detail page, where the user can read a short description of the project, see name, price, category, rating. The user can choose the next action, `Keep shopping` - redirect to previous page or `Add to cart` - add this product to the cart. 
 
 ![](static/media/readme-images/products-detail.jpg)
 
-### Shopping Cart
+#### Shopping Cart
 
 The shopping cart page is accessed from the right-based cart icon. Here the client can:
 
@@ -151,7 +151,7 @@ The shopping cart page is accessed from the right-based cart icon. Here the clie
 
 ![](static/media/readme-images/shopping-cart-page.jpg)
 
-### Checkout 
+#### Checkout 
 
 - **Shipping Address** is an order form that the user must fill out to proceed to payment. Here a website's guest can fill up the name, email, telephone, address, city, postal code, county, country, and notes (comments regarding delivery, e.g.).
 
@@ -167,7 +167,7 @@ The shopping cart page is accessed from the right-based cart icon. Here the clie
 ![](static/media/readme-images/order-form-full.jpg)
 
 
-### Payment
+#### Payment
 
 The secure payment formalities are implemented with Stripes. The standard Stripes page is divided into 2 columns. On the left side is a summary of the order, and on the right side is a payment form.
 
@@ -179,20 +179,27 @@ After clicking on `Pay`, if the transaction is successful, the user will receive
 
 ![](static/media/readme-images/order-confirmation.jpg)
 
+#### Profile
 
+An authenticated user has access to his profile. The profile page has three dropdown sections. 
+- The first section includes a form where a user can save default **shipping details**(e.g, home address, office, or another place where wishes to receive orders). This information will appear on the checkout without needing to complete the checkout form. 
+    The user can update or delete one registered address. 
 
+![](static/media/readme-images/registered-address.jpg)
 
+- The second section is **Order history**. A user can see the order number, status, order date, delivery address, and order summary for each order. 
 
+The 3rd section gives the user the possibility to change his password. `Change Password` will redirect to the reset password page, and the user will receive instructions via email. 
 
+![](static/media/readme-images/order-history-1.jpg)
 
+#### Contact form
 
+Contact form includes name, email, telephone, title, and message. When a user submits a contact request, the application logs the contact to the database for a record. Initially, all messages are marked as 'unreplied'. A quick reference to see the contact's status.
 
+![](static/media/readme-images/contact-form.jpg)
 
-
-
-
- 
-
+#### Additional pages 
 
 
 
