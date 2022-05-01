@@ -139,6 +139,11 @@ def terms_of_sale(request):
 
     return render(request, 'store/terms_of_sale.html')
 
+def open_purchase(request):
+    """ A view to return open purchase page """
+
+    return render(request, 'store/open_purchase.html')
+
 
 
 
