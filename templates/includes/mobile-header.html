@@ -1,63 +1,12 @@
-<div class="row">
-    <ul class="list-group list-group-horizontal col-12 justify-content-between bg-white p-0 d-lg-none">
-        <li class="list-group-item border-0">
-            <a class="text-black nav-link" data-bs-toggle="collapse" href="#mobile-searchbar" role="button"
-                aria-expanded="false" aria-controls="mobile-searchbar" aria-haspopup="true">
-                <div class="text-center">
-                    <div></div>
-                    <p class="my-0">Search</p>
-                </div>
-            </a>
-        </li>
-        <li class="list-group-item border-0 dropdown">
-            <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                <div class="text-center">
-                    <div></div>
-                    <p class="my-0">My Account</p>
-                </div>
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                {% if request.user.is_authenticated %}
-                {% if request.user.is_superuser %}
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Admin</a>
-                {% endif %}
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                {% endif %}
-            </div>
-        </li>
-        <li class="list-group-item border-0">
-            <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
-                href="{% url 'cart_view' %}">
-                <div class="text-center">
-                    <div></i></div>
-                    <p class="my-0">
-                        {% if grand_total %}
-                        ${{ grand_total|floatformat:2 }}
-                        {% else %}
-                        $0.00
-                        {% endif %}
-                    </p>
-                </div>
-            </a>
-        </li>
-    </ul>
-</div>
-<div class="row">
-    <div class="collapse col-12 p-0 b-0" id="mobile-searchbar">
+<div class="row d-lg-none d-lg-block">
+    <div class="col-12 p-0 b-0" id="mobile-searchbar">
         <form class="form" method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
                 <input class="form-control border border-black rounded-0" type="text" name="q"
                     placeholder="Search our site">
                 <div class="input-group-append">
-                    <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
-                        <span class="icon">
-                            <img
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA6dJREFUaEPt2GnIrVMUB/DfJb4QXwxJMk+lZChEZjKETCkuujdlSiKfkFmmEDKWoSQZyxSRISXjR8lUZB5SMmQe+muf2/F673Oevd9zct56n2+ns9ba67/X2mv911pknn+L5rn/FgD83xFciMB8j8AGOAT7YH2sjdXwJT7Fm3gEz+LnSYBtTaEdcRl2L07F0XfwGX7CWlgHkVsd3+M6XIXvxgmkFkCcuQ1H4gtcjYfxwXKcWgm7YSmOwjc4HfeOC0QNgE3wGDbCxbgWP1Y4sg2ux864Aufgzwr9WUX7AtgYrxQLh+PFxoMTkaTSybgdJzTaWabWB0Ae5cslr3fC+3M9FBfgfJxZItlssg+Ae0rO74sXmk/6t2LOvQ+HIZfyeqvdUQC2x2u4qNxa6zmz6a2Kd0v12qPV8CgAT2Nr5AGnFI77OxG3YH881WK8C8C6+LhUi9T8SXx51B+W1Dym5YAuAKfgRmxeQt1iv4/OraVHpPn92kdhWKYLQBrUVtis1mil/MGFbuyClyp1O+eBNwqfCdeZ5JcLCg05uqVDd0UgvOZRnDRJ75FqlAJxVqEmVcd1AfgWd5RmU2W0UnjFkvuhJ2lwVV8XgIQ1adRUHSq8CGtNtE/FTRV6/4h2AUjXDdnas9Zopfx25aKOwEOVup0AwhyXYM1JDSPF2TNwDdbDJ+MEsDeewQF4stZwhfzzZfjZokJnmWhXCqVLZmh5rpC5FvujdDbFW7i05QGPegP5/9xC5MIYXx3lTcP/9+NAZLb+ukF/5GJrFbxXRsbMv7+1HLIcnb1Kil6Os1vtjmKjsZsJ7IEyC4+rqW1YZoBsL7bFL5MEENsX4rwyC2eS+qv1QMT5J7AlQtcPaiFxg/P7RGDwVm5G+PuDpbz+0AAiPSWT2BpDulkUpAdUM9E+j3imj6eVmv1VedwZzH/vASRLgUsKbU7Vebuk5kA1nCurmmoQfSMw7GPGzCuRMTDbt9zg48WpwWIrG7pQhF1LimQ3FKDZSCQd42h41vFDhptAtAAYnLlfcSDjYBZegy/0Y4Wh35l7kzY3zCiVkbkTx80FxFwADM5dGTuU3WhuPWuY1PTPS+/4qCPFwkQTiWYQ4wDQ4wl0iiQSM9Mp1OXQPuV1GgAE3Wzp1AvEtAAIiNnSaSSIaQLQBGLaAAxA3IXFQy8nG5JQmv980whgACIl9lj8UTr/3fMJwHA6hS9lwTzrN60R6F2aFwD0vqoJCS5EYEIX29vsvI/A34DsqzEOpvKhAAAAAElFTkSuQmCC">
-                        </span>
+                    <button class="form-control form-control btn bg-light-1 rounded-end" type="submit">
+                        <i class="bi bi-search"></i>
                     </button>
                 </div>
             </div>

@@ -38,15 +38,15 @@
 
   <header class="container-fluid">
     <div class="row">
-      <div class="col-sm-12 d-flex align-items-center bg-dark-1 p-0">
+      <div class="col-sm-12 d-flex flex-wrap justify-content-center align-items-center bg-dark-1 p-0">
 
-        <div class="col-lg-2 justify-content-sm-center text-dark">
+        <div class="col-lg-2 d-flex justify-content-center text-dark">
           <a href="{% url 'home' %}" class="nav-link">
             <h2 class="text-light">El-mania</h2>
           </a>
         </div>
 
-        <div class="col-lg-7 d-none d-sm-block justify-content-center">
+        <div class="col-lg-7 d-none d-lg-block ">
           <form method="GET" action="{% url 'products' %}">
             <div class="input-group w-100 rounded">
               <input class="form-control rounded-start" type="text" name="q"
@@ -63,36 +63,36 @@
         <nav class=" col-lg-3 justify-content-lg-between bg-dark-1">
           <ul class="list-group justify-content-lg-end d-flex flex-row me-auto">
             {% if user.is_authenticated %}
-            <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+            <li class="list-group-item bg-transparent border-0">
               <a class="btn bg-light-1 position-relative" href="{% url 'profile' %}">
                 <i class="bi bi-person fs-6"> | Profile</i>
               </a>
             </li>
             {% if user.is_superuser %}
-            <li class="list-group-item d-none d-sm-block bg-transparent border-0">
-              <a class="btn bg-light-1 position-relative" href="">
+            <li class="list-group-item bg-transparent border-0">
+              <a class="btn bg-light-1 position-relative" href="/admin">
                 <i class="bi bi-person fs-6"> | Admin</i>
               </a>
             </li>
             {% endif %}
-            <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+            <li class="list-group-item bg-transparent border-0 ">
               <a role="button" class="btn bg-light-1 position-relative" href="{% url 'account_logout' %}">
                 <i class="bi bi-box-arrow-left fs-6"> | Logout</i>
               </a>
             </li>
             {% else %}
-            <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+            <li class="list-group-item bg-transparent border-0 ">
               <a role="button" class="btn bg-light-1 position-relative" href="{% url 'account_login' %}">
                 <i class="bi bi-box-arrow-right fs-6">| Login</i>
               </a>
             </li>
-            <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+            <li class="list-group-item  bg-transparent border-0 ">
               <a role="button" class="btn bg-light-1 position-relative" href="admin">
                 <i class="bi bi-box-arrow-right fs-6">| Login admin</i>
               </a>
             </li>
             {% endif %}
-            <li class="list-group-item d-none d-sm-block bg-transparent border-0">
+            <li class="list-group-item  bg-transparent border-0 ">
               <a role="button" class="btn bg-light-1 position-relative" href="{% url 'cart_view' %}">
                 <i class="bi bi-cart4 fs-6"> | Cart</i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -188,7 +188,7 @@
                   <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
                       name="b_8f89bfcfc4fb461a3c8360609_9e54c1306f" tabindex="-1" value=""></div>
                   <div class="optionalParent">
-                    <div class="clear foot">
+                    <div class="w-100">
                       <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn bg-light-1 btn-sm m-0">
                      
                     </div>

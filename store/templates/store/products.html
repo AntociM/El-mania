@@ -10,7 +10,7 @@
 <!-- <div class="overlay"></div> -->
 {% if page_obj.object_list|length > 0%}
 
-<div class="container-fluid mt-lg-3">
+<div class="container-fluid mt-3">
     <div class="row flex-sm-nowrap">
         <div class="col-sm-2 col-lg-2 offset-lg-1">
             <div class="btn-group w-100" role="group" aria-label="Basic example">
@@ -90,10 +90,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 col-lg-6">
-            <div class="container-fluid ">
-                <div class="container mb-2">
-                    <div class="d-flex row p-2 bg-white border rounded" id="product-sorting">
+        <div class="col-sm-12 col-lg-6">
+            <div class="container-fluid p-0">
+                <div class="container mb-2 p-0">
+                    <div class="d-flex row gx-0 p-2 bg-white border rounded" id="product-sorting">
                         <select class="form-select form-select-sm mb-3" id="product-sorting-select">
                             <option value="none" {% if current_sorting == 'none' %}selected {% endif %}>None</option>
                             <option value="name" {% if current_sorting == 'name' %}selected{% endif %}>Name</option>
@@ -117,9 +117,9 @@
 
                 <!-- List product -->
                 {% for i in page_obj.object_list %}
-                <div class="container mt-2 mb-2">
-                    <div class="d-flex justify-content-center row">
-                        <div class="row p-2 bg-white border rounded">
+                <div class="container p-0 mt-2 mb-2">
+                    <div class="d-flex justify-content-center row gx-0">
+                        <div class="row bg-white border rounded pt-2 pb-2">
                             <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
                                     src="{{i.image}}"></div>
                             <div class="col-md-6 mt-1">
