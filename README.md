@@ -43,6 +43,7 @@ These user stories are part of the agile tools used for this project. In order t
 ![](static/media/readme-images/wireframes-shopping-bag.jpg)
 
 Some design changes come up during the development process. 
+
 ## Site Structure
 
 The application has some main pages: Home, Products, Product-detail page, Profile, Shopping Cart, Checkout, Terms of sale, Open purchase, Privacy Policy,. It also has several additional pages related to Admin and accounts.
@@ -201,25 +202,149 @@ Contact form includes name, email, telephone, title, and message. When a user su
 
 #### Additional pages 
 
+The user is redirected to different pages from AllAuth accounts.
 
+- Sign in: the user can log in using his credentials, username/email, and password. There is a link to the Sign up form in the case of a new user.
+- Password reset: to recover the forgotten password.
+- Email verification: every new user will receive a verification email to finalize the signup process. 
 
+#### Admin Panel
 
+Admin has access via the default Django Admin page. The Admin panel is accessed from the navigation menu (Admin link) once a superuser has logged in. Admin can add/delete users, upload/delete products, and see the contact received via contact form. The admin can manually change the order status from `processing` to `delivered`.
+
+![](static/media/readme-images/admin-panel-order.jpg)
+
+### Future Feature
+
+- Add a custom Admin interface.
+- Automatic notification for the user when an order has a new status.
+Possibly for the user to change upload a profile picture and change credentials.
+- Order status to be more detailed. Now are available only 2. 
+- Information on delivery at checkout.
 
 ## Generating Fixtures
 
-The products data in the database is created by uploading pre-written data from a file using fixtures in JSON format. To read and filter the dataset using Python, conversion of JSON into their respective Python objects was needed.
+The product data in the database is created by uploading pre-written data from a file using fixtures in JSON format. To read and filter the dataset using Python, conversion of JSON into their respective Python objects was needed.
 
-https://github.com/algolia/datasets 
+## SEO Implementations
 
-https://www.geeksforgeeks.org/read-json-file-using-python/
+To improve accessibility for El-mania, a series of techniques were implemented:
+
+- `meta` tags description, keyword
+-  added xml-sitemap and robots.txt
+-  added alt tags for imgages
+
+## Marketing
+
+To increase visibility for potential clients, El-mania is using Social Media Marketing. This presents the advantage of being free of charge and offers the possibility of creating close relationships with customers. 
+
+El-mania has a Facebook business page, unpaid, as presented in the image above. The link to the page can be accessed from the footer, Facebook icon. 
+Facebook is the most popular social media platform, with a significant representation worldwide. They are also offering the possibility of paid ads, which aligns with El-mania's marketing strategy for the future.
+
+![](static/media/readme-images/fb-page.jpg)
+
+![](static/media/readme-images/fb-page1.jpg)
+
+
+## Technologies used
+
+- Python - the primary language of the application.
+- HTML5 - provides the content and structure for the website.
+- CSS - provides the styling.
+- Django - Django framework for the project.
+- Heroku - For project deployment.
+- Bootstrap - Design toolkit.
+- GitHub - to host the repositories.
+- Gitpod - as the IDE for the application.
+- Balsamiq - used to create the wireframes.
+- Cloudinary - used for image storage.
+- PEP8 - for testing and validating the code.
+- W3C Validator - code validation.
+- DrawSQL - for the database diagram.
+- XML - sitemap.
+- Privacy Policy Generator
+## Credits
+
+- [Shutterstoc](https://www.shutterstock.com/) for images.
+- [Coolors](https://coolors.co/palettes/trending) for genereting color scheme.
+- [StackOverflow](https://stackoverflow.com/) for generals ideas.
+- [Google Fonts](https://fonts.google.com/) for font.
+- [Ordinarycoders](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend) for contact form ideas.
+- [Code with Mosh](https://codewithmosh.com/p/the-ultimate-django-part1) for more info om MVC.
+- [Footer template](https://mdbootstrap.com/docs/standard/navigation/footer/)
+- [Code institute - Boutique Ado](https://kika-boutique-ado.herokuapp.com/) for code examples and ideas.
+- [Dataset](https://github.com/algolia/datasets )
+- [This](https://stackoverflow.com/questions/62679372/django-post-save-not-firing-but-post-delete-in-same-signals-py-file-does) was used for fixing a bug.
+- [Geeksforgeeks](https://www.geeksforgeeks.org/error_messages-django-form-field-validation/) for form validation.
+- [This](https://www.geeksforgeeks.org/read-json-file-using-python/) for creating fixtures.
+- [For MVC Model](https://fmhelp.filemaker.com/help/18/fmp/en/index.html#page/FMP_Help%2Fmany-to-many-relationships.html%23)
+- [Template](https://www.bootdey.com/snippets/view/Shop-cart#html) for shopping cart page.
+
+
+## Testing 
+
+Please refer to [here](Testing.md) for more information on testing.
+
+## Deployment
+### To deploy using Heroku:
+
+- Ensure your requirements.txt file has the required dependencies. 
+- Create or Login to your Heroku account.
+- Navigate to Dashboard.
+- "Create new app" from the drop-down menu. This is found in the upper right portion of the window.
+- Provide a unique name for your application and select your region.
+- Click "Create App".
+
+#### Heroku Postgres database:
+- Navigate to the "Resources" tab. Once there, in the search box type "Postgres".
+- Conect this to the App you have just created.
+
+#### Setting up the App within Heroku:
+- Navigate to "Settings" and scroll down to "config vars".
+- There are several config vars for this project: 
+
+![](static/media/readme-images/config_var.jpg)
+
+#### App deployment
+
+- Navigate to the "Deploy" section.
+- Scroll down to "Deployment Method" and select "GitHub".
+- Authorise the connection of Heroku to GitHub.
+- Search for your GitHub repository name, and select the correct repository.
+- For Deployment, there are two options, Automatic Deployments or Manual.
+- Automatic Deployment: This will prompt Heroku to re-build your app each time you push your code to GitHub.
+- Manual Deployment: This will only prompt Heroku to build your app when you manually tell it.
+- Select "master/Main", and the deployment method that you desire.
+
+#### Fork repository on GitHub
+
+- Log in to GitHub and locate the repository.
+- Click on the 'Fork' button (located on the left-hand side) to create a copy of the original repository in your GitHub Account.
+
+#### Local clone of a project
+
+- Under the repository's name, click on the code tab.
+- In the Clone with HTTPS section, click on the clipboard icon to copy the given URL. Cloning image
+- In your IDE of choice, open Git Bash.
+- Change the current working directory to the location where you want the cloned directory to be made.
+- Type git clone, and then paste the URL copied from GitHub.
+- Press 'enter', and the local clone will be created.
+
+## Acknowledgements
+
+The site was completed as a Portfolio 5 Project piece for the Full Stack Software Developer (e-Commerce) Diploma at the Code Institute. I want to thank my mentor Precious Ijege for his support and feedback. 
 
 
 
-Links:
 
-https://fmhelp.filemaker.com/help/18/fmp/en/index.html#page/FMP_Help%2Fmany-to-many-relationships.html%23
 
-https://www.bootdey.com/snippets/view/Shop-cart#html  Shopping cart code
+
+
+
+
+
+
+
 
 
 
