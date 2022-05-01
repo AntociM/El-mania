@@ -70,7 +70,7 @@
                 {% bootstrap_field registered_contact.form.postcode  layout='floating'%}
                 {% bootstrap_field registered_contact.form.country  layout='floating'%}
               </div>
-              <button class="btn btn-primary btn-sm w-100" type="submit">
+              <button class="btn bg-dark-2 text-dark btn-sm w-100" type="submit">
                 Update
               </button>
               <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -114,11 +114,11 @@
 
       <div class="accordion-item">
         <!-- <h2 class="accordion-header" id="heading{{order.order_number}}"> -->
-        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        <button class="accordion-button d-flex" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapse{{order.order_number}}" aria-expanded="true"
           aria-controls="collapse{{order.order_number}}">
-          <div class="d-flex justify-content-between w-100 me-5">
-            <div>
+          <div class="d-flex flex-column justify-content-between w-100 me-lg-5">
+            <div class="fw-bold">
               #{{user_order.order.order_number}}
             </div>
             <div class="text-uppercase">
@@ -133,9 +133,9 @@
 
         <div id="collapse{{order.order_number}}" class="accordion-collapse collapse show"
           aria-labelledby="heading{{order.order_number}}" data-bs-parent="#accordionOrders">
-          <div class="accordion-body d-flex flex-column">
-            <div class="row d-flex flex-nowrap ">
-              <div class="col-4  p-3">
+          <div class="accordion-body">
+            <div class="row d-flex">
+              <div class="col-lg-4  p-3">
                 <h6 class="card-title"> {{user_order.order.full_name}}</h6>
                 <i class="bi bi-telephone"> {{user_order.order.phone_number}}</i><br>
                 <i class="bi bi-envelope"> {{user_order.order.email}}</i> <br>
@@ -143,9 +143,8 @@
                   {{user_order.order.postcode}}<br>{{user_order.order.county}}, {{user_order.order.country}}</span>
               </div>
 
-              <!-- <div style=" border-left: 2px solid #17C3B2;"></div> -->
 
-              <div class="col-8 border-3 border-start p-3" style="border-color: #17C3B2 !important;">
+              <div class="col-lg-8 border-3 border-start p-3" style="border-color: #17C3B2 !important;">
                 <h6> Notes:</h6>
                 {{user_order.order.notes}}
               </div>
