@@ -50,7 +50,7 @@ The application has some main pages: Home, Products, Product-detail page, Profil
 
 ## Design Choices
 
-The design is modern and straightforward, with a sharp edge. The main goal is to maintain client focus on shopping and be as intuitive as possible, making users' interaction with the website fast and simple. 
+The design is modern and straightforward, with a sharp edge. The main goal is to maintain client's focus on shopping and to be as intuitive as possible, making client's interaction with the website fast and simple. 
 ### Color Scheme
 
 The color pallet has contrasting and vibrant colors. The red and green accents are used as intuitive visual hints for `delete` and `add to cart` buttons, as well as to display discounted prices and badges. 
@@ -78,17 +78,17 @@ The top header has:
 - search bar located in the middle where users can search after wished product by name or category;
 - icons for Login, Login Admin, and Cart in the right corner, displayed inline. When a user is authenticated, a My Profile and a Logout icon show up to make user interaction explicit. The Cart icon has a product-counter badge. 
 
-Main navigation consists of links for the entire list of products, Cell Phones, Tv and Home Theater, Computer $ Tablets, Video Games, Hausehold.
+Main navigation consists of links for the entire list of products, Cell Phones, Tv & Home Theater, Computer & Tablets, Video Games, Hausehold.
 
 ![](static/media/readme-images/navigation.jpg)
 
-The main navigation elemets swifts to a dropdown list for smaller screens, represented by three lines in the top left corner.
+The main navigation elements swifts to a dropdown list for smaller screens, represented by three lines in the top left corner.
 
 ![](static/media/readme-images/mobile-version.jpg)
 
 ##### Carousel Images
 
- A slideshow for cycling through a series of 3 images is a point of interest, with some sales or campaigns taking place.
+ A slideshow for cycling through a series of 3 images is a point of interest. Ongoing sales or marketing campaines are displayed on the representative images.
 
 ![](static/media/readme-images/carousel.jpg)
 
@@ -104,10 +104,10 @@ Bootstrap card presenting discounted products. Each card has information for one
 
 Located at the page bottom. It has three sections:
 
-1. social media section is redirecting the user to El-mania's Facebook page and other social media pages (El-mania does not have business pages on this website).
+1. social media section is redirecting the user to El-mania's Facebook page and other social media pages (El-mania does not yet have business pages on other social platforms).
 2. in the second section:
 - is embedded in a signup form to the company's newsletter. 
-A list of Useful Links redirects the user to Terms to sale, Open purchase, and Privacy policy pages to increase the client's reliability. 
+- A list of Useful Links redirects the user to Terms to sale, Open purchase, and Privacy policy pages to increase the website's reliability. 
 - company's contact details, followed by a button to the client form. 
 3. Copywrite information 
 
@@ -121,7 +121,7 @@ Each product is presented on a card with an image on the left side, name, and ra
 
 ![](static/media/readme-images/products-page.jpg)
 
-On this page, the user can sort the products based on **name, rating, and price**, **ascending or descending**. 
+On this page, the user can sort the products based on **name, rating**, and **price**, **ascending** or **descending**. 
 
 The left sidebar is dedicated to filtering: 
 - by price: the user can set a minimum and maximum value. 
@@ -136,7 +136,7 @@ When no result is found, an info message will be displayed.
 
 #### Product Detail
 
-On click `Details` button from each presentation card will redirect the user to a product-detail page, where the user can read a short description of the project, see name, price, category, rating. The user can choose the next action, `Keep shopping` - redirect to previous page or `Add to cart` - add this product to the cart. 
+On click `Details` button from each presentation card will redirect the user to a product-detail page, where the user can read a short description of the product, see name, price, category, rating. The user can choose the next action, `Keep shopping` - redirect to previous page or `Add to cart` - add this product to the cart. 
 
 ![](static/media/readme-images/products-detail.jpg)
 
@@ -190,7 +190,7 @@ An authenticated user has access to his profile. The profile page has three drop
 
 - The second section is **Order history**. A user can see the order number, status, order date, delivery address, and order summary for each order. 
 
-The 3rd section gives the user the possibility to change his password. `Change Password` will redirect to the reset password page, and the user will receive instructions via email. 
+- The 3rd section gives the user the possibility to change his password. `Change Password` will redirect to the reset password page, and the user will receive instructions via email. 
 
 ![](static/media/readme-images/order-history-1.jpg)
 
@@ -232,13 +232,13 @@ To improve accessibility for El-mania, a series of techniques were implemented:
 
 - `meta` tags description, keyword
 -  added xml-sitemap and robots.txt
--  added alt tags for imgages
+-  added alt tags for `img`
 
 ## Marketing
 
 To increase visibility for potential clients, El-mania is using Social Media Marketing. This presents the advantage of being free of charge and offers the possibility of creating close relationships with customers. 
 
-El-mania has a Facebook business page, unpaid, as presented in the image above. The link to the page can be accessed from the footer, Facebook icon. 
+El-mania has a Facebook business page, as presented in the image above. The link to the page can be accessed from the footer, Facebook icon. 
 Facebook is the most popular social media platform, with a significant representation worldwide. They are also offering the possibility of paid ads, which aligns with El-mania's marketing strategy for the future.
 
 ![](static/media/readme-images/fb-page.jpg)
