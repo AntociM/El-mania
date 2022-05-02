@@ -4,6 +4,9 @@ El-mania is an e-commerce website based on the B2C (Business to Customers) type.
 El-mania's website is designed to offer a pleasant and effortless shopping experience to individual customers with the end-user in mind.
 
 The fictional El-mania company is Swedish-based.
+
+Live demo can be found on [Heroku](https://el-mania.herokuapp.com/)
+
 ## User Stories
 
 - As a **site user** I want to **register myself on an account** so that **I can have a personal account and view my profile**.
