@@ -5,10 +5,11 @@
 
 <div class="container-fluid mt-md-3">
     <div class="row">
-        <div class=" d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-3 offset-lg-3" style="background-color:white">
-                <a href="{{ product.image }}" target="_blank">
-                    <img class="img-fluid rounded product-image" src="{{product.image}}" style="width:160px; height: auto;">
-                </a>
+        <div class=" d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-3 offset-lg-3"
+            style="background-color:white">
+            <a href="{{ product.image }}" target="_blank">
+                <img class="img-fluid rounded product-image" src="{{product.image}}" style="width:160px; height: auto;">
+            </a>
         </div>
 
         <div class="col-12 col-md-6 col-lg-3" style="background-color:white">
@@ -22,14 +23,23 @@
                         <i class="bi bi-star-fill text-success"> </i>{{ product.rating }}/6
                     </span>
                 </p>
-            
+
                 <form action="{% url 'add_to_cart' product.pk %}" method="POST">
                     {% csrf_token %}
-                    <a type="button" class="btn btn-dark mt-3" href="{% url 'products' %}"> <i class="bi bi-caret-left"></i>Keep
+                    <a type="button" class="btn btn-dark mt-3" href="{% url 'products' %}"> <i
+                            class="bi bi-caret-left"></i>Keep
                         shopping</i></a>
                     <input class="btn btn-dark mt-3" type="submit" value="Add to cart">
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
+                {% if user.is_superuser %}
+
+                <a type="button" class="btn btn-warning mt-3" href="{% url 'edit_product_detail' product.pk %}"> <i class="bi bi-pencil"></i> Edit product</a>
+                <a type="button" class="btn btn-danger mt-3" href="{% url 'products' %}"> <i class="bi bi-trash"></i> Delete product</a>
+
+                {% endif %}
+
+
             </div>
         </div>
     </div>
