@@ -271,6 +271,7 @@ Facebook is the most popular social media platform, with a significant represent
 - [Shutterstoc](https://www.shutterstock.com/) for images.
 - [Coolors](https://coolors.co/palettes/trending) for genereting color scheme.
 - [StackOverflow](https://stackoverflow.com/) for generals ideas.
+- [This](https://stackoverflow.com/questions/19130942/whats-the-best-way-to-store-a-phone-number-in-django-models) for phone number model.
 - [Google Fonts](https://fonts.google.com/) for font.
 - [Ordinarycoders](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend) for contact form ideas.
 - [Code with Mosh](https://codewithmosh.com/p/the-ultimate-django-part1) for more info om MVC.

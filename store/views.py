@@ -5,6 +5,7 @@ from django.db.models import Q
 from decimal import Decimal
 
 from .models import ItemDiscount, Item
+from .forms import EditItemForm
 
 # Create your views here.
 
@@ -125,6 +126,62 @@ def product_detail(request, item_id):
     }
 
     return render(request, 'store/product_detail.html', context)
+
+def edit_product_detail(request, item_id):
+    """ A view to allow superuser to edit product details """
+    
+    product = get_object_or_404(Item, pk=item_id)
+
+    form = EditItemForm()
+    form.initial = {
+        'name': product.name,
+        'category': product.category,
+        'description': product.description,
+        'brand': product.brand,
+        'price': product.price,
+        'rating': product.rating,
+        'image': product.image
+    }
+
+    context = {
+        'item': product,
+        'form': form,
+    }
+
+    return render(request, 'store/edit_product_detail.html', context)
+
+def update_product_detail(request, item_id):
+    """ Update product detail in the database """
+    if request.method == 'POST':
+        form = EditItemForm(request.POST)
+        if form.is_valid():
+            product=get_object_or_404(Item, pk=item_id)
+            product.name=form.cleaned_data['name']
+            product.category=form.cleaned_data['category']
+            product.description=form.cleaned_data['description']
+            product.brand=form.cleaned_data['brand']
+            product.price=form.cleaned_data['price']
+            product.rating=form.cleaned_data['rating']
+            product.image=form.cleaned_data['image']
+
+            product.save()
+
+            messages.success(request, f'{product.name}" successfully updated.')
+            return redirect(f'/products/{item_id}')
+        else:
+            messages.error(request, 'Your product was not updated.')
+
+    # return render(request,'enroll/userregistration.html',{'form':fm})
+    
+
+
+
+
+
+
+
+
+
 
 
 def privacy_policy(request):
