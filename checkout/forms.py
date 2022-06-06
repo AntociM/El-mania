@@ -76,7 +76,6 @@ class OrderForm(forms.ModelForm):
 
         # initializing flag variable
         flag_l = False
-        flag_n = False
 
         for i in address:
 
@@ -84,13 +83,7 @@ class OrderForm(forms.ModelForm):
             if i.isalpha():
                 flag_l = True
 
-            # if string has number
-            if i.isdigit():
-                flag_n = True
-
         if not flag_l:
-            raise forms.ValidationError("Address street number not detected. E.g. '1984 Motihari Blvd, Ste 101' ")
-        elif not flag_n:
             raise forms.ValidationError("Address street name not detected. E.g. '1984 Motihari Blvd, Ste 101' ")
 
         return address
