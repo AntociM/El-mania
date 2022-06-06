@@ -1,4 +1,6 @@
 import phonenumbers
+
+from phonenumber_field.formfields import PhoneNumberField
 from django import forms
 from .models import Order
 
@@ -10,6 +12,7 @@ class OrderForm(forms.ModelForm):
         fields = (('full_name', 'email', 'phone_number',
                    'address', 'city', 'postcode',
                    'county', 'country', 'notes'))
+
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -88,13 +91,3 @@ class OrderForm(forms.ModelForm):
 
         return address
 
-    def clean_phone_number(self):
-        string_phone_number = self.cleaned_data['phone_number']
-        try:
-            phone_number = phonenumbers.parse(string_phone_number)
-            if not phonenumbers.is_valid_number(phone_number):
-                raise forms.ValidationError("Phone number is invalid.")
-        except phonenumbers.NumberParseException:
-            raise forms.ValidationError(
-                "Phone number is not in a valid format. E.g. +46712345678 ")
-        return string_phone_number

@@ -9,6 +9,7 @@ from store.models import Item
 
 from model_utils.fields import StatusField
 from model_utils import Choices
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 # Create your models here.
@@ -19,7 +20,7 @@ class Order(models.Model):
     payment_id = models.IntegerField(null=True)
     full_name = models.CharField(max_length=254, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
-    phone_number = models.CharField(max_length=12, null=False, blank=False)
+    phone_number = PhoneNumberField(null=False, blank=False, unique=False)
     country = CountryField(null=False, blank=False)
     postcode = models.CharField(max_length=20, null=False, blank=False)
     city = models.CharField(max_length=50, null=False, blank=False)
