@@ -33,9 +33,13 @@
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
                 {% if user.is_superuser %}
-
-                <a type="button" class="btn btn-warning mt-3" href="{% url 'edit_product_detail' product.pk %}"> <i class="bi bi-pencil"></i> Edit product</a>
-                <a type="button" class="btn btn-danger mt-3" href="{% url 'products' %}"> <i class="bi bi-trash"></i> Delete product</a>
+                <form action="{% url 'delete_product' product.pk %}" method="POST">
+                    {% csrf_token %}
+                    <a type="button" class="btn btn-warning mt-3" href="{% url 'edit_product_detail' product.pk %}"> <i class="bi bi-pencil"></i> Edit product</a>
+                    <button class="btn btn-danger mt-3" type="submit"> <i class="bi bi-trash"></i>
+                        Delete product
+                      </button>
+                </form>
 
                 {% endif %}
 

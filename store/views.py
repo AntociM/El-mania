@@ -171,7 +171,14 @@ def update_product_detail(request, item_id):
         else:
             messages.error(request, 'Your product was not updated.')
 
-    # return render(request,'enroll/userregistration.html',{'form':fm})
+def delete_product(request,item_id):
+    product=get_object_or_404(Item, pk=item_id)
+    product.delete()
+
+    messages.success(request, f'{product.name}" deleted.')
+
+    return redirect((f'/products'))
+
     
 
 

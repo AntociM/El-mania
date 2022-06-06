@@ -24,3 +24,4 @@ class EditItemForm(forms.ModelForm):
 
         for field in self.fields:
             self.fields[field].label = labels[field]
+
