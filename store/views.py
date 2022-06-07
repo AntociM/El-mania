@@ -5,7 +5,7 @@ from django.db.models import Q
 from decimal import Decimal
 
 from .models import ItemDiscount, Item
-from .forms import EditItemForm
+from .forms import ItemForm
 
 # Create your views here.
 
@@ -127,12 +127,50 @@ def product_detail(request, item_id):
 
     return render(request, 'store/product_detail.html', context)
 
+def add_product(request):
+    """ Add products to the store """
+    if request.method == 'POST':
+        form = ItemForm(request.POST)
+        if form.is_valid():
+            new_item = Item()
+            new_item.name = form.cleaned_data['name']
+            new_item.category = form.cleaned_data['category']
+            new_item.description = form.cleaned_data['description']
+            new_item.brand = form.cleaned_data['brand']
+            new_item.price = form.cleaned_data['price']
+            new_item.rating = form.cleaned_data['rating']
+            new_item.image = form.cleaned_data['image']
+            new_item.save()
+
+            return redirect(f'/products/{new_item.pk}')
+        else:
+            context = {
+                'form': form,
+            }
+
+            return render(request, 'store/add_product.html', context)
+
+    else:
+
+        form = ItemForm()
+
+        context = {
+         'form': form,
+        }
+
+        return render(request, 'store/add_product.html', context)
+
+
+
+
+
+
 def edit_product_detail(request, item_id):
     """ A view to allow superuser to edit product details """
     
     product = get_object_or_404(Item, pk=item_id)
 
-    form = EditItemForm()
+    form = ItemForm()
     form.initial = {
         'name': product.name,
         'category': product.category,
@@ -150,10 +188,11 @@ def edit_product_detail(request, item_id):
 
     return render(request, 'store/edit_product_detail.html', context)
 
+
 def update_product_detail(request, item_id):
     """ Update product detail in the database """
     if request.method == 'POST':
-        form = EditItemForm(request.POST)
+        form = ItemForm(request.POST)
         if form.is_valid():
             product=get_object_or_404(Item, pk=item_id)
             product.name=form.cleaned_data['name']
@@ -178,17 +217,6 @@ def delete_product(request,item_id):
     messages.success(request, f'{product.name}" deleted.')
 
     return redirect((f'/products'))
-
-    
-
-
-
-
-
-
-
-
-
 
 
 def privacy_policy(request):
