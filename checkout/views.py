@@ -175,15 +175,15 @@ def create_checkout_session(request):
 
         try:
             checkout_session = stripe.checkout.Session.create(
-                success_url=settings.BASE_URL + 'checkout/success?session_id={CHECKOUT_SESSION_ID}',
-                cancel_url=settings.BASE_URL + 'checkout/cancelled/',
+                success_url=settings.BASE_URL + '/checkout/success?session_id={CHECKOUT_SESSION_ID}',
+                cancel_url=settings.BASE_URL + '/checkout/cancelled/',
                 payment_method_types=['card'],
                 mode='payment',
                 line_items=stripe_cart_items
             )
             return redirect(checkout_session.url)
         except Exception as e:
-            return str(e)
+            return render(request, 'error.html')
         
         return redirect(redirect_url)
 
