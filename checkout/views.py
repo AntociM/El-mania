@@ -10,6 +10,7 @@ from decimal import Decimal
 from django.http.response import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import stripe
+import json
 
 import base64
 
@@ -79,7 +80,27 @@ def stripe_config(request):
         stripe_config = {'publicKey': settings.STRIPE_PUBLISHABLE_KEY}
         return JsonResponse(stripe_config, safe=False)
 
-        
+
+@csrf_exempt
+def create_payment(request):
+    stripe.api_key = settings.STRIPE_SECRET_KEY
+    try:
+        # data = json.loads(request.POST)
+        # Create a PaymentIntent with the order amount and currency
+        intent = stripe.PaymentIntent.create(
+            amount=1400,
+            currency='usd',
+            automatic_payment_methods={
+                'enabled': True,
+            },
+        )
+        return JsonResponse({
+            'clientSecret': intent['client_secret']
+        })
+    except Exception as e:
+        return JsonResponse(error=str(e)), 403
+
+
 @csrf_exempt
 def create_checkout_session(request):
     if request.method == 'GET':
@@ -186,6 +207,8 @@ def create_checkout_session(request):
             return render(request, 'error.html')
         
         return redirect(redirect_url)
+
+
 
 
 def success(request):
