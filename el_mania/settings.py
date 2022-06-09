@@ -28,7 +28,10 @@ environ.Env.read_env()
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False if env('DEBUG') == 'False' else True
+if env('DEBUG') == 'False':
+    DEBUG = False 
+else:
+    DEBUG = True
 
 ALLOWED_HOSTS = ["el-mania.herokuapp.com", "localhost"]
 
@@ -97,7 +100,7 @@ AUTHENTICATION_BACKENDS = [
 
 AUTH_USER_MODEL = 'customer.UserProfile'
 
-SITE_ID = 1
+SITE_ID = 2
 
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'

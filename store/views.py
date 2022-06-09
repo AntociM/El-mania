@@ -234,6 +234,6 @@ def open_purchase(request):
 
     return render(request, 'store/open_purchase.html')
 
-
-
+def handle_404(request, exception):
+    return render(request, '404.html')
 
