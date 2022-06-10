@@ -58,9 +58,6 @@
           <fieldset id="address-form-fields">
             {% csrf_token %}
             {% bootstrap_form order_form layout='floating'%}
-            <!-- <button class="btn bg-dark-2 btn-lg w-100 mb-5 mt-3" id="submitBtn" type="submit">
-              <i class="bi bi-credit-card-2-back"> Payment</i>
-            </button> -->
             <input type="hidden" name="redirect_url"  value="{{ request.path }}" id="redirect-url">
             <input type="hidden" name="address_select" value="create" id="address-select" >
           </fieldset>
@@ -72,7 +69,7 @@
         <div id="payment-element">
           <!--Stripe.js injects the Payment Element-->
         </div>
-        <button id="submit">
+        <button class="btn-block mt-5 mb-5 w-100 btn-lg bg-dark-2" id="submit">
           <div class="spinner hidden" id="spinner"></div>
           <span id="button-text">Pay now</span>
         </button>
@@ -114,7 +111,7 @@
           </li>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <span style="font-weight: bold">Total (USD)</span>
-            <strong style="">{{ grand_total }}</strong>
+            <strong>{{ grand_total }}</strong>
           </li>
 
         </ul>
