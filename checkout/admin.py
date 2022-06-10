@@ -3,9 +3,11 @@ from .models import Order, OrderItem
 
 # Register your models here.
 
+
 class OrderItemAdmin(admin.TabularInline):
     model = OrderItem
     readonly_fields = ('order_item_total',)
+
 
 class OrderAdmin(admin.ModelAdmin):
     inlines = (OrderItemAdmin,)
@@ -26,5 +28,6 @@ class OrderAdmin(admin.ModelAdmin):
                     'grand_total')
 
     ordering = ('-created_at',)
+
 
 admin.site.register(Order, OrderAdmin)

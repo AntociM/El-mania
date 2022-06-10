@@ -20,10 +20,7 @@ def cart_view(request):
     # Parse items
     total = 0
     for item in items:
-        try:
-            discount = ItemDiscount.objects.get(item=item)
-        except:
-            discount = None
+        discount = get_object_or_404(ItemDiscount, item=item)
 
         # Calculate cart's subtotal
         total += (
@@ -32,7 +29,11 @@ def cart_view(request):
             else discount.new_price * Decimal(bag_items[f"{item.pk}"])
         )
         cart_items.append(
-            {"item": item, "discount": discount, "quantity": bag_items[f"{item.pk}"]}
+            {
+                "item": item,
+                "discount": discount,
+                "quantity": bag_items[f"{item.pk}"]
+            }
         )
 
     context = {
@@ -59,7 +60,10 @@ def add_to_cart(request, item_id):
     if item_id in list(bag_items.keys()):
         # If the user has the product in the bag, increase the quantity
         bag_items[item_id] += 1
-        messages.success(request, f'Added another "{product.name}" to your bag')
+        messages.success(
+            request,
+            f'Added another "{product.name}" to your bag'
+        )
     else:
         # Create cart item
         bag_items[item_id] = 1
@@ -89,12 +93,14 @@ def adjust_quantity(request, item_id):
         else:
             messages.error(
                 request,
-                "Quantity could not be 0. To remove the product from cart press delete.",
+                "Quantity could not be 0. "
+                "To remove the product from cart press delete.",
             )
     else:
         messages.error(
             request,
-            f'Quantity for product "{product.name}" could not be updated and it cannot be found in the shopping bag.',
+            f'Quantity for product "{product.name}" could not be'
+            ' updated and it cannot be found in the shopping bag.',
         )
 
     bag["items"] = bag_items
@@ -117,7 +123,6 @@ def remove_from_cart(request, item_id):
     bag["items"] = bag_items
     request.session["bag"] = update_bag(bag)
     return redirect(redirect_url)
-
 
 
 def update_bag(current_bag):

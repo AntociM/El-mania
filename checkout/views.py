@@ -15,8 +15,9 @@ import stripe
 
 
 def checkout(request):
-    '''A view for the checkout page.
-    The item's price, quantity and subtotal will be displayed'''
+    """A view for the checkout page.
+    The item's price, quantity and subtotal will be displayed"""
+
     bag = request.session.get("bag", {})
     bag_items = bag.get("items", {})
     items = Item.objects.filter(pk__in=bag_items.keys())
@@ -40,10 +41,12 @@ def checkout(request):
     line_item_total = 0
     cart_items = []
     for item in items:
-        try:
-            discount = ItemDiscount.objects.get(item=item)
-        except:
-            discount = None
+
+        discount = get_object_or_404(ItemDiscount, item=item)
+        # try:
+        #     discount = ItemDiscount.objects.get(item=item)
+        # except:
+        #     discount = None
 
         # Calculate item's subtotal
         line_item_total = (
@@ -123,10 +126,9 @@ def create_checkout_session(request):
         delivery_cost = 0
 
         for item in items:
-            try:
-                discount = ItemDiscount.objects.get(item=item)
-            except:
-                discount = None
+            discount = get_object_or_404(ItemDiscount, item=item)
+
+            real_price = item.price if discount is None else discount.new_price
 
             stripe_cart_items.append(
                 {
@@ -143,8 +145,7 @@ def create_checkout_session(request):
                 {
                     "item": item,
                     "quantity": bag_items[f"{item.pk}"],
-                    "subtotal": (item.price if discount is None else discount.new_price)
-                    * Decimal(bag_items[f"{item.pk}"]),
+                    "subtotal": (real_price)*Decimal(bag_items[f"{item.pk}"]),
                 }
             )
             order_total += (
@@ -173,8 +174,10 @@ def create_checkout_session(request):
             order.notes = form.cleaned_data["notes"]
             order.save()
         elif address_identifier != "create":
-            contact_item = get_object_or_404(UserContact,
-                     pk=address_identifier)
+            contact_item = get_object_or_404(
+                UserContact,
+                pk=address_identifier
+            )
             order.full_name = contact_item.user_full_name
             order.email = contact_item.email
             order.phone_number = contact_item.phone_number
@@ -188,7 +191,9 @@ def create_checkout_session(request):
             contact_items = []
             if request.user.is_authenticated:
                 try:
-                    contact_items = UserContact.objects.filter(user=request.user)
+                    contact_items = UserContact.objects.filter(
+                        user=request.user
+                    )
                 except UserContact.DoesNotExist:
                     contact_items = []
             context = {
@@ -250,11 +255,12 @@ def success(request):
             f"Order #{order_id} confirmation",
             f"""Dear {order.full_name},
 
-Thank you for your order! We hope that you enjoyed shopping with us. Your order is being processed and we will keep you updated. 
+Thank you for your order! We hope that you enjoyed shopping with us.\
+     Your order is being processed and we will keep you updated.
 For additional information, contact us at orders@elmania.com.
 
 Best regards,
-El-mania team          
+El-mania team
 """,
             "orders@elmania.com",
             [order.email],
@@ -264,7 +270,8 @@ El-mania team
     else:
         messages.error(
             request,
-            f"Order could not be submitted. If you made the payment, please contact us.",
+            'Order could not be submitted.'
+            'If you made the payment, please contact us.',
         )
 
     # If the order succeded, take the items from the request.session bag
@@ -273,8 +280,8 @@ El-mania team
 
 
 def cancelled(request):
-    '''If the request failed, remove the order from database, but items in the
-    bag until the session expires'''
+    """If the request failed, remove the order from database, but items in the
+    bag until the session expires"""
 
     bag = request.session.get("bag", {})
     bag_items = bag.get("items", {})

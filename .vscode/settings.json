@@ -1,8 +1,10 @@
 {
-   "python.linting.pylintEnabled": true,
+   "python.linting.pylintEnabled": false,
    "python.linting.enabled": true,
-   "python.linting.pycodestyleEnabled": false,
-   "python.linting.flake8Enabled": true,
+   "python.linting.pycodestyleEnabled": true,
+   "python.linting.flake8Enabled": false,
+   "python.linting.pep8Enabled": true,
+   "python.linting.pep8Path": "/home/gitpod/.pyenv/shims/pep8e",
    "python.terminal.activateEnvironment": false,
    "python.formatting.autopep8Path": "/home/gitpod/.pyenv/shims/autopep8",
    "python.linting.flake8Path": "/home/gitpod/.pyenv/shims/flake8",
@@ -27,5 +29,7 @@
    "[python]": {
       "editor.defaultFormatter": "ms-python.python"
    },
-   "python.formatting.provider": "black"
+   "python.formatting.provider": "black",
+   "python.linting.pydocstyleEnabled": false,
+   "python.linting.banditEnabled": false
 }
