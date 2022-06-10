@@ -9,9 +9,10 @@ from .forms import ItemForm
 
 # Create your views here.
 
+
 def index(request):
-    
     """" A view to retun the index page """
+
     offers = ItemDiscount.objects.all()
     discounted_items = []
     for offer in offers:
@@ -24,21 +25,22 @@ def index(request):
              "item_id":  offer.item.pk
         }
         discounted_items.append(offer_dict)
-    
+
     context = {
         'discounted_items': discounted_items,
     }
- 
+
     return render(request, 'store/index.html', context)
+
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
     products = Item.objects.all()
-    
-    ### Search functionality code from Boutique Ado project - Code Institute
+
+    # Search functionality code from Boutique Ado project - Code Institute
     query = None
-    sort  = 'none'
+    sort = 'none'
     order = ''
     min_price = ''
     max_price = ''
@@ -51,17 +53,17 @@ def all_products(request):
             if not query:
                 # messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(category__icontains=query)
             products = products.filter(queries)
-        
+
         if 'sort' in request.GET:
             sort = request.GET['sort']
             sortkey = sort
             # Check the order
             if 'order' in request.GET:
                 order = request.GET['order']
-            
+
             if order == 'desc':
                 sortkey = f'-{sort}'
 
@@ -69,7 +71,7 @@ def all_products(request):
                 products = products.order_by(sortkey)
 
         # Price filtering
-        min_price = Decimal(request.GET.get('min_price', 0)) 
+        min_price = Decimal(request.GET.get('min_price', 0))
         max_price = Decimal(request.GET.get('max_price', 100000))
         # Validate the price filters
         if min_price < 0:
@@ -115,8 +117,10 @@ def all_products(request):
 
     return render(request, 'store/products.html', context)
 
+
 def product_detail(request, item_id):
     """ A view to show individual product details """
+
     print(item_id)
 
     product = get_object_or_404(Item, pk=item_id)
@@ -126,6 +130,7 @@ def product_detail(request, item_id):
     }
 
     return render(request, 'store/product_detail.html', context)
+
 
 def add_product(request):
     """ Add products to the store """
@@ -161,13 +166,9 @@ def add_product(request):
         return render(request, 'store/add_product.html', context)
 
 
-
-
-
-
 def edit_product_detail(request, item_id):
     """ A view to allow superuser to edit product details """
-    
+
     product = get_object_or_404(Item, pk=item_id)
 
     form = ItemForm()
@@ -194,14 +195,14 @@ def update_product_detail(request, item_id):
     if request.method == 'POST':
         form = ItemForm(request.POST)
         if form.is_valid():
-            product=get_object_or_404(Item, pk=item_id)
-            product.name=form.cleaned_data['name']
-            product.category=form.cleaned_data['category']
-            product.description=form.cleaned_data['description']
-            product.brand=form.cleaned_data['brand']
-            product.price=form.cleaned_data['price']
-            product.rating=form.cleaned_data['rating']
-            product.image=form.cleaned_data['image']
+            product = get_object_or_404(Item, pk=item_id)
+            product.name = form.cleaned_data['name']
+            product.category = form.cleaned_data['category']
+            product.description = form.cleaned_data['description']
+            product.brand = form.cleaned_data['brand']
+            product.price = form.cleaned_data['price']
+            product.rating = form.cleaned_data['rating']
+            product.image = form.cleaned_data['image']
 
             product.save()
 
@@ -210,8 +211,9 @@ def update_product_detail(request, item_id):
         else:
             messages.error(request, 'Your product was not updated.')
 
+
 def delete_product(request,item_id):
-    product=get_object_or_404(Item, pk=item_id)
+    product = get_object_or_404(Item, pk=item_id)
     product.delete()
 
     messages.success(request, f'{product.name}" deleted.')
@@ -224,16 +226,18 @@ def privacy_policy(request):
 
     return render(request, 'store/privacy_policy.html')
 
+
 def terms_of_sale(request):
     """ A view to return terms of sale page """
 
     return render(request, 'store/terms_of_sale.html')
+
 
 def open_purchase(request):
     """ A view to return open purchase page """
 
     return render(request, 'store/open_purchase.html')
 
+
 def handle_404(request, exception):
     return render(request, '404.html')
-

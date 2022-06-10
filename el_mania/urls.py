@@ -25,4 +25,4 @@ urlpatterns = [
     path('', include('customer.urls')),
 ]
 
-handler404='store.views.handle_404'
+handler404 = 'store.views.handle_404'

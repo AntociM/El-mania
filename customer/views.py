@@ -19,40 +19,40 @@ def profile(request):
     for order in orders:
         order_items = OrderItem.objects.filter(order=order)
         user_orders.append({
-            'order':order,
-            'order_items' : order_items
+            'order': order,
+            'order_items': order_items
         })
 
     try:
         user_contact_items = UserContact.objects.filter(user=request.user)
     except UserContact.DoesNotExist:
-        user_contact_items=None
+        user_contact_items = None
 
     for user_contact_item in user_contact_items:
         registered_form = UserContactForm()
         registered_form.initial = {
-            'name' : user_contact_item.name,
-            'user_full_name' : user_contact_item.user_full_name,
-            'email' : user_contact_item.email,
-            'phone_number' : user_contact_item.phone_number,
-            'address' : user_contact_item.address,
-            'city' : user_contact_item.city,
-            'county' : user_contact_item.county,
-            'postcode' : user_contact_item.postcode,
-            'country' : user_contact_item.country,
+            'name': user_contact_item.name,
+            'user_full_name': user_contact_item.user_full_name,
+            'email': user_contact_item.email,
+            'phone_number': user_contact_item.phone_number,
+            'address': user_contact_item.address,
+            'city': user_contact_item.city,
+            'county': user_contact_item.county,
+            'postcode': user_contact_item.postcode,
+            'country': user_contact_item.country,
         }
 
         registered_contact_forms.append(
             {
                 'item': user_contact_item,
-                'form' : registered_form
+                'form': registered_form
             }
         )
 
     context = {
-        'register_contact_form' : new_user_contact_form,
-        'registered_contacts'   : registered_contact_forms,
-        'user_orders' : user_orders
+        'register_contact_form': new_user_contact_form,
+        'registered_contacts': registered_contact_forms,
+        'user_orders': user_orders
     }
 
     return render(request, "customer/profile.html", context)
@@ -63,7 +63,6 @@ def register_address(request):
     if request.method == 'POST':
         registered_contact_forms = []
         user_orders = []
-
 
         redirect_url = request.POST.get('redirect_url')
 
@@ -86,55 +85,58 @@ def register_address(request):
             return redirect(redirect_url)
 
         else:
-            messages.error(request, "Address could not be registered. Please check the form")
+            messages.error(
+                request,
+                "Address could not be registered. Please check the form")
             orders = Order.objects.filter(user_id=request.user.pk)
             for order in orders:
                 order_items = Order.objects.filter(order_number=order.pk)
                 user_orders.append({
-                    'order':order,
-                    'order_items' : order_items
+                    'order': order,
+                    'order_items': order_items
                 })
 
-
-            user_contacts=[]
+            user_contacts = []
             if request.user.is_authenticated:
                 try:
                     user_contacts = UserContact.objects.filter(user=request.user)
                 except UserContact.DoesNotExist:
-                    user_contacts=[]
+                    user_contacts = []
 
             for user_contact_item in user_contacts:
                 registered_form = UserContactForm()
                 registered_form.initial = {
-                    'name' : user_contact_item.name,
-                    'user_full_name' : user_contact_item.user_full_name,
-                    'email' : user_contact_item.email,
-                    'phone_number' : user_contact_item.phone_number,
-                    'address' : user_contact_item.address,
-                    'city' : user_contact_item.city,
-                    'county' : user_contact_item.county,
-                    'postcode' : user_contact_item.postcode,
-                    'country' : user_contact_item.country,
+                    'name': user_contact_item.name,
+                    'user_full_name': user_contact_item.user_full_name,
+                    'email': user_contact_item.email,
+                    'phone_number': user_contact_item.phone_number,
+                    'address': user_contact_item.address,
+                    'city': user_contact_item.city,
+                    'county': user_contact_item.county,
+                    'postcode': user_contact_item.postcode,
+                    'country': user_contact_item.country,
                 }
 
                 registered_contact_forms.append(
                     {
                         'item': user_contact_item,
-                        'form' : registered_form
+                        'form': registered_form
                     }
                 )
 
             context = {
-            'register_contact_form' : form,
-            'registered_contacts'   : registered_contact_forms,
-            'user_orders' : user_orders
-            }
+                        'register_contact_form': form,
+                        'registered_contacts': registered_contact_forms,
+                        'user_orders': user_orders
+                     }
             return render(request, "customer/profile.html", context)
-    
+
     return render(request, "customer/profile.html")
+
 
 @login_required
 def update_contact(request, contact_id):
+    """Update user's contact information"""
     if request.method == 'POST':
         redirect_url = request.POST.get('redirect_url')
         form = UserContactForm(request.POST)
@@ -158,7 +160,10 @@ def update_contact(request, contact_id):
 
     return render(request, "customer/profile.html")
 
-def delete_contact(request, contact_id): 
+
+def delete_contact(request, contact_id):
+    """Delete contact information"""
+
     if request.method == "POST":
         redirect_url = request.POST.get('redirect_url')
         contact = get_object_or_404(UserContact, pk=contact_id)
@@ -166,10 +171,12 @@ def delete_contact(request, contact_id):
         contact.delete()
         return redirect(redirect_url)
 
-    # messages.success(request, f'Saved address "{contact.name}" has been succesfully removed.')
     return render(request, "customer/profile.html")
-    
+
+
 def contact_view(request):
+    """"Handle contact form"""
+
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -179,5 +186,3 @@ def contact_view(request):
     else:
         form = ContactForm()
     return render(request, 'customer/contact.html', {'form': form})
-
-        
