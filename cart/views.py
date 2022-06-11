@@ -20,7 +20,10 @@ def cart_view(request):
     # Parse items
     total = 0
     for item in items:
-        discount = get_object_or_404(ItemDiscount, item=item)
+        try:
+            discount = ItemDiscount.objects.get(item=item)
+        except ItemDiscount.DoesNotExist:
+            discount = None
 
         # Calculate cart's subtotal
         total += (

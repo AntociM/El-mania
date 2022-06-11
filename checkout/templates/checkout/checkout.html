@@ -28,8 +28,9 @@
       <div class="row m-0">
         {% if contact_items %}
         {% for contact_item in contact_items %}
-  
-        <div class="card shadow border-dark border-2 p-0 m-2" style="max-width: 18rem;" id="address-cards-{{contact_item.pk}}">
+
+        <div class="card shadow border-dark border-2 p-0 m-2" style="max-width: 18rem;"
+          id="address-cards-{{contact_item.pk}}">
           <div class="card-header d-flex justify-content-between text-center text-justify">
             <h5> {{ contact_item.name}} </h5>
           </div>
@@ -38,7 +39,8 @@
             <p class="card-text">
               <i class="bi bi-telephone"> {{contact_item.phone_number}}</i><br>
               <i class="bi bi-envelope"> {{contact_item.email}}</i> <br>
-              <span> <i class="bi bi-geo-alt"></i> {{contact_item.address}}<br>{{contact_item.city}}, {{contact_item.postcode}}<br>{{contact_item.county}}, {{contact_item.country}}</span>
+              <span> <i class="bi bi-geo-alt"></i> {{contact_item.address}}<br>{{contact_item.city}},
+                {{contact_item.postcode}}<br>{{contact_item.county}}, {{contact_item.country}}</span>
             </p>
           </div>
         </div>
@@ -46,7 +48,7 @@
 
         {% else %}
         {% if user.is_authenticated %}
-          <p class="m-3"> You can add predefined shipping addresses in your profile page.</p>
+        <p class="m-3"> You can add predefined shipping addresses in your profile page.</p>
         {% endif %}
         {% endif %}
       </div>
@@ -54,27 +56,31 @@
       <hr>
 
       <div class="row mt-3">
-        <form action="{% url 'create-checkout-session' %}" method="GET" class="form">
+        <form id="payment-form" method="GET" class="form">
           <fieldset id="address-form-fields">
             {% csrf_token %}
-            {% bootstrap_form order_form layout='floating'%}
-            <input type="hidden" name="redirect_url"  value="{{ request.path }}" id="redirect-url">
-            <input type="hidden" name="address_select" value="create" id="address-select" >
+            {% bootstrap_field order_form.full_name layout='floating'%}
+            {% bootstrap_field order_form.email layout='floating'%}
+            {% bootstrap_field order_form.phone_number layout='floating'%}
+            {% bootstrap_field order_form.address layout='floating'%}
+            {% bootstrap_field order_form.city layout='floating'%}
+            {% bootstrap_field order_form.postcode layout='floating'%}
+            {% bootstrap_field order_form.county layout='floating'%}
+            {% bootstrap_field order_form.country layout='floating'%}
+
+            <input type="hidden" name="redirect_url" value="{{ request.path }}" id="redirect-url">
+            <input type="hidden" name="address_select" value="create" id="address-select">
           </fieldset>
+          <div id="payment-element">
+            <!--Stripe.js injects the Payment Element-->
+          </div>
+          <button class="btn-block mt-5 mb-5 w-100 btn-lg bg-dark-2" id="submit">
+            <div class="spinner hidden" id="spinner"></div>
+            <span id="button-text">Pay now</span>
+          </button>
+          <div id="payment-message" class="hidden"></div>
         </form>
       </div>
-      
-
-      <form id="payment-form">
-        <div id="payment-element">
-          <!--Stripe.js injects the Payment Element-->
-        </div>
-        <button class="btn-block mt-5 mb-5 w-100 btn-lg bg-dark-2" id="submit">
-          <div class="spinner hidden" id="spinner"></div>
-          <span id="button-text">Pay now</span>
-        </button>
-        <div id="payment-message" class="hidden"></div>
-      </form>
 
     </div>
 

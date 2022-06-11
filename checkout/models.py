@@ -18,7 +18,7 @@ class Order(models.Model):
     order_number = models.CharField(
         max_length=40, null=False, editable=False, primary_key=True)
     user_id = models.IntegerField(null=True)
-    payment_id = models.IntegerField(null=True)
+    payment_id = models.CharField(max_length=254, null=False, blank=False, default='unpaid')
     full_name = models.CharField(max_length=254, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = PhoneNumberField(null=False, blank=False, unique=False)
