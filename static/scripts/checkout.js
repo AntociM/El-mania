@@ -125,7 +125,7 @@ window.onload=()=>{
               elements,
               confirmParams: {
                   // Make sure to change this to your payment completion page
-                  return_url: "https://el-mania.herokuapp.com//checkout/success",
+                  return_url: "https://el-mania.herokuapp.com/checkout/success",
                   receipt_email: document.getElementById("id_email").value,
                 //   description : document.getElementById("id_notes").value,
                   shipping : {
