@@ -155,6 +155,8 @@ def success(request):
                 order = Order()
 
             # Populate the order
+            if request.user.is_authenticated:
+                order.user_id = request.user.id
             order.payment_id = payment_intent
             order.full_name = payment['shipping']['name']
             order.email = payment['receipt_email']
@@ -190,7 +192,7 @@ def success(request):
                 f"""Dear {order.full_name},
 
     Thank you for your order! We hope that you enjoyed shopping with us.\
-        Your order is being processed and we will keep you updated.
+    Your order is being processed and we will keep you updated.
     For additional information, contact us at orders@elmania.com.
 
     Best regards,

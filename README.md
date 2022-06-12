@@ -53,7 +53,7 @@ Some design changes come up during the development process.
 
 ## Site Structure
 
-The application has some main pages: Home, Products, Product-detail page, Profile, Shopping Cart, Checkout, Terms of sale, Open purchase, Privacy Policy. It also has several additional pages related to Admin and accounts.
+The application has some main pages: Home, Products, Product-detail page, Profile, Shopping Cart, Checkout, Terms of sale, Open purchase, Privacy Policy and a custom 404 error page. It also has several additional pages related to Admin and accounts.
 
 ## Design Choices
 
@@ -80,6 +80,7 @@ Some fields have been altered during the development process, and new models hav
 This e-commerce platform presents functionality elements for Admin, logged-in users, and guests (shoppers without an account).
 
 When logged in, the `Admin` can see, add, edit and delete products in the store. These operations can be performed only by the Admin using a series of buttons from the products page and product detail page. The usual buttons for customers are disabled for the Admin.
+The admin can also access the Django Admin Panel.
 
 ![](static/media/readme-images/admin_role.jpg)
 
@@ -88,11 +89,6 @@ When logged in, the `Admin` can see, add, edit and delete products in the store.
 A logged-in `user` has access to his own `Profile`. On the Profile page, the user can save/update his contact information, see order history, and change his account password.
 
 A site's `gues` has access to the store and can place an order without authentification. Guests will be updated via email.
-
-
-
-
-
 #### Home Page
 ##### Navigation
 
