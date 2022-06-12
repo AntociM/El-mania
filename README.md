@@ -1,6 +1,6 @@
 # El-mania
 
-El-mania is an e-commerce website based on the B2C (Business to Customers) type. Customers can purchase products to address their needs using single-payment transactions. The online retailer is facilitating the purchase of a vast range of electronics, from video games, cables, and batteries to mobile devices, laptops, and appliances. 
+El-mania is an e-commerce website based on the B2C (Business to Customers) type. Customers can purchase products to address their needs using single-payment transactions. The online retailer is facilitating the purchase of a vast range of electronics, from video games, cables, and batteries to mobile devices, laptops, and appliances.
 El-mania's website is designed to offer a pleasant and effortless shopping experience to individual customers with the end-user in mind.
 
 The fictional El-mania company is Swedish-based.
@@ -24,6 +24,10 @@ Live demo can be found on [Heroku](https://el-mania.herokuapp.com/)
 - As a **site user** I want to **have a personal user profile** so that **I can see my past orders and save my payment information**.
 - As a **site user** I want to **receive an email confirmation after checkout** so that **I can see that my order is being handled**.
 - As a **site user**, I want to **contact the company via form** so that **I conveniently can reach the company**.
+- As an **admin** I want to **add new products** so that **I keep the brand relevant to customers**.
+- As an **admin**, I want to **edit product information presented on the website** so that **I can keep the customers updated and well-informed**.
+- As an **admin** I want to **delete products from the store** so that **I can effortlessly remove old products**.
+
 
 These user stories are part of the agile tools used for this project. In order to integrate issues and pull requests, GitHub Projects was used.
 
@@ -31,7 +35,7 @@ These user stories are part of the agile tools used for this project. In order t
 
 ## Wireframes
 
-- Home page 
+- Home page
 
 ![](static/media/readme-images/wireframes-home-page.jpg)
 
@@ -45,18 +49,18 @@ These user stories are part of the agile tools used for this project. In order t
 
 ![](static/media/readme-images/wireframes-shopping-bag.jpg)
 
-Some design changes come up during the development process. 
+Some design changes come up during the development process.
 
 ## Site Structure
 
-The application has some main pages: Home, Products, Product-detail page, Profile, Shopping Cart, Checkout, Terms of sale, Open purchase, Privacy Policy,. It also has several additional pages related to Admin and accounts.
+The application has some main pages: Home, Products, Product-detail page, Profile, Shopping Cart, Checkout, Terms of sale, Open purchase, Privacy Policy. It also has several additional pages related to Admin and accounts.
 
 ## Design Choices
 
-The design is modern and straightforward, with a sharp edge. The main goal is to maintain client's focus on shopping and to be as intuitive as possible, making client's interaction with the website fast and simple. 
+The design is modern and straightforward, with a sharp edge. The main goal is to maintain client's focus on shopping and to be as intuitive as possible, making client's interaction with the website fast and simple.
 ### Color Scheme
 
-The color pallet has contrasting and vibrant colors. The red and green accents are used as intuitive visual hints for `delete` and `add to cart` buttons, as well as to display discounted prices and badges. 
+The color pallet has contrasting and vibrant colors. The red and green accents are used as intuitive visual hints for `delete` and `add to cart` buttons, as well as to display discounted prices and badges.
 
 ![](static/media/readme-images/pallets.jpg)
 
@@ -71,15 +75,15 @@ Some fields have been altered during the development process, and new models hav
 ## Features
 ### Existing features
 #### Home Page
-##### Navigation 
+##### Navigation
 
-El-mania's navigation is located at the top of every page, under a banner with shipping cost info. 
+El-mania's navigation is located at the top of every page, under a banner with shipping cost info.
 
 The top header has:
 
 - company's logo on the left-hand side;
 - search bar located in the middle where users can search after wished product by name or category;
-- icons for Login, Login Admin, and Cart in the right corner, displayed inline. When a user is authenticated, a My Profile and a Logout icon show up to make user interaction explicit. The Cart icon has a product-counter badge. 
+- icons for Login, Login Admin, and Cart in the right corner, displayed inline. When a user is authenticated, a My Profile and a Logout icon show up to make user interaction explicit. The Cart icon has a product-counter badge.
 
 Main navigation consists of links for the entire list of products, Cell Phones, Tv & Home Theater, Computer & Tablets, Video Games, Hausehold.
 
@@ -97,9 +101,9 @@ The main navigation elements swifts to a dropdown list for smaller screens, repr
 
 ##### Offers Cards
 
-Bootstrap card presenting discounted products. Each card has information for one product. Image, name, price, discounted price, discounted percent on the left corner. At the bottom are two buttons, `add to cart` and `details`. 
+Bootstrap card presenting discounted products. Each card has information for one product. Image, name, price, discounted price, discounted percent on the left corner. At the bottom are two buttons, `add to cart` and `details`.
 
-`Add to cart` will add that product to the shopping cart, while `Details` will open a product-detail page with more information on that product. 
+`Add to cart` will add that product to the shopping cart, while `Details` will open a product-detail page with more information on that product.
 
 ![](static/media/readme-images/cards.jpg)
 
@@ -109,29 +113,29 @@ Located at the page bottom. It has three sections:
 
 1. social media section is redirecting the user to El-mania's Facebook page and other social media pages (El-mania does not yet have business pages on other social platforms).
 2. in the second section:
-- is embedded in a signup form to the company's newsletter. 
-- A list of Useful Links redirects the user to Terms to sale, Open purchase, and Privacy policy pages to increase the website's reliability. 
-- company's contact details, followed by a button to the client form. 
-3. Copywrite information 
+- is embedded in a signup form to the company's newsletter.
+- A list of Useful Links redirects the user to Terms to sale, Open purchase, and Privacy policy pages to increase the website's reliability.
+- company's contact details, followed by a button to the client form.
+3. Copywrite information
 
 ![](static/media/readme-images/footer.jpg)
 
 #### Products
 
-The Products page displays all the products that are registered in the database. On each page are displayed 25 products. Navigation between those pages is made using the pagination from the bottom of the page. 
+The Products page displays all the products that are registered in the database. On each page are displayed 25 products. Navigation between those pages is made using the pagination from the bottom of the page.
 
-Each product is presented on a card with an image on the left side, name, and rating in the middle, and on the right-side unit price and two options: `Add to cart` and `Details`. 
+Each product is presented on a card with an image on the left side, name, and rating in the middle, and on the right-side unit price and two options: `Add to cart` and `Details`.
 
 ![](static/media/readme-images/products-page.jpg)
 
-On this page, the user can sort the products based on **name, rating**, and **price**, **ascending** or **descending**. 
+On this page, the user can sort the products based on **name, rating**, and **price**, **ascending** or **descending**.
 
-The left sidebar is dedicated to filtering: 
-- by price: the user can set a minimum and maximum value. 
+The left sidebar is dedicated to filtering:
+- by price: the user can set a minimum and maximum value.
 - by category: the user can check one or multiple categories from a dropdown list.
 - by brand: the user can select one or multiple manufacturers.
 
-To complete these actions, the user must click on `Show results`. The matching results are displayed. `Clear filters` will remove the selected filters. 
+To complete these actions, the user must click on `Show results`. The matching results are displayed. `Clear filters` will remove the selected filters.
 
 When no result is found, an info message will be displayed.
 
@@ -139,7 +143,7 @@ When no result is found, an info message will be displayed.
 
 #### Product Detail
 
-On click `Details` button from each presentation card will redirect the user to a product-detail page, where the user can read a short description of the product, see name, price, category, rating. The user can choose the next action, `Keep shopping` - redirect to previous page or `Add to cart` - add this product to the cart. 
+On click `Details` button from each presentation card will redirect the user to a product-detail page, where the user can read a short description of the product, see name, price, category, rating. The user can choose the next action, `Keep shopping` - redirect to previous page or `Add to cart` - add this product to the cart.
 
 ![](static/media/readme-images/products-detail.jpg)
 
@@ -150,50 +154,46 @@ The shopping cart page is accessed from the right-based cart icon. Here the clie
 - see all items added to the cart.
 - adjust the quantity by direct input in the field or by pressing the increase or decrease arrows. `Update cart` button will recalculate the subtotal displayed.
 - delete a product by pressing `Remove` button
-- see the product's total price. Each item is added to this amount. 
+- see the product's total price. Each item is added to this amount.
 - continue to the next step in the shopping process by clicking on `Proceed to Checkout`.
 
 ![](static/media/readme-images/shopping-cart-page.jpg)
 
-#### Checkout 
+#### Checkout
 
-- **Shipping Address** is an order form that the user must fill out to proceed to payment. Here a website's guest can fill up the name, email, telephone, address, city, postal code, county, country, and notes (comments regarding delivery, e.g.).
+- **Shipping Address** is an order form that the user must fill out to proceed to payment. Here a website's guest can fill up the name, email, telephone, address, city, postal code, county, and country (select from the list).
 
-   An authenticated user has the possibility to select from his registered shipping address.
+   An authenticated user can select from his registered shipping address.
 
 ![](static/media/readme-images/checkout-2.jpg)
 
 
-- **Your cart** is a summary of the order. Quantity, product name, and amount for that product are displayed inline. *Order Total* is the products' total. *Delivery fee* is 0 for orders over 100$. If an order is under this amount, a delivery fee of 10$ will be applied. *Total* is the sum of the order total and delivery fee. 
-
-- `Payment` button will redirect the user to the payment form.
-
-![](static/media/readme-images/order-form-full.jpg)
+- **Your cart** is a summary of the order. Quantity, product name, and amount for that product are displayed inline. *Order Total* is the products' total. *Delivery fee* is 0 for orders over 100$. If an order is under this amount, a delivery fee of 10$ will be applied. *Total* is the sum of the order total and delivery fee.
 
 
 #### Payment
 
-The secure payment formalities are implemented with Stripes. The standard Stripes page is divided into 2 columns. On the left side is a summary of the order, and on the right side is a payment form.
+The secure payment formalities are implemented with Stripes. The user can choose to pay by card or using Google Pay. Card payment requirements are card number, expiration date, three-digit security code, and country.
 
-The user can choose the type of card in the form, write the card's number, date, three digits security code, card's holder name, and country.
+If the user selects Pay new instructions will appear after submitting his order.
 
-After clicking on `Pay`, if the transaction is successful, the user will receive a message, followed by a confirmation email. An error message will appear for an unsuccessful payment.
+After clicking on `Pay now`, if the transaction is successful, the user will receive a message, followed by a confirmation email. An error message will appear for an unsuccessful payment.
 
-![](static/media/readme-images/payment.jpg)
+![](static/media/readme-images/payment1.jpg)
 
 ![](static/media/readme-images/order-confirmation.jpg)
 
 #### Profile
 
-An authenticated user has access to his profile. The profile page has three dropdown sections. 
-- The first section includes a form where a user can save default **shipping details**(e.g, home address, office, or another place where wishes to receive orders). This information will appear on the checkout without needing to complete the checkout form. 
-    The user can update or delete one registered address. 
+An authenticated user has access to his profile. The profile page has three dropdown sections.
+- The first section includes a form where a user can save default **shipping details**(e.g, home address, office, or another place where wishes to receive orders). This information will appear on the checkout without needing to complete the checkout form.
+    The user can update or delete one registered address.
 
 ![](static/media/readme-images/registered-address.jpg)
 
-- The second section is **Order history**. A user can see the order number, status, order date, delivery address, and order summary for each order. 
+- The second section is **Order history**. A user can see the order number, status, order date, delivery address, and order summary for each order.
 
-- The 3rd section gives the user the possibility to change his password. `Change Password` will redirect to the reset password page, and the user will receive instructions via email. 
+- The 3rd section gives the user the possibility to change his password. `Change Password` will redirect to the reset password page, and the user will receive instructions via email.
 
 ![](static/media/readme-images/order-history-1.jpg)
 
@@ -203,13 +203,13 @@ Contact form includes name, email, telephone, title, and message. When a user su
 
 ![](static/media/readme-images/contact-form.jpg)
 
-#### Additional pages 
+#### Additional pages
 
 The user is redirected to different pages from AllAuth accounts.
 
 - Sign in: the user can log in using his credentials, username/email, and password. There is a link to the Sign up form in the case of a new user.
 - Password reset: to recover the forgotten password.
-- Email verification: every new user will receive a verification email to finalize the signup process. 
+- Email verification: every new user will receive a verification email to finalize the signup process.
 
 #### Admin Panel
 
@@ -222,7 +222,7 @@ Admin has access via the default Django Admin page. The Admin panel is accessed 
 - Add a custom Admin interface.
 - Automatic notification for the user when an order has a new status.
 Possibly for the user to change upload a profile picture and change credentials.
-- Order status to be more detailed. Now are available only 2. 
+- Order status to be more detailed. Now are available only 2.
 - Information on delivery at checkout.
 
 ## Generating Fixtures
@@ -239,9 +239,9 @@ To improve accessibility for El-mania, a series of techniques were implemented:
 
 ## Marketing
 
-To increase visibility for potential clients, El-mania is using Social Media Marketing. This presents the advantage of being free of charge and offers the possibility of creating close relationships with customers. 
+To increase visibility for potential clients, El-mania is using Social Media Marketing. This presents the advantage of being free of charge and offers the possibility of creating close relationships with customers.
 
-El-mania has a Facebook business page, as presented in the image above. The link to the page can be accessed from the footer, Facebook icon. 
+El-mania has a Facebook business page, as presented in the image above. The link to the page can be accessed from the footer, Facebook icon.
 Facebook is the most popular social media platform, with a significant representation worldwide. They are also offering the possibility of paid ads, which aligns with El-mania's marketing strategy for the future.
 
 ![](static/media/readme-images/fb-page.jpg)
@@ -285,14 +285,14 @@ Facebook is the most popular social media platform, with a significant represent
 - [Template](https://www.bootdey.com/snippets/view/Shop-cart#html) for shopping cart page.
 
 
-## Testing 
+## Testing
 
 Please refer to [here](Testing.md) for more information on testing.
 
 ## Deployment
 ### To deploy using Heroku:
 
-- Ensure your requirements.txt file has the required dependencies. 
+- Ensure your requirements.txt file has the required dependencies.
 - Create or Login to your Heroku account.
 - Navigate to Dashboard.
 - "Create new app" from the drop-down menu. This is found in the upper right portion of the window.
@@ -305,7 +305,7 @@ Please refer to [here](Testing.md) for more information on testing.
 
 #### Setting up the App within Heroku:
 - Navigate to "Settings" and scroll down to "config vars".
-- There are several config vars for this project: 
+- There are several config vars for this project:
 
 ![](static/media/readme-images/config_var.jpg)
 
@@ -336,7 +336,7 @@ Please refer to [here](Testing.md) for more information on testing.
 
 ## Acknowledgements
 
-The site was completed as a Portfolio 5 Project piece for the Full Stack Software Developer (e-Commerce) Diploma at the Code Institute. I want to thank my mentor Precious Ijege for his support and feedback. 
+The site was completed as a Portfolio 5 Project piece for the Full Stack Software Developer (e-Commerce) Diploma at the Code Institute. I want to thank my mentor Precious Ijege for his support and feedback.
 
 
 

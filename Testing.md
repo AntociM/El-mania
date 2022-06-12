@@ -10,7 +10,7 @@
 
 3. As a **site user** I want to **search for products by name** so that **I can find the ones I want to purchase**.
 
-    - At the top of every page is a search bar where the user can search by name or category. After that, he can select the wished product. 
+    - At the top of every page is a search bar where the user can search by name or category. After that, he can select the wished product.
 Deleting the search criteria will list products randomly.
 
 4. As a **site user** I want to **quickly get a list of relevant search results** so that **I can decide if the desired product is available**.
@@ -31,7 +31,7 @@ Deleting the search criteria will list products randomly.
 
 8. As a **site user**, I want to **see products displayed page by page** so that **I can easily navigate to the next or previous page**.
 
-    - A number indicating the currently displayed page, previous and next is shown at the page bottom. Based on the search criteria applied, up to 25 products will show. 
+    - A number indicating the currently displayed page, previous and next is shown at the page bottom. Based on the search criteria applied, up to 25 products will show.
 
 9. As a **site user** I want to **see the number of products in my cart** so that **I keep track of my purchase**.
 
@@ -54,15 +54,27 @@ Deleting the search criteria will list products randomly.
     - In the menu, the user can access `My Profile`. There will be Order History, registered address, and the possibility to change the password.
 
 14. As a **site user** I want to **receive an email confirmation after checkout** so that **I can see that my order is being handled**.
-   
+
     - When a purchase is completed, the user will receive an email with the order number and more information.
 
 15. As a **site user**, I want to **contact the company via form** so that **I conveniently can reach the company**.
 
     - At the bottom of the page, where is contact information, the user can send a message to the company by filling out that form.
+
+16. As an **admin** I want to **add new products** so that **I keep the brand relevant to customers**.
+
+    - The website has role-based login in place. When the admin is logged in, a special button `Add product` will be enabled. When pressing a new product, all the details can be added to the store.
+
+17. As an **admin**, I want to **edit product information presented on the website** so that **I can keep the customers updated and well-informed**.
+
+    - When logged in, the admin can press the `Edit product` button on the products page and for each product page. Here any category can be changed and saved to the database.
+
+18. As an **admin** I want to **delete products from the store** so that **I can effortlessly remove old products**.
+
+    - The admin can press the `Delete product` button on the products and product detail pages, and this action will automatically remove the chosen product from the database.
 ## Code verification
 
-El-mania e-commerce application has been manually tested. All the code has been run through the W3C HTML validator, the W3C CSS validator, and the PEP8 linter for python code. The code passed the W3C Validator with all the Django template tags. Outside of that, no errors were reported. 
+El-mania e-commerce application has been manually tested. All the code has been run through the W3C HTML validator, the W3C CSS validator, and the PEP8 linter for python code. The code passed the W3C Validator with all the Django template tags. Outside of that, no errors were reported.
 
 ![](static/media/readme-images/css-validation.jpg)
 
@@ -71,7 +83,7 @@ PEP8 linter showed some errors, which were fixed—remaining some E501 errors.
 
 ![](static/media/readme-images/pEP8.jpg)
 
-### Lighthouse 
+### Lighthouse
 
 This tool was used to test the performance and accessibility, and it provided helpful information to improve accessibility and SEO during the creation process. Here are the final results:
 
@@ -86,14 +98,14 @@ The responsive design tests were carried out manually with Google Chrome DevTool
 The website was tested on Chrome, Edge, Mozilla Firefox. The functionality and appearance remain unchanged between these three on any device size.
 ### Manual Testing
 
-The testing targeted especially form fields input. 
+The testing targeted especially form fields input.
 
-1. Validation was added to the **order form**, where the user fills out his personal information. 
+1. Validation was added to the **order form**, where the user fills out his personal information.
 
 - full name, city, country  fields validate only alphabetical characters and space.
 - address field must contain only alphanumeric characters.
 - phone number is validating only numbers, with a standard format.
-When a user clicks `Payment` button, the validation error messages are displayed. 
+When a user clicks `Payment` button, the validation error messages are displayed.
 
 ![](static/media/readme-images/order-validation.jpg)
 
@@ -108,15 +120,15 @@ Future improvements in these forms can be instant validation, so the user can se
 
 4. The `min` field for the price filter on the products page does not validate negative values, and `max` price must be greater than the minimum price input.
 
-### Fixed Bugs 
+### Fixed Bugs
 
 During the development process, a series of errors popped up.
 
-- Documented in GitHub issues are some fixed bugs. See: #17, #20, #23, #26, #28, #29, #30, #31, #32, #33, #36. 
+- Documented in GitHub issues are some fixed bugs. See: #17, #20, #23, #26, #28, #29, #30, #31, #32, #33, #36.
 
 ### Known Issues
 
-At this moment, there are two open bugs on GitHub issues - #22 and #37, and three enhancement issues #19, #25, #38.  
+At this moment, there are two open bugs on GitHub issues - #22 and #37, and three enhancement issues #19, #25, #38.
 
 
 
