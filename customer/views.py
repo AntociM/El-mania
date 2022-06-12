@@ -10,6 +10,8 @@ from checkout.models import Order, OrderItem
 
 @login_required
 def profile(request):
+    """"A view to render user's profile"""
+
     new_user_contact_form = UserContactForm()
     orders = Order.objects.filter(user_id=request.user.pk)
     registered_contact_forms = []
@@ -60,6 +62,8 @@ def profile(request):
 
 @login_required
 def register_address(request):
+    """Save user's contact info"""
+
     if request.method == 'POST':
         registered_contact_forms = []
         user_orders = []
@@ -137,6 +141,7 @@ def register_address(request):
 @login_required
 def update_contact(request, contact_id):
     """Update user's contact information"""
+
     if request.method == 'POST':
         redirect_url = request.POST.get('redirect_url')
         form = UserContactForm(request.POST)

@@ -12,7 +12,7 @@ from .forms import ItemForm
 
 
 def index(request):
-    """" A view to retun the index page """
+    """"A view to retun the index page"""
 
     offers = ItemDiscount.objects.all()
     discounted_items = []
@@ -22,7 +22,7 @@ def index(request):
              "name": offer.item.name,
              "price": offer.item.price,
              "discount": offer.discount_procent,
-             "new_price": round(offer.item.price - (offer.discount_procent * offer.item.price) / 100,2),
+             "new_price": round(offer.item.price - (offer.discount_procent * offer.item.price) / 100, 2),
              "item_id":  offer.item.pk
         }
         discounted_items.append(offer_dict)
@@ -35,7 +35,7 @@ def index(request):
 
 
 def all_products(request):
-    """ A view to show all products, including sorting and search queries """
+    """A view to show all products, including sorting and search queries"""
 
     products = Item.objects.all()
 
@@ -52,7 +52,6 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                # messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(category__icontains=query)
@@ -80,7 +79,8 @@ def all_products(request):
         if max_price < 0:
             messages.error(request, 'Max price cannot be negative value')
         if max_price < min_price:
-            messages.warning(request, 'Max price is smaller than Min price. It may not find any products.')
+            messages.warning(request, 'Max price is smaller than Min price.'
+                             'It may not find any products.')
         if min_price >= 0 and max_price >= 0:
             products = products.filter(price__range=(min_price, max_price))
 
@@ -120,7 +120,7 @@ def all_products(request):
 
 
 def product_detail(request, item_id):
-    """ A view to show individual product details """
+    """A view to show individual product details"""
 
     print(item_id)
 
@@ -132,9 +132,10 @@ def product_detail(request, item_id):
 
     return render(request, 'store/product_detail.html', context)
 
+
 @user_passes_test(lambda u: u.is_superuser)
 def add_product(request):
-    """ Add products to the store """
+    """Add products to the store"""
     if request.method == 'POST':
         form = ItemForm(request.POST)
         if form.is_valid():
@@ -166,9 +167,10 @@ def add_product(request):
 
         return render(request, 'store/add_product.html', context)
 
+
 @user_passes_test(lambda u: u.is_superuser)
 def edit_product_detail(request, item_id):
-    """ A view to allow superuser to edit product details """
+    """A view to allow superuser to edit product details"""
 
     product = get_object_or_404(Item, pk=item_id)
 
@@ -190,9 +192,10 @@ def edit_product_detail(request, item_id):
 
     return render(request, 'store/edit_product_detail.html', context)
 
+
 @user_passes_test(lambda u: u.is_superuser)
 def update_product_detail(request, item_id):
-    """ Update product detail in the database """
+    """Update product detail in the database"""
     if request.method == 'POST':
         form = ItemForm(request.POST)
         if form.is_valid():
@@ -212,8 +215,11 @@ def update_product_detail(request, item_id):
         else:
             messages.error(request, 'Your product was not updated.')
 
+
 @user_passes_test(lambda u: u.is_superuser)
 def delete_product(request, item_id):
+    """Remove products from the store"""
+
     product = get_object_or_404(Item, pk=item_id)
     product.delete()
 

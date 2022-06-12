@@ -15,8 +15,8 @@ import stripe
 
 
 def checkout(request):
-    """A view for the checkout page.
-    The item's price, quantity and subtotal will be displayed"""
+    '''A view for the checkout page.
+    The item's price, quantity and subtotal will be displayed'''
 
     bag = request.session.get("bag", {})
     bag_items = bag.get("items", {})
@@ -131,8 +131,10 @@ def create_payment(request):
     except Exception as e:
         return JsonResponse(error=str(e)), 403
 
+
 def success(request):
     """Handle successful checkouts"""
+
     stripe.api_key = settings.STRIPE_SECRET_KEY
 
     if request.method == "GET":
@@ -212,8 +214,6 @@ def success(request):
             'If you made the payment, please contact us.',
         )
 
-    # If the order succeded, take the items from the request.session bag
-    # and add them into the OrderItem table
     return render(request, "checkout/success.html", {"order_id": order.pk})
 
 
