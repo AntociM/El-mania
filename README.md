@@ -74,6 +74,25 @@ Some fields have been altered during the development process, and new models hav
 
 ## Features
 ### Existing features
+
+#### Role-based Authorisation functionality
+
+This e-commerce platform presents functionality elements for Admin, logged-in users, and guests (shoppers without an account).
+
+When logged in, the `Admin` can see, add, edit and delete products in the store. These operations can be performed only by the Admin using a series of buttons from the products page and product detail page. The usual buttons for customers are disabled for the Admin.
+
+![](static/media/readme-images/admin_role.jpg)
+
+![](static/media/readme-images/admin_role2.jpg)
+
+A logged-in `user` has access to his own `Profile`. On the Profile page, the user can save/update his contact information, see order history, and change his account password.
+
+A site's `gues` has access to the store and can place an order without authentification. Guests will be updated via email.
+
+
+
+
+
 #### Home Page
 ##### Navigation
 
@@ -83,7 +102,7 @@ The top header has:
 
 - company's logo on the left-hand side;
 - search bar located in the middle where users can search after wished product by name or category;
-- icons for Login, Login Admin, and Cart in the right corner, displayed inline. When a user is authenticated, a My Profile and a Logout icon show up to make user interaction explicit. The Cart icon has a product-counter badge.
+- icons for Login, and Cart in the right corner, displayed inline. When a user is authenticated, a My Profile and a Logout icon show up to make user interaction explicit. The Cart icon has a product-counter badge.
 
 Main navigation consists of links for the entire list of products, Cell Phones, Tv & Home Theater, Computer & Tablets, Video Games, Hausehold.
 
@@ -165,10 +184,9 @@ The shopping cart page is accessed from the right-based cart icon. Here the clie
 
    An authenticated user can select from his registered shipping address.
 
-![](static/media/readme-images/checkout-2.jpg)
-
-
 - **Your cart** is a summary of the order. Quantity, product name, and amount for that product are displayed inline. *Order Total* is the products' total. *Delivery fee* is 0 for orders over 100$. If an order is under this amount, a delivery fee of 10$ will be applied. *Total* is the sum of the order total and delivery fee.
+
+![](static/media/readme-images/order-form1.jpg)
 
 
 #### Payment
