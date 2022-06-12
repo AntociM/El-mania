@@ -62,7 +62,7 @@
           <ul class="list-group justify-content-lg-end d-flex flex-row me-auto">
             {% if user.is_authenticated %}
             <li class="list-group-item bg-transparent border-0">
-              <a class="btn bg-light-1 position-relative" href="{% url 'profile' %}">
+              <a class="btn bg-light-1 {% if user.is_superuser %} d-none {% endif %} position-relative" href="{% url 'profile' %}">
                 <i class="bi bi-person fs-6"> | Profile</i>
               </a>
             </li>
@@ -114,7 +114,7 @@
 
 
   </header>
-  
+
   <!-- Display Messages -->
   {% if messages %}
   {% for message in messages %}
@@ -188,7 +188,7 @@
                   <div class="optionalParent">
                     <div class="w-100">
                       <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn bg-light-1 btn-sm m-0">
-                     
+
                     </div>
                   </div>
                 </div>
@@ -213,7 +213,7 @@
             <p>
               <a href="{% url 'privacy_policy' %}" class="text-reset">Privacy policy</a>
             </p>
-          
+
           </div>
 
 
@@ -230,7 +230,7 @@
             <p><i class="bi bi-printer-fill"></i> + 07 33 32 85 61</p>
             <p>
               <a  href="{% url 'contact' %}" class="btn bg-light-1 text-dark btn-sm" role="button">Drop us a message</a>
-    
+
             </p>
           </div>
         </div>

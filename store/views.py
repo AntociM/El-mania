@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from decimal import Decimal
+from django.contrib.auth.decorators import user_passes_test
 
 from .models import ItemDiscount, Item
 from .forms import ItemForm
@@ -131,7 +132,7 @@ def product_detail(request, item_id):
 
     return render(request, 'store/product_detail.html', context)
 
-
+@user_passes_test(lambda u: u.is_superuser)
 def add_product(request):
     """ Add products to the store """
     if request.method == 'POST':
@@ -165,7 +166,7 @@ def add_product(request):
 
         return render(request, 'store/add_product.html', context)
 
-
+@user_passes_test(lambda u: u.is_superuser)
 def edit_product_detail(request, item_id):
     """ A view to allow superuser to edit product details """
 
@@ -189,7 +190,7 @@ def edit_product_detail(request, item_id):
 
     return render(request, 'store/edit_product_detail.html', context)
 
-
+@user_passes_test(lambda u: u.is_superuser)
 def update_product_detail(request, item_id):
     """ Update product detail in the database """
     if request.method == 'POST':
@@ -211,8 +212,8 @@ def update_product_detail(request, item_id):
         else:
             messages.error(request, 'Your product was not updated.')
 
-
-def delete_product(request,item_id):
+@user_passes_test(lambda u: u.is_superuser)
+def delete_product(request, item_id):
     product = get_object_or_404(Item, pk=item_id)
     product.delete()
 
