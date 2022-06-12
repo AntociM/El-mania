@@ -35,12 +35,27 @@
             <h5> {{ contact_item.name}} </h5>
           </div>
           <div class="card-body ">
-            <h6 class="card-title"> {{contact_item.user_full_name}}</h6>
+            <h6 class="card-title" id="address-cards-{{contact_item.pk}}-id_full_name"> {{contact_item.user_full_name}}</h6>
             <p class="card-text">
-              <i class="bi bi-telephone"> {{contact_item.phone_number}}</i><br>
-              <i class="bi bi-envelope"> {{contact_item.email}}</i> <br>
-              <span> <i class="bi bi-geo-alt"></i> {{contact_item.address}}<br>{{contact_item.city}},
-                {{contact_item.postcode}}<br>{{contact_item.county}}, {{contact_item.country}}</span>
+              <i class="bi bi-telephone">
+                <span id="address-cards-{{contact_item.pk}}-id_phone_number" >{{contact_item.phone_number}}</span>
+              </i>
+              <br>
+              <i class="bi bi-envelope">
+                <span id="address-cards-{{contact_item.pk}}-id_email" >{{contact_item.email}}</span>
+              </i>
+              <br>
+
+              <span>
+                <i class="bi bi-geo-alt"></i>
+                <span id="address-cards-{{contact_item.pk}}-id_address" >{{contact_item.address}}</span>
+                <br>
+                <span id="address-cards-{{contact_item.pk}}-id_city" >{{contact_item.city}}</span>,
+                <span id="address-cards-{{contact_item.pk}}-id_postcode" >{{contact_item.postcode}}</span>
+                <br>
+                <span id="address-cards-{{contact_item.pk}}-id_county" >{{contact_item.county}}</span>,
+                <span id="address-cards-{{contact_item.pk}}-id_country" >{{contact_item.country}}</span>
+              </span>
             </p>
           </div>
         </div>

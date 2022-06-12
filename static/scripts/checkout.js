@@ -41,10 +41,37 @@ window.onload=()=>{
             }
         }
 
+
+
         // Disable form fields
         var form = document.getElementById('address-form-fields')
         var fields_to_waive = ["redirect-url", "address-select", "id_notes"]
         var children = form.querySelectorAll('input,select,textarea')
+
+        if (one_card_selected) {
+            // Populate the form with values
+            // form
+            document.getElementById("id_email").value = document.getElementById(card.id + "-id_email").textContent
+            document.getElementById("id_full_name").value = document.getElementById(card.id + "-id_full_name").textContent
+            document.getElementById("id_phone_number").value = document.getElementById(card.id + "-id_phone_number").textContent
+            document.getElementById("id_city").value = document.getElementById(card.id + "-id_city").textContent
+            document.getElementById("id_address").value = document.getElementById(card.id + "-id_address").textContent
+            document.getElementById("id_postcode").value = document.getElementById(card.id + "-id_postcode").textContent
+            document.getElementById("id_country").value = document.getElementById(card.id + "-id_country").textContent
+            document.getElementById("id_county").value = document.getElementById(card.id + "-id_county").textContent
+        }
+        else {
+            // Clear the form
+            document.getElementById("id_email").value = ''
+            document.getElementById("id_full_name").value = ''
+            document.getElementById("id_phone_number").value = ''
+            document.getElementById("id_city").value = ''
+            document.getElementById("id_address").value = ''
+            document.getElementById("id_postcode").value = ''
+            document.getElementById("id_country").value = ''
+            document.getElementById("id_county").value = ''
+        }
+
         for (var i = 0; i < children.length; i++) {
             if (!(fields_to_waive.includes(children[i].id))) {
                 if (one_card_selected) {
