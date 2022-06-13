@@ -102,7 +102,7 @@ body{margin-top:20px;}
 .cart-item-thumb {
     display: block;
     width: 10rem
-} 
+}
 
 .cart-item-thumb>img {
     display: block;
@@ -139,7 +139,6 @@ body{margin-top:20px;}
 /* Mailchimp */
 
 #mc_embed_signup {
-    /* background: #fff; */
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
   }
@@ -150,7 +149,6 @@ body{margin-top:20px;}
     z-index: 3;
     color: #fff;
     background-color: #2f9dc5;
-    /* border-color: rgb(25, 38, 25); */
 }
 
 
