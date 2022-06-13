@@ -17,15 +17,16 @@ def index(request):
     offers = ItemDiscount.objects.all()
     discounted_items = []
     for offer in offers:
-        offer_dict = {
-             "image": offer.item.image,
-             "name": offer.item.name,
-             "price": offer.item.price,
-             "discount": offer.discount_procent,
-             "new_price": round(offer.item.price - (offer.discount_procent * offer.item.price) / 100, 2),
-             "item_id":  offer.item.pk
-        }
-        discounted_items.append(offer_dict)
+        if offer.item:
+            offer_dict = {
+                "image": offer.item.image,
+                "name": offer.item.name,
+                "price": offer.item.price,
+                "discount": offer.discount_procent,
+                "new_price": round(offer.item.price - (offer.discount_procent * offer.item.price) / 100, 2),
+                "item_id":  offer.item.pk
+            }
+            discounted_items.append(offer_dict)
 
     context = {
         'discounted_items': discounted_items,
