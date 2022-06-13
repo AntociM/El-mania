@@ -67,25 +67,25 @@
               </a>
             </li>
             {% if user.is_superuser %}
-            <li class="list-group-item bg-transparent border-0">
+            <li class="list-group-item bg-transparent border-0 ps-1 pe-1 ps-xl-3 pe-xl-3">
               <a class="btn bg-light-1 position-relative" href="/admin">
                 <i class="bi bi-person fs-6"> | Admin</i>
               </a>
             </li>
             {% endif %}
-            <li class="list-group-item bg-transparent border-0 ">
+            <li class="list-group-item bg-transparent border-0 ps-1 pe-1 ps-xl-3 pe-xl-3">
               <a role="button" class="btn bg-light-1 position-relative" href="{% url 'account_logout' %}">
                 <i class="bi bi-box-arrow-left fs-6"> | Logout</i>
               </a>
             </li>
             {% else %}
-            <li class="list-group-item bg-transparent border-0 ">
+            <li class="list-group-item bg-transparent border-0 ps-1 pe-1 ps-xl-3 pe-xl-3">
               <a role="button" class="btn bg-light-1 position-relative" href="{% url 'account_login' %}">
                 <i class="bi bi-box-arrow-right fs-6">| Login</i>
               </a>
             </li>
             {% endif %}
-            <li class="list-group-item  bg-transparent border-0 ">
+            <li class="list-group-item  bg-transparent border-0 ps-1 pe-1 ps-xl-3 pe-xl-3">
               <a role="button" class="btn bg-light-1 position-relative" href="{% url 'cart_view' %}">
                 <i class="bi bi-cart4 fs-6"> | Cart</i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">

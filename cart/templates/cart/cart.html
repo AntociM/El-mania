@@ -23,8 +23,7 @@
                             alt="Product"></a>
                 </div>
 
-                <div class="media-body pt-3 w-50
-                ">
+                <div class="media-body pt-3 w-50">
                     <h3 class="product-card-title text-left font-weight-semibold border-0 pb-0"><a href="{% url 'product_detail'  cart_item.item.pk %}">
                             {{ cart_item.item.name }}</a></h3>
 
@@ -38,7 +37,7 @@
                 </div>
 
 
-                <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left" style="max-width: 10rem;">
+                <div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left">
                     <form action="{% url 'adjust_quantity' cart_item.item.pk %}" class="form" method="POST">
                         {% csrf_token %}
                         <div class="form-group mb-2">
