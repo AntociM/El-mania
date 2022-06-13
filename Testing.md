@@ -103,9 +103,9 @@ The testing targeted especially form fields input.
 1. Validation was added to the **order form**, where the user fills out his personal information.
 
 - full name, city, country  fields validate only alphabetical characters and space.
-- address field must contain only alphanumeric characters.
-- phone number is validating only numbers, with a standard format.
-When a user clicks `Payment` button, the validation error messages are displayed.
+- address field must contain only alphanumeric characters. Addresses without numbers are accepted.
+- phone number field is validating only numbers, with an international standard format.
+When a user clicks `Pay` button, the validation error messages are displayed.
 
 ![](static/media/readme-images/order-validation.jpg)
 

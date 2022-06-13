@@ -88,7 +88,7 @@ The admin can also access the Django Admin Panel.
 
 A logged-in `user` has access to his own `Profile`. On the Profile page, the user can save/update his contact information, see order history, and change his account password.
 
-A site's `gues` has access to the store and can place an order without authentification. Guests will be updated via email.
+A site's `guest` has access to the store and can place an order without authentication. Guests will be updated via email.
 #### Home Page
 ##### Navigation
 
@@ -233,9 +233,8 @@ Admin has access via the default Django Admin page. The Admin panel is accessed 
 
 ### Future Feature
 
-- Add a custom Admin interface.
 - Automatic notification for the user when an order has a new status.
-Possibly for the user to change upload a profile picture and change credentials.
+- Possibly for the user to upload a profile picture and change credentials.
 - Order status to be more detailed. Now are available only 2.
 - Information on delivery at checkout.
 
