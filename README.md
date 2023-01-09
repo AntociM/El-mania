@@ -5,7 +5,7 @@ El-mania's website is designed to offer a pleasant and effortless shopping exper
 
 The fictional El-mania company is Swedish-based.
 
-Live demo can be found on [Heroku](https://el-mania.herokuapp.com/)
+Live demo can be found on [Heroku](https://el-mania.onrender.com)
 
 ## User Stories
 
